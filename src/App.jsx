@@ -5,11 +5,13 @@ import Review from './pages/Review.jsx'
 import Costs from './pages/Costs.jsx'
 import Compare from './pages/Compare.jsx'
 import Watches from './pages/Watches.jsx'
+import Flights from './pages/Flights.jsx'
 
 const TABS = [
   { hash: '#/', label: 'The Trip' },
   { hash: '#/map', label: 'Itinerary & Map' },
   { hash: '#/compare', label: 'V1 vs V2' },
+  { hash: '#/flights', label: 'Flights' },
   { hash: '#/watches', label: 'The Pair' },
   { hash: '#/review', label: 'Review' },
   { hash: '#/costs', label: 'Costs' },
@@ -54,6 +56,7 @@ export default function App() {
       {route === '#/' && <Home />}
       {route === '#/map' && <MapPage />}
       {route === '#/compare' && <Compare />}
+      {route === '#/flights' && <Flights />}
       {route === '#/watches' && <Watches />}
       {route === '#/review' && <Review />}
       {route === '#/costs' && <Costs />}
