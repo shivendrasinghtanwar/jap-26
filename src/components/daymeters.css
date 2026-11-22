@@ -1,0 +1,79 @@
+/* ——— per-day rating + cost meters ——— */
+.dm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+@media (max-width: 520px) {
+  .dm-grid { grid-template-columns: 1fr; }
+}
+
+.dm-card {
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 11px 13px;
+  box-shadow: 0 1px 3px rgba(60, 46, 20, 0.05);
+  min-width: 0;
+}
+
+.dm-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* rating */
+.dm-rate-top { display: flex; align-items: center; gap: 11px; }
+.dm-dial { flex: none; display: block; }
+.dm-dial-track { stroke: var(--line); opacity: 0.8; }
+.dm-rate-body { min-width: 0; }
+.dm-score {
+  font: 600 1.25rem/1 var(--serif);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  margin-top: 3px;
+}
+.dm-score small { font-size: 0.72rem; font-weight: 600; color: var(--ink-soft); font-family: var(--sans); }
+.dm-word { display: block; font-size: 0.8rem; font-weight: 700; margin-top: 2px; }
+.dm-note { font-size: 0.73rem; line-height: 1.5; color: var(--ink-soft); margin: 8px 0 0; }
+
+/* cost */
+.dm-cost {
+  font: 600 1.25rem/1.15 var(--serif);
+  font-variant-numeric: tabular-nums;
+  color: var(--shu);
+  margin-top: 9px;
+  overflow-wrap: anywhere;
+}
+.dm-costnote { font-size: 0.73rem; line-height: 1.5; color: var(--ink-soft); margin: 8px 0 0; }
+
+/* header date */
+.tl-date { font-size: 0.78rem; font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
+
+/* overview score/cost column */
+.ov-meters {
+  margin-left: auto;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+.ov-score {
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #fffdf8;
+  border-radius: 99px;
+  padding: 2px 8px;
+}
+.ov-cost {
+  font-size: 0.68rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+}

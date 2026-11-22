@@ -1,0 +1,218 @@
+/* ——— V1 vs V2 compare · washi & ink ——— */
+
+.cmp-page {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 56px) clamp(16px, 4vw, 32px) 80px;
+}
+
+/* ——— header ——— */
+.cmp-kicker {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--shu);
+}
+.cmp-head h1 {
+  font: 700 clamp(1.8rem, 4.5vw, 2.5rem)/1.12 var(--serif);
+  margin-top: 6px;
+}
+.cmp-sub {
+  margin-top: 8px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  max-width: 62ch;
+  line-height: 1.65;
+}
+.cmp-doc {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.82em;
+  color: var(--ink);
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1px 6px;
+  white-space: nowrap;
+}
+.cmp-legend {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* ——— status chips ——— */
+.cmp-chip {
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border-radius: 99px;
+  padding: 2.5px 9px;
+  border: 1px solid transparent;
+}
+.cmp-chip-unchanged { color: var(--ink-soft); background: #eee8da; border-color: var(--line); }
+.cmp-chip-modified { color: #7a4a0f; background: #f6e7cf; border-color: #e3c99b; }
+.cmp-chip-new { color: #2c5a3c; background: #ddeadd; border-color: #b9cfae; }
+
+/* ——— column heads ——— */
+.cmp-cols {
+  display: grid;
+  grid-template-columns: 132px 1fr 1fr;
+  gap: 10px 14px;
+  margin: 30px 0 10px;
+}
+.cmp-colhead {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--ink);
+}
+
+/* ——— rows ——— */
+.cmp-rows {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cmp-row {
+  display: grid;
+  grid-template-columns: 132px 1fr 1fr;
+  grid-template-areas:
+    'date v1 v2'
+    'date change change';
+  gap: 8px 14px;
+  align-items: stretch;
+  padding: 12px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+}
+.cmp-row-unchanged { opacity: 0.86; }
+
+.cmp-date {
+  grid-area: date;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 6px;
+}
+.cmp-date b {
+  font: 600 0.95rem var(--serif);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* ——— day cards ——— */
+.cmp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-decoration: none;
+  color: inherit;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 10px 13px;
+  transition: all 0.15s ease;
+}
+a.cmp-card:hover {
+  transform: translateY(-2px);
+  border-color: #cdbfa2;
+  box-shadow: 0 5px 16px rgba(60, 46, 20, 0.1);
+}
+.cmp-card-v2 { border-left: 4px solid var(--shu); }
+.cmp-card-v1 { border-left: 4px solid color-mix(in srgb, var(--ink-soft) 40%, var(--line)); }
+.cmp-card-empty {
+  justify-content: center;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #9a8f7a;
+  background: transparent;
+  border-style: dashed;
+}
+.cmp-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cmp-ver {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+}
+.cmp-card-v2 .cmp-ver { color: var(--shu); }
+.cmp-daynum {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.cmp-score {
+  margin-left: auto;
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: #fffdf8;
+  border-radius: 99px;
+  padding: 2px 8px;
+  font-variant-numeric: tabular-nums;
+}
+.cmp-title {
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+.cmp-meta {
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ——— change note ——— */
+.cmp-change {
+  grid-area: change;
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  font-style: italic;
+  padding: 2px 4px 0;
+}
+.cmp-row-modified .cmp-change::before,
+.cmp-row-new .cmp-change::before {
+  content: '↳ ';
+  font-style: normal;
+  color: #c97a1f;
+}
+.cmp-row-new .cmp-change::before { color: #3f7d63; }
+
+/* ——— stacked, phone-width ——— */
+@media (max-width: 720px) {
+  .cmp-cols { display: none; }
+  .cmp-row {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'date'
+      'v1'
+      'v2'
+      'change';
+    gap: 8px;
+    padding: 16px 0;
+  }
+  .cmp-date {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding-top: 0;
+  }
+  .cmp-card-v1 { grid-area: v1; }
+  .cmp-card-v2 { grid-area: v2; }
+  .cmp-card-empty { padding: 8px 13px; }
+}

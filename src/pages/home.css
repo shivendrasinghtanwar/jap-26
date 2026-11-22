@@ -1,0 +1,124 @@
+/* ——— Home page overrides · loaded after app.css, scoped under .home ——— */
+
+/* full-viewport hero, vertically balanced */
+.home .hero {
+  min-height: calc(100svh - 76px);
+  align-items: center;
+}
+.home .hero-copy {
+  align-self: center;
+  max-width: 880px;
+  padding: clamp(24px, 4svh, 56px) clamp(20px, 4.5vw, 72px);
+  /* optical centre: lift the block slightly above true centre (golden-ratio bias),
+     collapsing to none on short viewports so nothing clips at the top */
+  translate: 0 clamp(-36px, -3svh, 0px);
+}
+
+/* bigger type */
+.home .hero-badges { gap: 10px; margin-bottom: 24px; }
+.home .badge { font-size: 0.76rem; padding: 6px 14px; }
+.home .hero-title {
+  font-size: clamp(2.8rem, 5.2vw, 5rem);
+  line-height: 1.1;
+}
+.home .hero-lede {
+  margin-top: 24px;
+  max-width: 60ch;
+  font-size: clamp(1.02rem, 0.9rem + 0.35vw, 1.12rem);
+  line-height: 1.75;
+  padding: 18px 20px;
+}
+.home .hero-aside {
+  margin-top: 12px;
+  max-width: 60ch;
+  width: fit-content;
+  font-size: 0.86rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  background: rgba(247, 242, 233, 0.72);
+  backdrop-filter: blur(3px);
+  border-radius: 9px;
+  padding: 8px 14px;
+}
+.home .hero-ctas { margin-top: 32px; gap: 12px; }
+.home .cta { font-size: 0.98rem; padding: 14px 24px; }
+
+/* deliberate vertical rhythm */
+.home .statstrip { padding: 38px clamp(16px, 3vw, 30px); }
+.home .statstrip b { font-size: 2.1rem; }
+.home .statstrip span { font-size: 0.72rem; }
+
+.home .routeband { padding: 52px clamp(16px, 3vw, 30px) 44px; }
+.home .routestop b { font-size: 1.08rem; }
+.home .routestop small { font-size: 0.76rem; }
+
+/* ——— the route, on the map ——— */
+.home .home-mapband {
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 64px clamp(20px, 5vw, 72px) 76px;
+}
+.home .home-mapband-head {
+  max-width: 1280px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px 20px;
+  flex-wrap: wrap;
+}
+.home .home-map-title {
+  font: 600 clamp(1.6rem, 2.6vw, 2.3rem)/1.2 var(--serif);
+  letter-spacing: 0.005em;
+}
+.home .home-map-link {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--shu);
+  text-decoration: none;
+}
+.home .home-map-link:hover { text-decoration: underline; }
+.home .home-mapframe {
+  position: relative;
+  height: 68svh;
+  min-height: 420px;
+  max-width: 1280px;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(60, 46, 20, 0.08);
+}
+
+/* four cards: 4-up wide, 2×2 mid, single column on phones */
+.home .home-grid {
+  max-width: 1180px;
+  margin: 72px auto 0;
+  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1060px) {
+  .home .home-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .home .home-grid { grid-template-columns: 1fr; }
+}
+.home .home-card { padding: 26px 24px 20px; }
+.home .home-card h3 { font-size: 1.3rem; }
+.home .home-card p { font-size: 0.92rem; }
+.home .home-card-go { font-size: 0.72rem; }
+
+.home .home-foot { padding: 60px 16px 56px; font-size: 0.78rem; font-style: italic; font-family: var(--serif); letter-spacing: 0.01em; }
+
+/* ——— mobile ——— */
+@media (max-width: 640px) {
+  .home .hero { min-height: 82svh; }
+  .home .hero-title { font-size: clamp(2.2rem, 9.5vw, 2.8rem); }
+  .home .hero-copy { padding: 30px 18px 36px; }
+  .home .home-mapband { padding: 44px 16px 52px; }
+  .home .home-mapframe { height: 56svh; min-height: 360px; border-radius: 13px; }
+  .home .home-grid { margin-top: 48px; }
+  .home .home-foot { padding: 44px 16px 44px; }
+}

@@ -1,0 +1,260 @@
+/* ——— Costs page · washi & ink ——— */
+
+.costs-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 56px) clamp(16px, 4vw, 32px) 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* shared label */
+.costs-page .label {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+.costs-page .label-in { color: #2c5a35; }
+.costs-page .label-ex { color: var(--shu); }
+
+/* ——— header ——— */
+.costs-head { text-align: left; }
+.costs-kicker {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--shu);
+}
+.costs-head h1 {
+  font: 700 clamp(1.8rem, 4.5vw, 2.5rem)/1.12 var(--serif);
+  margin-top: 6px;
+}
+.costs-sub {
+  margin-top: 8px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  max-width: 52ch;
+  line-height: 1.6;
+}
+
+/* ——— unknowns notice ——— */
+.notice {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--shu);
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 3px rgba(60, 46, 20, 0.05);
+}
+.notice-mark {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font: 700 1rem var(--serif);
+  color: #fffdf8;
+  background: var(--shu);
+  margin-top: 2px;
+}
+.notice-title {
+  font: 600 1.02rem/1.3 var(--serif);
+  margin-bottom: 4px;
+}
+.notice p { font-size: 0.86rem; line-height: 1.6; color: var(--ink-soft); }
+.notice p.notice-title { color: var(--ink); }
+.notice strong { color: var(--ink); font-weight: 600; }
+
+/* ——— covers vs you-pay split ——— */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.split-col {
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px 18px;
+}
+.split-col-pay { border-color: color-mix(in srgb, var(--shu) 32%, var(--line)); }
+.split-col ul { list-style: none; padding: 0; margin: 0; }
+.split-col li {
+  position: relative;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--ink);
+  padding: 6px 0 6px 18px;
+}
+.split-col li + li { border-top: 1px solid color-mix(in srgb, var(--line) 55%, transparent); }
+.split-col li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 14px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2c5a35;
+  opacity: 0.75;
+}
+.split-col-pay li::before { background: var(--shu); }
+
+/* ——— the table ——— */
+.table-wrap {
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px 6px;
+  overflow-x: auto;
+}
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.cost-table th {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: left;
+  padding: 4px 8px 10px;
+  border-bottom: 2px solid var(--ink);
+}
+.cost-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  vertical-align: top;
+  font-size: 0.88rem;
+}
+.cost-table .num {
+  text-align: right;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.item-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+.item-basis {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+  margin-top: 2px;
+  line-height: 1.45;
+}
+.tag {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: 1px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 1.5px 7px;
+  background: var(--paper);
+}
+.cost-table tfoot td {
+  border-bottom: none;
+  border-top: 2px solid var(--ink);
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.cost-table tfoot .item-label {
+  font: 600 1.02rem var(--serif);
+}
+.cost-table tfoot .num {
+  font: 700 1.05rem var(--serif);
+  color: var(--ink);
+}
+.inr {
+  display: block;
+  font: 600 0.76rem var(--sans);
+  color: var(--shu);
+  margin-top: 3px;
+}
+
+/* ——— cash callout ——— */
+.cash-callout {
+  background:
+    radial-gradient(360px 150px at 90% -20%, rgba(201, 58, 43, 0.07), transparent 65%),
+    #fffdf8;
+  border: 1px solid color-mix(in srgb, var(--shu) 30%, var(--line));
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+.costs-page .label-cash { color: var(--shu); margin-bottom: 4px; }
+.cash-amount {
+  font: 700 clamp(1.5rem, 3.6vw, 1.9rem)/1.15 var(--serif);
+  font-variant-numeric: tabular-nums;
+}
+.cash-body {
+  margin-top: 6px;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 58ch;
+}
+
+/* ——— watch-outs ——— */
+.watchouts {
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.watch-list { list-style: none; padding: 0; margin: 0; }
+.watch-list li {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.watch-list li + li { border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+.watch-title { font-weight: 600; font-size: 0.88rem; }
+.watch-body {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* ——— ask jay ——— */
+.ask-jay {
+  border: 1px dashed color-mix(in srgb, var(--shu) 45%, var(--line));
+  border-radius: 12px;
+  padding: 16px 18px;
+  background: color-mix(in srgb, var(--shu) 4%, transparent);
+}
+.ask-jay p:not(.label) {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--ink);
+  max-width: 62ch;
+}
+.ask-jay strong { font-weight: 600; }
+
+/* ——— responsive ——— */
+@media (max-width: 640px) {
+  .split { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .costs-page { gap: 20px; }
+  .cost-table td { padding: 9px 6px; font-size: 0.84rem; }
+  .cost-table .num { font-size: 0.82rem; }
+  .table-wrap { padding: 14px 12px 4px; }
+}
