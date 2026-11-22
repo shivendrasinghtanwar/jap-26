@@ -27,12 +27,19 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 
 /* ——— header ——— */
 .hdr {
+  position: relative;
   padding: 14px clamp(16px, 3vw, 30px);
   border-bottom: 1px solid var(--line);
   background: color-mix(in srgb, var(--paper) 92%, white);
 }
 .hdr-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-.hdr-title { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
+.hdr-title { display: flex; align-items: center; gap: 14px; }
+.hdr-home { text-decoration: none; color: inherit; }
+.hinomaru-btn {
+  flex: none; width: 34px; height: 34px; padding: 0;
+  display: grid; place-items: center; border-radius: 50%; position: relative;
+}
+.hinomaru-btn:focus-visible { outline: 2px solid var(--shu); outline-offset: 3px; }
 .topnav { margin-left: auto; display: flex; gap: 4px; flex-wrap: wrap; }
 .tab {
   text-decoration: none; color: var(--ink-soft); font-weight: 600; font-size: 0.84rem;
@@ -51,6 +58,49 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   box-shadow: 0 2px 10px rgba(201, 58, 43, 0.35);
 }
 .hdr h1 { font: 700 clamp(1.3rem, 2.6vw, 1.7rem)/1.1 var(--serif); letter-spacing: 0.01em; }
+
+/* ——— sun menu (the hinomaru is the nav below the wrap breakpoint) ——— */
+.sunmenu-scrim { position: fixed; inset: 0; z-index: 59; background: transparent; cursor: default; }
+.sunmenu {
+  position: absolute; top: 100%; left: clamp(12px, 2.6vw, 26px); right: clamp(12px, 2.6vw, 26px);
+  z-index: 60; margin-top: -1px; padding: 6px;
+  display: flex; flex-direction: column;
+  background: #fffdf8; border: 1px solid var(--line); border-radius: 0 0 14px 14px;
+  box-shadow: 0 16px 36px rgba(34, 31, 26, 0.16);
+  animation: sunmenu-in 0.2s ease both;
+  max-width: 420px;
+}
+@keyframes sunmenu-in {
+  from { opacity: 0; transform: translateY(-7px); }
+  to { opacity: 1; }
+}
+.sunmenu-row {
+  display: flex; align-items: center; min-height: 46px; padding: 0 16px;
+  border-radius: 10px; text-decoration: none;
+  font-weight: 600; font-size: 0.92rem; color: var(--ink-soft);
+}
+.sunmenu-row + .sunmenu-row { border-top: 1px solid color-mix(in srgb, var(--line) 50%, transparent); }
+.sunmenu-row:hover { color: var(--ink); background: var(--paper); }
+.sunmenu-row.on { color: #fffdf8; background: var(--ink); }
+
+@media (max-width: 1039px) {
+  .topnav { display: none; }
+  .hdr-title { gap: 20px; }
+  /* bigger tap target + a tappable affordance on the sun */
+  .hinomaru-btn { width: 44px; height: 44px; margin: -5px 0 -5px -5px; }
+  .hinomaru-btn .hinomaru {
+    box-shadow: 0 2px 10px rgba(201, 58, 43, 0.35), 0 0 0 2.5px #fffdf8,
+      0 0 0 4px color-mix(in srgb, var(--line) 85%, var(--ink-soft));
+  }
+  .hinomaru-btn::after {
+    content: ''; position: absolute; right: -4px; bottom: 5px;
+    border-left: 4.5px solid transparent; border-right: 4.5px solid transparent;
+    border-top: 6px solid var(--ink-soft);
+  }
+}
+@media (min-width: 1040px) {
+  .sunmenu, .sunmenu-scrim { display: none; }
+}
 .hdr-sub { margin-top: 3px; font-size: 0.8rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .draft-pill {
   font-size: 0.66rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;

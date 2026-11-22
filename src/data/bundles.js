@@ -1,5 +1,5 @@
 // Itinerary version bundles: V1 (travel agent's 14-day plan) and
-// V2 (our 17-day counter-proposal). Same shapes, swappable everywhere.
+// V2 (our 18-day counter-proposal). Same shapes, swappable everywhere.
 
 import {
   DAYS as V1_DAYS,
@@ -59,5 +59,6 @@ export const CHANGES = {
   14: { status: 'modified', text: 'V1 flew home today. V2: illuminations by day, then midnight at Zojoji Temple under Tokyo Tower.' },
   15: { status: 'new', text: 'Real hatsumode at Meiji Jingu + Skytree’s first night view.' },
   16: { status: 'new', text: 'Imperial Palace New-Year Greeting (balcony appearances) + Ginza fukubukuro.' },
-  17: { status: 'new', text: 'Departure moves here — 3 Jan is counter-flow to the U-turn rush.' },
+  17: { status: 'new', text: 'A full bonus Tokyo day — the 10:10 flight on the 4th bought it back.' },
+  18: { status: 'new', text: 'Departure moves here — early out on 4 Jan, counter-flow to the U-turn rush, ₹16.8k cheaper than the afternoon.' },
 }

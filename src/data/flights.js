@@ -1,44 +1,18 @@
-// JAP-26 · flight research, structured for the Flights page.
-// Single source of truth: ~/mine/docs/JAP-26/research/flights.md,
-// flights-toolkit.md and flights-live-prices.md — all captured 22 Nov 2026.
-// All prices are INR TOTALS FOR 2 ADULTS, economy, round trip unless noted.
+// JAP-26 · flight selector data.
+// Source of truth: ~/mine/docs/JAP-26/research/flights.md, flights-toolkit.md,
+// flights-live-prices.md, flights-cx-quote.md — captured 22 Nov 2026.
+// All prices are INR TOTALS FOR 2 ADULTS, economy.
+// Times marked ~ are derived (from leg totals / standard check-in rules), not published schedules.
+// Zones: IST base · JST = IST +3:30 · HKT / SGT / MYT = IST +2:30 · ICT = IST +1:30.
 
 export const CAPTURED = '22 Nov 2026'
 
-export const BRIEF = {
-  kicker: 'JAP-26 · HYD ⇄ Tokyo Haneda · 2 adults · economy',
-  title: 'Flights',
-  sub: 'Every Haneda-compliant way to land by Friday afternoon, 18 Dec 2026 — priced for two. No nonstop HYD–Tokyo exists; these are the real routings.',
-}
-
-// ——— verdict strip ———
-export const VERDICTS = [
-  {
-    title: 'Return Mon 4 Jan, not Sun 3 Jan',
-    stat: 'saves ₹20k–1.7L',
-    body: '3 Jan is Japan’s peak New Year return day. On Cathay the Monday flight is less than half price — ₹1,53,340 vs ₹3,23,274 for two. One extra hotel night (≈₹15–25k) is trivial against that.',
-  },
-  {
-    title: 'Book this week',
-    stat: 'T−4 weeks',
-    body: 'Peak fares this close out only move up. The cheap 17 Dec buckets (₹34–40k pp on AI and CX) will not survive into December. Prices on this page were captured 22 Nov 2026.',
-  },
-  {
-    title: 'Fly from HYD itself',
-    stat: 'positioning loses ₹31–79k',
-    body: 'Via DEL ≈₹2.36L and via BLR ≈₹1.88L against ₹1.57L straight out of HYD — before self-transfer risk in Delhi fog season. BLR’s only Tokyo nonstop is Narita-only, dead under the Haneda rule.',
-  },
-]
-
-// ——— option cards ———
-// tier: cheapest | balance | timefit | comfort
-// source: kiwi (one-way sums = ceilings) | google (live) | est | direct
-// fit.kind: ok | near | early
 export const SOURCES = {
   kiwi: 'Kiwi + Skiplagged · 22 Nov · one-way sum, ceiling',
   google: 'Google Flights live · 22 Nov',
-  est: 'estimate · UNVERIFIED',
-  direct: 'no Google quote · price direct',
+  googleq: 'Google Flights live · 22 Nov 12:50 IST · bookable direct with CX',
+  estq: 'estimate · not yet quoted direct',
+  direct: 'no search price · quote direct',
 }
 
 export const TIERS = {
@@ -48,283 +22,466 @@ export const TIERS = {
   comfort: 'Comfort',
 }
 
+export const AIRLINE_CHIPS = ['Cathay', 'Air India', 'Thai', 'Singapore', 'AirAsia']
+export const DAY_CHIPS = [
+  ['fri', 'Fri 18 Dec'],
+  ['thu', 'Thu 17 Dec'],
+]
+export const SLOT_CHIPS = [
+  ['morning', 'Morning'],
+  ['afternoon', 'Afternoon'],
+  ['evening', 'Evening'],
+]
+
+export const LEGEND =
+  '~ = derived: at airport 3 h before departure, counters close 60 min before; segment times without a published schedule are derived from totals · JST = IST +3:30 · HKT / SGT / MYT = IST +2:30 · ICT = IST +1:30 · prices captured 22 Nov 2026, totals for 2'
+
+// Timeline stops: endpoints {code, t, tz, t2, d}; layovers {code, lay, times, times2, note?}
 export const OPTIONS = [
+  {
+    id: 'cx-fri',
+    tier: 'timefit',
+    pick: true,
+    airline: 'Cathay Pacific',
+    airlines: ['Cathay'],
+    name: 'All-Cathay · Fri evening',
+    arriveDay: 'fri',
+    arriveSlot: 'evening',
+    bags2x23: true,
+    out: {
+      total: '15h40',
+      stops: [
+        { code: 'HYD', t: '02:05', tz: 'IST', t2: '05:35 JST', d: 'Fri 18 Dec' },
+        { code: 'HKG', lay: '6h50', times: '~09:40 → ~16:30 HKT', times2: '~07:10 → ~14:00 IST', note: 'airside' },
+        { code: 'HND', t: '21:15', tz: 'JST', t2: '17:45 IST', d: 'Fri 18 Dec' },
+      ],
+    },
+    checkinOut: 'at HYD by ~23:00 IST Thu 17 (02:30 JST) · counters close 01:05 IST',
+    bags: {
+      checked: '1 checked bag pp included · 2nd bag = Essential/Flex, confirm on CX site',
+      cabin: '1 carry-on pp (7 kg)',
+    },
+    returns: {
+      jan4: {
+        price: 149658,
+        source: 'googleq',
+        variant: '16:00 afternoon return instead: ₹1,66,458 (+₹16,800)',
+        checkin: 'at HND by ~07:10 JST Mon 4 (03:40 IST) · counters close 09:10 JST',
+        timeline: {
+          total: '18h10',
+          stops: [
+            { code: 'HND', t: '10:10', tz: 'JST', t2: '06:40 IST', d: 'Mon 4 Jan' },
+            { code: 'HKG', lay: '6h40', times: '~14:05 → ~20:45 HKT', times2: '~11:35 → ~18:15 IST' },
+            { code: 'HYD', t: '00:50', tz: 'IST', t2: '04:20 JST', d: 'Tue 5 Jan +1' },
+          ],
+        },
+      },
+      jan3: {
+        price: 253746,
+        source: 'google',
+        priceNote: 'RT total with the same CX outbound · 16:00 afternoon return',
+        checkin: 'at HND by ~13:00 JST Sun 3 (09:30 IST) · counters close 15:00 JST',
+        timeline: {
+          total: '12h20',
+          stops: [
+            { code: 'HND', t: '16:00', tz: 'JST', t2: '12:30 IST', d: 'Sun 3 Jan' },
+            { code: 'HKG', lay: '50m', times: '20:15 → 21:05 HKT', times2: '17:45 → 18:35 IST' },
+            { code: 'HYD', t: '00:50', tz: 'IST', t2: '04:20 JST', d: 'Mon 4 Jan +1' },
+          ],
+        },
+      },
+    },
+    caveat: '10:10-return flight numbers confirm at booking; the 16:00 variant carries the 50-min HKG minimum connection.',
+    flights: 'CX 672 / CX 542 · CX 10:10 all-day return',
+  },
   {
     id: 'ai-cx',
     tier: 'balance',
-    pick: true,
-    title: 'Air India out · Cathay back',
-    carriers: 'AI 2618 / AI 356 + CX 549 / CX 601',
-    price: 220800,
-    approx: true,
-    source: 'kiwi',
+    airline: 'Air India + Cathay',
+    airlines: ['Air India', 'Cathay'],
+    name: 'AI out · CX back',
+    arriveDay: 'fri',
+    arriveSlot: 'morning',
+    bags2x23: false,
     out: {
+      total: '11h40',
       stops: [
-        { c: 'HYD', m: '13:45 · Thu 17 Dec' },
-        { c: 'BOM', m: '1h45' },
-        { c: 'HND', m: '04:55 · Fri 18 Dec' },
+        { code: 'HYD', t: '13:45', tz: 'IST', t2: '17:15 JST', d: 'Thu 17 Dec' },
+        { code: 'BOM', lay: '1h45', times: '~15:10 → ~16:55 IST', times2: '~18:40 → ~20:25 JST' },
+        { code: 'HND', t: '04:55', tz: 'JST', t2: '01:25 IST', d: 'Fri 18 Dec +1' },
       ],
-      dur: '11h40',
     },
-    back: {
-      stops: [
-        { c: 'HND', m: '16:00 · Mon 4 Jan' },
-        { c: 'HKG', m: '50m' },
-        { c: 'HYD', m: '00:50 · Tue 5 Jan' },
-      ],
-      dur: '12h20',
+    checkinOut: 'at HYD by ~10:45 IST Thu 17 (14:15 JST) · counters close 12:45 IST',
+    bags: {
+      checked: 'AI 25–30 kg by fare family · CX 2×23 kg pp',
+      cabin: '7 kg pp cabin',
     },
-    fit: { kind: 'ok', label: 'HND 04:55 Fri — 10 h inside the 15:00 target' },
-    bags: 'AI 25–30 kg by fare family · CX 2×23 kg pp on Essential/Flex',
-    caveats: [
-      'AI cheap fare may exclude the checked bag — Kiwi shows ₹69.5k without vs ₹76.6k with. Confirm at booking.',
-      '04:55 arrival = early hotel check-in problem — request early check-in or bag drop now.',
-      'Two separate tickets (AI out, CX back), each its own PNR.',
-    ],
+    returns: {
+      jan4: {
+        price: 220800,
+        approx: true,
+        source: 'kiwi',
+        checkin: 'at HND by ~13:00 JST Mon 4 (09:30 IST) · counters close 15:00 JST',
+        timeline: {
+          total: '12h20',
+          stops: [
+            { code: 'HND', t: '16:00', tz: 'JST', t2: '12:30 IST', d: 'Mon 4 Jan' },
+            { code: 'HKG', lay: '50m', times: '20:15 → 21:05 HKT', times2: '17:45 → 18:35 IST' },
+            { code: 'HYD', t: '00:50', tz: 'IST', t2: '04:20 JST', d: 'Tue 5 Jan +1' },
+          ],
+        },
+      },
+      jan3: {
+        price: 390745,
+        approx: true,
+        source: 'kiwi',
+        priceNote: '3 Jan CX return alone is ₹3,23,274',
+        checkin: 'at HND by ~13:00 JST Sun 3 (09:30 IST) · counters close 15:00 JST',
+        timeline: {
+          total: '12h20',
+          stops: [
+            { code: 'HND', t: '16:00', tz: 'JST', t2: '12:30 IST', d: 'Sun 3 Jan' },
+            { code: 'HKG', lay: '50m', times: '20:15 → 21:05 HKT', times2: '17:45 → 18:35 IST' },
+            { code: 'HYD', t: '00:50', tz: 'IST', t2: '04:20 JST', d: 'Mon 4 Jan +1' },
+          ],
+        },
+      },
+    },
+    caveat: 'Two separate PNRs; the cheap AI fare may exclude the checked bag — confirm.',
+    flights: 'AI 2618 / AI 356 · CX 549 / CX 601',
   },
   {
     id: 'cx-rt',
     tier: 'cheapest',
-    title: 'Cathay via HKG, both ways',
-    carriers: 'CX 672 / CX 542 + JL/CX return',
-    price: 185526,
-    approx: false,
-    source: 'google',
+    airline: 'Cathay Pacific',
+    airlines: ['Cathay'],
+    name: 'CX both ways · out 17 Dec',
+    arriveDay: 'thu',
+    arriveSlot: 'evening',
+    bags2x23: true,
     out: {
+      total: '15h40',
       stops: [
-        { c: 'HYD', m: '02:05 · Thu 17 Dec' },
-        { c: 'HKG', m: '6h50' },
-        { c: 'HND', m: '21:15 · Thu 17 Dec' },
+        { code: 'HYD', t: '02:05', tz: 'IST', t2: '05:35 JST', d: 'Thu 17 Dec' },
+        { code: 'HKG', lay: '6h50', times: '~09:40 → ~16:30 HKT', times2: '~07:10 → ~14:00 IST', note: 'airside' },
+        { code: 'HND', t: '21:15', tz: 'JST', t2: '17:45 IST', d: 'Thu 17 Dec' },
       ],
-      dur: '15h40',
     },
-    back: {
-      stops: [
-        { c: 'HND', m: '09:35 · Sun 3 Jan' },
-        { c: 'HKG', m: '7h15' },
-        { c: 'HYD', m: '00:50 · Mon 4 Jan' },
-      ],
-      dur: '~15h',
+    checkinOut: 'at HYD by ~23:00 IST Wed 16 (02:30 JST) · counters close 01:05 IST',
+    bags: {
+      checked: 'CX Light 1×23 · Essential/Flex 2×23 kg pp',
+      cabin: '7 kg pp cabin',
     },
-    fit: { kind: 'early', label: 'HND 21:15 Thu — evening a day early, +1 hotel night' },
-    bags: 'CX ex-India, piece system: Light 1×23 kg · Essential/Flex 2×23 kg pp — best in the field',
-    caveats: [
-      'Volatile: the same itinerary re-quoted at ₹1,56,974 minutes later. Treat ±₹20–30k as noise and re-check.',
-      'The cheapest CX variants keep a 19 h HKG overnight on the return.',
-      'Hong Kong needs the free Pre-Arrival Registration before leaving the airport.',
-    ],
+    returns: {
+      jan4: {
+        priceText: '₹1.6–1.7L',
+        source: 'estq',
+        priceNote: '4 Jan HND variant missing from Google top list; 4 Jan ran ~₹20k under 3 Jan',
+        checkin: 'at HND by ~13:00 JST Mon 4 (09:30 IST) · counters close 15:00 JST',
+        timeline: {
+          total: '12h20',
+          stops: [
+            { code: 'HND', t: '16:00', tz: 'JST', t2: '12:30 IST', d: 'Mon 4 Jan' },
+            { code: 'HKG', lay: '50m', times: '20:15 → 21:05 HKT', times2: '17:45 → 18:35 IST' },
+            { code: 'HYD', t: '00:50', tz: 'IST', t2: '04:20 JST', d: 'Tue 5 Jan +1' },
+          ],
+        },
+      },
+      jan3: {
+        price: 185526,
+        source: 'google',
+        priceNote: 're-quoted ₹1,56,974 minutes later — volatile ±₹20–30k',
+        checkin: 'at HND by ~06:35 JST Sun 3 (03:05 IST) · counters close 08:35 JST',
+        timeline: {
+          total: '~15h',
+          stops: [
+            { code: 'HND', t: '09:35', tz: 'JST', t2: '06:05 IST', d: 'Sun 3 Jan' },
+            { code: 'HKG', lay: '7h15', times: '~13:30 → ~20:45 HKT', times2: '~11:00 → ~18:15 IST' },
+            { code: 'HYD', t: '00:50', tz: 'IST', t2: '04:20 JST', d: 'Mon 4 Jan +1' },
+          ],
+        },
+      },
+    },
+    caveat: 'Lands Thursday night — one hotel night ahead of the 18 Dec itinerary start.',
+    flights: 'CX 672 / CX 542 · JL/CX return',
   },
   {
     id: 'cx-hk-night',
-    tier: 'timefit',
-    title: 'All-Cathay, Hong Kong night',
-    carriers: 'CX 672 / CX 548 + CX 549 / CX 601',
-    price: 233900,
-    approx: true,
-    source: 'kiwi',
-    priceNote: '+ one HK hotel night',
+    tier: 'comfort',
+    airline: 'Cathay Pacific',
+    airlines: ['Cathay'],
+    name: 'Hong Kong night en route',
+    arriveDay: 'fri',
+    arriveSlot: 'afternoon',
+    bags2x23: true,
     out: {
+      total: '32h10',
       stops: [
-        { c: 'HYD', m: '02:05 · Thu 17 Dec' },
-        { c: 'HKG', m: '~23h · overnight' },
-        { c: 'HND', m: '13:45 · Fri 18 Dec' },
+        { code: 'HYD', t: '02:05', tz: 'IST', t2: '05:35 JST', d: 'Thu 17 Dec' },
+        { code: 'HKG', lay: '~23h', times: '~09:40 → ~08:50 +1 HKT', times2: '~07:10 → ~06:20 +1 IST', note: 'overnight' },
+        { code: 'HND', t: '13:45', tz: 'JST', t2: '10:15 IST', d: 'Fri 18 Dec +1' },
       ],
-      dur: '32h10',
     },
-    back: {
-      stops: [
-        { c: 'HND', m: '16:00 · Mon 4 Jan' },
-        { c: 'HKG', m: '50m' },
-        { c: 'HYD', m: '00:50 · Tue 5 Jan' },
-      ],
-      dur: '12h20',
+    checkinOut: 'at HYD by ~23:00 IST Wed 16 (02:30 JST) · counters close 01:05 IST',
+    bags: {
+      checked: 'CX Light 1×23 · Essential/Flex 2×23 kg pp',
+      cabin: '7 kg pp cabin',
     },
-    fit: { kind: 'ok', label: 'HND 13:45 Fri — 1h15 inside the 15:00 target' },
-    bags: 'CX ex-India: Light 1×23 kg · Essential/Flex 2×23 kg pp',
-    caveats: [
-      'One carrier throughout — price it as a single CX round trip on cathaypacific.com/in; expect it at or under this sum.',
-      'HK night out: hotel cost + free Pre-Arrival Registration needed.',
-      'Best IRROPS cover of the cheap set if bought as one PNR.',
-    ],
+    returns: {
+      jan4: {
+        price: 233900,
+        approx: true,
+        source: 'kiwi',
+        priceNote: '+ one HK hotel night',
+        checkin: 'at HND by ~13:00 JST Mon 4 (09:30 IST) · counters close 15:00 JST',
+        timeline: {
+          total: '12h20',
+          stops: [
+            { code: 'HND', t: '16:00', tz: 'JST', t2: '12:30 IST', d: 'Mon 4 Jan' },
+            { code: 'HKG', lay: '50m', times: '20:15 → 21:05 HKT', times2: '17:45 → 18:35 IST' },
+            { code: 'HYD', t: '00:50', tz: 'IST', t2: '04:20 JST', d: 'Tue 5 Jan +1' },
+          ],
+        },
+      },
+      jan3: {
+        price: 403900,
+        approx: true,
+        source: 'kiwi',
+        priceNote: '3 Jan CX return alone is ₹3,23,274 · + HK hotel night',
+        checkin: 'at HND by ~13:00 JST Sun 3 (09:30 IST) · counters close 15:00 JST',
+        timeline: {
+          total: '12h20',
+          stops: [
+            { code: 'HND', t: '16:00', tz: 'JST', t2: '12:30 IST', d: 'Sun 3 Jan' },
+            { code: 'HKG', lay: '50m', times: '20:15 → 21:05 HKT', times2: '17:45 → 18:35 IST' },
+            { code: 'HYD', t: '00:50', tz: 'IST', t2: '04:20 JST', d: 'Mon 4 Jan +1' },
+          ],
+        },
+      },
+    },
+    caveat: 'Leaving the airport for the HK night needs the free Pre-Arrival Registration.',
+    flights: 'CX 672 / CX 548 · CX 549 / CX 601',
   },
   {
     id: 'ai-del',
-    tier: 'timefit',
-    title: 'Air India through-ticket via Delhi',
-    carriers: 'AI 2541 / AI 358 · back AI 357 + feeder',
-    price: 229206,
-    approx: true,
-    source: 'google',
+    tier: 'comfort',
+    airline: 'Air India',
+    airlines: ['Air India'],
+    name: 'Through-ticket via Delhi',
+    arriveDay: 'fri',
+    arriveSlot: 'morning',
+    bags2x23: false,
     out: {
+      total: '11h35',
       stops: [
-        { c: 'HYD', m: '14:55 · Thu 17 Dec' },
-        { c: 'DEL', m: '2h00' },
-        { c: 'HND', m: '06:00 · Fri 18 Dec' },
+        { code: 'HYD', t: '14:55', tz: 'IST', t2: '18:25 JST', d: 'Thu 17 Dec' },
+        { code: 'DEL', lay: '2h00', times: '~17:00 → ~19:00 IST', times2: '~20:30 → ~22:30 JST', note: 'one PNR' },
+        { code: 'HND', t: '06:00', tz: 'JST', t2: '02:30 IST', d: 'Fri 18 Dec +1' },
       ],
-      dur: '11h35',
     },
-    back: {
-      stops: [
-        { c: 'HND', m: '11:25 · 3 or 4 Jan' },
-        { c: 'DEL', m: '17:05 + feeder' },
-        { c: 'HYD', m: '~21:00–23:00' },
-      ],
-      dur: 'daily',
+    checkinOut: 'at HYD by ~11:55 IST Thu 17 (15:25 JST) · counters close 13:55 IST',
+    bags: {
+      checked: 'AI 25–30 kg pp by fare family — confirm at booking',
+      cabin: '7 kg pp cabin',
     },
-    fit: { kind: 'ok', label: 'HND 06:00 Fri — the only clean one-PNR target fit' },
-    bags: 'AI 25–30 kg by fare family · confirm at booking (ANA/JAL via DEL: 2×23 kg pp)',
-    caveats: [
-      'Google quoted ₹2.29L once, then “price unavailable” — quote on airindia.com directly.',
-      'Single PNR: protected connection, through-tagged bags; the ANA-coded variant priced the same.',
-      'AI 357 at 11:25 is the best midday return timing of every option here.',
-    ],
+    returns: {
+      jan4: {
+        source: 'direct',
+        priceNote: 'AI 4 Jan did not surface in searches — airindia.com',
+        checkin: 'at HND by ~08:25 JST Mon 4 (04:55 IST) · counters close 10:25 JST',
+        timeline: {
+          total: '~11–13h',
+          stops: [
+            { code: 'HND', t: '11:25', tz: 'JST', t2: '07:55 IST', d: 'Mon 4 Jan' },
+            { code: 'DEL', lay: '~2–4h', times: '17:05 IST arr · evening feeder' },
+            { code: 'HYD', t: '~21–23:00', tz: 'IST', d: 'Mon 4 Jan' },
+          ],
+        },
+      },
+      jan3: {
+        price: 229206,
+        approx: true,
+        source: 'google',
+        priceNote: 'quoted once, then “price unavailable” — airindia.com',
+        checkin: 'at HND by ~08:25 JST Sun 3 (04:55 IST) · counters close 10:25 JST',
+        timeline: {
+          total: '~11–13h',
+          stops: [
+            { code: 'HND', t: '11:25', tz: 'JST', t2: '07:55 IST', d: 'Sun 3 Jan' },
+            { code: 'DEL', lay: '~2–4h', times: '17:05 IST arr · evening feeder' },
+            { code: 'HYD', t: '~21–23:00', tz: 'IST', d: 'Sun 3 Jan' },
+          ],
+        },
+      },
+    },
+    caveat: 'Single PNR throughout — protected connection, through-tagged bags.',
+    flights: 'AI 2541 / AI 358 · AI 357 + feeder',
   },
   {
     id: 'tg-bkk',
     tier: 'comfort',
-    title: 'Thai, with a Bangkok day',
-    carriers: 'TG 330 / TG 682 + CX 549 / CX 601',
-    price: 258800,
-    approx: true,
-    source: 'kiwi',
+    airline: 'Thai + Cathay',
+    airlines: ['Thai', 'Cathay'],
+    name: 'Bangkok day en route',
+    arriveDay: 'fri',
+    arriveSlot: 'morning',
+    bags2x23: true,
     out: {
+      total: '25h55',
       stops: [
-        { c: 'HYD', m: '01:30 · night 16/17 Dec' },
-        { c: 'BKK', m: '16h45 · city day' },
-        { c: 'HND', m: '06:55 · Fri 18 Dec' },
+        { code: 'HYD', t: '01:30', tz: 'IST', t2: '05:00 JST', d: 'night 16/17 Dec' },
+        { code: 'BKK', lay: '16h45', times: '06:30 → 23:15 ICT', times2: '05:00 → 21:45 IST', note: 'city day' },
+        { code: 'HND', t: '06:55', tz: 'JST', t2: '03:25 IST', d: 'Fri 18 Dec +1' },
       ],
-      dur: '25h55',
     },
-    back: {
-      stops: [
-        { c: 'HND', m: '16:00 · Mon 4 Jan' },
-        { c: 'HKG', m: '50m' },
-        { c: 'HYD', m: '00:50 · Tue 5 Jan' },
-      ],
-      dur: '12h20',
+    checkinOut: 'at HYD by ~22:30 IST Wed 16 (02:00 JST) · counters close 00:30 IST',
+    bags: {
+      checked: 'TG 2× checked · CX 2×23 kg pp',
+      cabin: '7 kg pp cabin',
     },
-    fit: { kind: 'ok', label: 'HND 06:55 Fri — 8 h inside the 15:00 target' },
-    bags: 'TG 2× checked out · CX 2×23 kg pp back on Essential/Flex',
-    caveats: [
-      '₹38k over the AI pairing — you are buying the Bangkok day, not a cheaper seat.',
-      'Departs HYD the night of 16 Dec: one extra leave day.',
-      'Thailand entry was visa-exempt for Indians — confirm the current stay limit.',
-    ],
+    returns: {
+      jan4: {
+        price: 258800,
+        approx: true,
+        source: 'kiwi',
+        checkin: 'at HND by ~13:00 JST Mon 4 (09:30 IST) · counters close 15:00 JST',
+        timeline: {
+          total: '12h20',
+          stops: [
+            { code: 'HND', t: '16:00', tz: 'JST', t2: '12:30 IST', d: 'Mon 4 Jan' },
+            { code: 'HKG', lay: '50m', times: '20:15 → 21:05 HKT', times2: '17:45 → 18:35 IST' },
+            { code: 'HYD', t: '00:50', tz: 'IST', t2: '04:20 JST', d: 'Tue 5 Jan +1' },
+          ],
+        },
+      },
+      jan3: {
+        price: 428700,
+        approx: true,
+        source: 'kiwi',
+        priceNote: '3 Jan CX return alone is ₹3,23,274',
+        checkin: 'at HND by ~13:00 JST Sun 3 (09:30 IST) · counters close 15:00 JST',
+        timeline: {
+          total: '12h20',
+          stops: [
+            { code: 'HND', t: '16:00', tz: 'JST', t2: '12:30 IST', d: 'Sun 3 Jan' },
+            { code: 'HKG', lay: '50m', times: '20:15 → 21:05 HKT', times2: '17:45 → 18:35 IST' },
+            { code: 'HYD', t: '00:50', tz: 'IST', t2: '04:20 JST', d: 'Mon 4 Jan +1' },
+          ],
+        },
+      },
+    },
+    caveat: '₹38k over the AI pairing — the Bangkok day is what the premium buys.',
+    flights: 'TG 330 / TG 682 · CX 549 / CX 601',
   },
   {
     id: 'sq-sin',
     tier: 'comfort',
-    title: 'Singapore Airlines, short connection',
-    carriers: 'SQ 523 + SIN–HND morning leg',
-    price: null,
-    source: 'direct',
+    airline: 'Singapore Airlines',
+    airlines: ['Singapore'],
+    name: 'Short connection via SIN',
+    arriveDay: 'fri',
+    arriveSlot: 'afternoon',
+    bags2x23: false,
     out: {
+      total: '12h55',
       stops: [
-        { c: 'HYD', m: '23:10 · Thu 17 Dec' },
-        { c: 'SIN', m: '1h50' },
-        { c: 'HND', m: '15:35 · Fri 18 Dec' },
+        { code: 'HYD', t: '23:10', tz: 'IST', t2: '02:40 JST +1', d: 'Thu 17 Dec' },
+        { code: 'SIN', lay: '1h50', times: '~06:05 → ~07:55 SGT', times2: '~03:35 → ~05:25 IST' },
+        { code: 'HND', t: '15:35', tz: 'JST', t2: '12:05 IST', d: 'Fri 18 Dec +1' },
       ],
-      dur: '12h55',
     },
-    back: {
-      stops: [
-        { c: 'HND', m: 'evening · 3/4 Jan' },
-        { c: 'SIN', m: 'layover' },
-        { c: 'HYD', m: '21:55 next day' },
-      ],
-      dur: '14–26h',
+    checkinOut: 'at HYD by ~20:10 IST Thu 17 (23:40 JST) · counters close 22:10 IST',
+    bags: {
+      checked: 'SQ 30 kg weight pp',
+      cabin: '7 kg pp cabin',
     },
-    fit: { kind: 'near', label: 'HND 15:35 Fri — 35 min past the 15:00 target' },
-    bags: 'SQ 30 kg weight pp',
-    caveats: [
-      'Google shows no price for these dates — quote on singaporeair.com before ruling it in or out.',
-      'The all-SQ round trip searched at ₹5,32,500 — 2.4× best balance. Skip unless the direct quote surprises.',
-      'Best soft product of this set.',
-    ],
+    returns: {
+      jan4: {
+        source: 'direct',
+        priceNote: 'all-SQ one-way sum searched ₹5,32,500 — singaporeair.com',
+        checkin: 'at HND by ~19:55 JST Mon 4 (16:25 IST) · counters close 21:55 JST',
+        timeline: {
+          total: '26h30',
+          stops: [
+            { code: 'HND', t: '22:55', tz: 'JST', t2: '19:25 IST', d: 'Mon 4 Jan' },
+            { code: 'SIN', lay: '14h40', times: '~05:30 +1 → ~20:10 SGT', times2: '~03:00 +1 → ~17:40 IST' },
+            { code: 'HYD', t: '21:55', tz: 'IST', t2: '01:25 JST +1', d: 'Tue 5 Jan +1' },
+          ],
+        },
+      },
+      jan3: {
+        source: 'direct',
+        priceNote: 'all-SQ one-way sum searched ₹5,54,000 — singaporeair.com',
+        checkin: 'at HND by ~19:55 JST Sun 3 (16:25 IST) · counters close 21:55 JST',
+        timeline: {
+          total: '14h40',
+          stops: [
+            { code: 'HND', t: '22:55', tz: 'JST', t2: '19:25 IST', d: 'Sun 3 Jan' },
+            { code: 'SIN', lay: '2h30', times: '~05:30 +1 → ~08:00 SGT', times2: '~03:00 +1 → ~05:30 IST' },
+            { code: 'HYD', t: '10:05', tz: 'IST', t2: '13:35 JST', d: 'Mon 4 Jan +1' },
+          ],
+        },
+      },
+    },
+    caveat: 'No search price on these dates — the searched all-SQ sums ran ~2.4× the field.',
+    flights: 'SQ 523 + SIN–HND leg · SQ 635 / SQ 522',
   },
   {
     id: 'd7-kul',
     tier: 'cheapest',
-    title: 'AI out · AirAsia X back via KUL',
-    carriers: 'AI 2618 / AI 356 + D7 523 / AK 69',
-    price: 202700,
-    approx: true,
-    source: 'kiwi',
-    priceNote: '+ ₹10–12k checked bags',
-    out: {
-      stops: [
-        { c: 'HYD', m: '13:45 · Thu 17 Dec' },
-        { c: 'BOM', m: '1h45' },
-        { c: 'HND', m: '04:55 · Fri 18 Dec' },
-      ],
-      dur: '11h40',
-    },
-    back: {
-      stops: [
-        { c: 'HND', m: '23:55 · Mon 4 Jan' },
-        { c: 'KUL', m: '14h30' },
-        { c: 'HYD', m: '23:15 · Tue 5 Jan' },
-      ],
-      dur: '26h50',
-    },
-    fit: { kind: 'ok', label: 'Same AI outbound — HND 04:55 Fri, inside target' },
-    bags: 'AI out 25–30 kg · D7 return none — buying bags costs ₹10–12k',
     verdict: 'Not worth it',
-    caveats: [
-      'No checked bags on the return — add ₹10–12k and the saving over best balance shrinks to ₹6–8k.',
-      '26h50 door to door and a lost Tuesday for that ₹6–8k.',
-      'Leaving KUL airport in the 14.5 h layover: visa-free for Indians under the current exemption.',
-    ],
+    airline: 'Air India + AirAsia X',
+    airlines: ['Air India', 'AirAsia'],
+    name: 'Cheap return via KUL',
+    arriveDay: 'fri',
+    arriveSlot: 'morning',
+    bags2x23: false,
+    out: {
+      total: '11h40',
+      stops: [
+        { code: 'HYD', t: '13:45', tz: 'IST', t2: '17:15 JST', d: 'Thu 17 Dec' },
+        { code: 'BOM', lay: '1h45', times: '~15:10 → ~16:55 IST', times2: '~18:40 → ~20:25 JST' },
+        { code: 'HND', t: '04:55', tz: 'JST', t2: '01:25 IST', d: 'Fri 18 Dec +1' },
+      ],
+    },
+    checkinOut: 'at HYD by ~10:45 IST Thu 17 (14:15 JST) · counters close 12:45 IST',
+    bags: {
+      checked: 'AI 25–30 kg out · D7 return none (+₹10–12k to add)',
+      cabin: '7 kg pp cabin',
+    },
+    returns: {
+      jan4: {
+        price: 202700,
+        approx: true,
+        source: 'kiwi',
+        priceNote: '+ ₹10–12k checked bags on the return',
+        checkin: 'at HND by ~20:55 JST Mon 4 (17:25 IST) · counters close 22:55 JST',
+        timeline: {
+          total: '26h50',
+          stops: [
+            { code: 'HND', t: '23:55', tz: 'JST', t2: '20:25 IST', d: 'Mon 4 Jan' },
+            { code: 'KUL', lay: '14h30', times: '~06:25 +1 → ~20:55 MYT', times2: '~03:55 +1 → ~18:25 IST' },
+            { code: 'HYD', t: '23:15', tz: 'IST', t2: '02:45 JST +1', d: 'Tue 5 Jan +1' },
+          ],
+        },
+      },
+      jan3: {
+        price: 225500,
+        approx: true,
+        source: 'kiwi',
+        priceNote: '+ ₹10–12k checked bags on the return',
+        checkin: 'at HND by ~20:55 JST Sun 3 (17:25 IST) · counters close 22:55 JST',
+        timeline: {
+          total: '26h50',
+          stops: [
+            { code: 'HND', t: '23:55', tz: 'JST', t2: '20:25 IST', d: 'Sun 3 Jan' },
+            { code: 'KUL', lay: '14h30', times: '~06:25 +1 → ~20:55 MYT', times2: '~03:55 +1 → ~18:25 IST' },
+            { code: 'HYD', t: '23:15', tz: 'IST', t2: '02:45 JST +1', d: 'Mon 4 Jan +1' },
+          ],
+        },
+      },
+    },
+    caveat: 'Once return bags are bought the gap to the AI + CX pairing is ₹6–8k.',
+    flights: 'AI 2618 / AI 356 · D7 523 / AK 69',
   },
 ]
-
-export const BAGS_NOTE = 'Baggage allowances checked 22 Nov 2026 — AI figures conflict by source; confirm the fare family at booking.'
-
-export const NRT_NOTE =
-  'Narita reference: the same Cathay-via-HKG itinerary lands NRT at ₹1,56,974 (3 Jan return) or ₹1,37,256 (4 Jan) — ₹20–42k under the Haneda fares. Excluded by the Haneda-only rule; listed so the cost of that rule is visible.'
-
-// ——— 3 Jan vs 4 Jan (returns, totals for 2, Kiwi/Skiplagged one-ways) ———
-export const JAN_COMPARE = {
-  note: 'Return leg HND → HYD, totals for 2 · Kiwi + Skiplagged, 22 Nov · one-way prices, so ceilings — the gap is the point.',
-  rows: [
-    { carrier: 'Cathay Pacific', detail: 'full service · 12h20', jan3: '₹3,23,274', jan4: '₹1,53,340', saves: '₹1,69,934' },
-    { carrier: 'AirAsia X via KUL', detail: 'no bags · 26h50', jan3: '₹1,58,020–1,63,194', jan4: '₹1,35,240', saves: '₹22,800–28,000' },
-    { carrier: 'HK Express + Cathay', detail: 'self-transfer · 28h25', jan3: '₹1,47,084', jan4: '₹1,21,041', saves: '₹26,043' },
-    { carrier: 'Singapore Airlines', detail: 'bags incl. · 14–26h', jan3: '₹3,51,319', jan4: '₹3,29,809', saves: '₹21,510' },
-  ],
-}
-
-// ——— why not via Delhi / Bengaluru ———
-export const POSITIONING = [
-  {
-    route: 'Straight out of HYD',
-    math: '₹1,56,974 (CX via HKG)',
-    note: 'The cheap Cathay fare routes via HKG from all three cities — and is cheapest from Hyderabad.',
-  },
-  {
-    route: 'Via Delhi',
-    math: '₹2,00,120 + ₹35,712 hop ≈ ₹2,35,800',
-    note: '₹79k worse before any risk. AI’s own one-PNR HYD–DEL–HND priced ₹1,05,285 one-way vs ₹67,471 via BOM — AI’s cheap routing is Mumbai, not Delhi.',
-  },
-  {
-    route: 'Via Bengaluru',
-    math: '₹1,67,418 + ₹20,796 hop ≈ ₹1,88,200',
-    note: '₹31k worse — and BLR’s only Tokyo nonstop (JL 754) is Narita-only. No carrier flies BLR–HND, so it is dead under the Haneda rule.',
-  },
-]
-
-export const POSITIONING_RISK =
-  'Separate-ticket self-transfers carry real risk on these dates: a late first hop forfeits the Tokyo ticket, Delhi sits in fog season through mid-Dec–Jan, and a walk-up replacement one-way runs ₹1–2L for two. Bags too: on a single through-ticket the international allowance covers the domestic HYD–DEL/BOM leg; a separate positioning ticket drops that leg to 15 kg domestic limits plus excess fees.'
-
-// ——— booking checklist ———
-export const CHECKLIST = [
-  'Settle the 18-vs-19 Dec date-shift flag first — nothing is bookable until trip dates lock, and a slide to a 1 Jan return lands on the single worst ex-Japan day of the season.',
-  'Re-quote the winner as a true round trip on the carrier’s own .in site (cathaypacific.com/in, airindia.com) — every Kiwi/Skiplagged number here is a one-way sum, a ceiling.',
-  'Confirm the checked bag is inside the AI ₹33.7k pp fare — Kiwi shows a no-bag variant about ₹7k cheaper for two.',
-  'Prefer Cathay Essential/Flex or AI Classic/Flex fare families for the 2×23 kg / 30 kg allowance — watch boxes plus winter luggage will exceed 20 kg pp.',
-  'Decide the Mon 4 Jan return and tell Jay the hotel needs one more night (≈₹15–25k, funded several times over by the fare delta).',
-  'Book within 24–48 h of deciding — at four weeks out, the cheap buckets on these dates close weekly.',
-]
-
-export const FOOTER =
-  'Research captured 22 Nov 2026 · prices move daily · full sources in the research files.'

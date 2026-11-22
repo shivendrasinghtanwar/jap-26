@@ -9,7 +9,7 @@ const ROUTE = [
   { name: 'Kanazawa', days: '6', city: 'kanazawa' },
   { name: 'Kyoto', days: '7–9', city: 'kyoto' },
   { name: 'Osaka', days: '10–12', city: 'osaka' },
-  { name: 'Tokyo', days: '13–17', city: 'tokyo' },
+  { name: 'Tokyo', days: '13–18', city: 'tokyo' },
 ]
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
           <h2 className="cv-title">A Winter in Japan.</h2>
           <p className="cv-tagline">One year ends; another begins in snow.</p>
           <p className="hero-dates" aria-label="Trip dates">
-            <span className="d">18 December 2026</span>&ensp;<i>→</i>&ensp;<span className="d">3 January 2027</span>
+            <span className="d">18 December 2026</span>&ensp;<i>→</i>&ensp;<span className="d">4 January 2027</span>
           </p>
           <nav className="cv-toc" aria-label="Contents">
             <a href="#/map"><i>I.</i><span>Itinerary &amp; Map</span><em aria-hidden="true" /><b>day by day</b></a>
@@ -35,9 +35,9 @@ export default function Home() {
       </section>
 
       <section className="statstrip" aria-label="Trip numbers">
-        <div><b>17</b><span>days</span></div>
+        <div><b>18</b><span>days</span></div>
         <div><b>5</b><span>cities</span></div>
-        <div><b>120</b><span>planned stops</span></div>
+        <div><b>130</b><span>planned stops</span></div>
         <div><b>~1,300</b><span>km on rails</span></div>
         <div><b>2</b><span>theme parks</span></div>
         <div><b>12+</b><span>temples &amp; shrines</span></div>

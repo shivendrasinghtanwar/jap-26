@@ -84,7 +84,7 @@ export default function MapPage() {
             aria-pressed={version === 'v2'}
             onClick={() => switchVersion('v2')}
           >
-            V2 · Ours · 17d
+            V2 · Ours · 18d
           </button>
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>

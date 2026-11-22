@@ -14,7 +14,8 @@
         14,
         15,
         16,
-        17
+        17,
+        18
       ]
     },
     {
@@ -62,33 +63,33 @@
     {
       "day": 1,
       "seq": 1,
-      "time": "14:00",
+      "time": "21:15",
       "title": "Arrive Haneda Airport Terminal 3",
       "place": "Haneda Airport Terminal 3",
       "lat": 35.5458,
       "lng": 139.7704,
       "type": "airport",
       "costIncluded": null,
-      "notes": "",
+      "notes": "All-Cathay plan: CX 672 HYD 02:05 → HKG (airside transit) → CX 542 lands HND 21:15 — flight not booked yet, times from 22 Nov research",
       "blurb": "Haneda Airport is Tokyo's close-in international gateway, consistently ranked among the world's cleanest and most punctual airports, with Terminal 3 handling international flights just 30 minutes from the city centre."
     },
     {
       "day": 1,
       "seq": 2,
-      "time": "15:00",
+      "time": "22:00",
       "title": "Private car transfer to hotel",
       "place": "Tokyo hotel (TBD)",
       "lat": 35.6812,
       "lng": 139.7671,
       "type": "transit",
       "costIncluded": true,
-      "notes": "hotel TBD — placeholder location (near Tokyo Station)"
+      "notes": "hotel TBD — placeholder location (near Tokyo Station); ask Jay to move the included transfer to the night slot"
     },
     {
       "day": 1,
       "seq": 3,
-      "time": "15:45",
-      "title": "Hotel check-in and rest",
+      "time": "22:45",
+      "title": "Hotel check-in and sleep",
       "place": "Tokyo hotel (TBD)",
       "lat": 35.6812,
       "lng": 139.7671,
@@ -1617,51 +1618,88 @@
     {
       "day": 17,
       "seq": 1,
-      "time": "08:30",
-      "title": "Breakfast",
+      "time": "09:00",
+      "title": "Slow breakfast — no alarm",
       "place": "Tokyo hotel (TBD)",
       "lat": 35.6812,
       "lng": 139.7671,
-      "type": "food",
+      "type": "meal",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "hotel TBD — placeholder location",
+      "blurb": "The one unhurried morning of the trip — the 10:10 flight moved to tomorrow and bought this whole day back."
     },
     {
       "day": 17,
       "seq": 2,
-      "time": "09:30",
+      "time": "11:00",
+      "title": "Open day — New-Year Tokyo",
+      "place": "Tokyo hotel (TBD)",
+      "lat": 35.6812,
+      "lng": 139.7671,
+      "type": "experience",
+      "costIncluded": null,
+      "notes": "plan closer to the date: Ginza NY-sale round two, a quiet shrine, or nothing at all"
+    },
+    {
+      "day": 17,
+      "seq": 3,
+      "time": "19:00",
+      "title": "Last-night dinner — open",
+      "place": "Tokyo hotel (TBD)",
+      "lat": 35.6812,
+      "lng": 139.7671,
+      "type": "meal",
+      "costIncluded": null,
+      "notes": "pick the farewell meal in December; pack tonight — 06:15 start tomorrow"
+    },
+    {
+      "day": 18,
+      "seq": 1,
+      "time": "06:15",
       "title": "Check-out & luggage",
       "place": "Tokyo hotel (TBD)",
       "lat": 35.6812,
       "lng": 139.7671,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "hotel TBD — placeholder location; packed the night before"
     },
     {
-      "day": 17,
-      "seq": 3,
-      "time": "10:00",
+      "day": 18,
+      "seq": 2,
+      "time": "06:30",
       "title": "Private transfer to Haneda",
       "place": "Haneda Airport Terminal 3",
       "lat": 35.5458,
       "lng": 139.7704,
       "type": "transit",
       "costIncluded": true,
-      "notes": "ask Jay to extend transfer to 3 Jan"
+      "notes": "ask Jay to move the included transfer to the 06:30 slot"
     },
     {
-      "day": 17,
-      "seq": 4,
-      "time": "10:45",
-      "title": "Haneda T3 departure",
+      "day": 18,
+      "seq": 3,
+      "time": "07:10",
+      "title": "Haneda T3 — check-in + tax-free customs",
       "place": "Haneda Airport Terminal 3",
       "lat": 35.5458,
       "lng": 139.7704,
       "type": "airport",
       "costIncluded": null,
-      "notes": "flight time TBD — arrive 3 h early for customs tax refund",
-      "blurb": "Haneda Airport is Tokyo's close-in international gateway, consistently ranked among the world's cleanest and most punctual airports, with Terminal 3 handling international flights just 30 minutes from the city centre."
+      "notes": "counters close 09:10; watches, boxes and receipts in hand at customs",
+      "blurb": "Japan's tax-free refund is validated at customs with the goods physically present — the watch boxes ride in the cabin bag."
+    },
+    {
+      "day": 18,
+      "seq": 4,
+      "time": "10:10",
+      "title": "CX departure — HYD via HKG, home 00:50",
+      "place": "Haneda Airport Terminal 3",
+      "lat": 35.5458,
+      "lng": 139.7704,
+      "type": "airport",
+      "costIncluded": null,
+      "notes": "All-Cathay plan, times from 22 Nov research — not booked yet; arrive Hyderabad 00:50 night of 4/5 Jan"
     }
   ]
 }
