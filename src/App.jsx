@@ -7,6 +7,10 @@ import Compare from './pages/Compare.jsx'
 import Watches from './pages/Watches.jsx'
 import Flights from './pages/Flights.jsx'
 
+// The Pair stays a local-only surprise: on the deployed site the tab disappears
+// and '#/watches' falls back to home (route matching below only knows TABS).
+const IS_LOCAL = /^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(window.location.hostname)
+
 const TABS = [
   { hash: '#/', label: 'The Trip' },
   { hash: '#/map', label: 'Itinerary & Map' },
@@ -15,7 +19,7 @@ const TABS = [
   { hash: '#/watches', label: 'The Pair' },
   { hash: '#/review', label: 'Review' },
   { hash: '#/costs', label: 'Costs' },
-]
+].filter(t => IS_LOCAL || t.hash !== '#/watches')
 
 function useHash() {
   const [hash, setHash] = useState(window.location.hash || '#/')
