@@ -40,7 +40,7 @@ export default function Home() {
       <section className="statstrip" aria-label="Trip numbers">
         <div><b>18</b><span>days</span></div>
         <div><b>5</b><span>cities</span></div>
-        <div><b>130</b><span>planned stops</span></div>
+        <div><b>128</b><span>planned stops</span></div>
         <div><b>~1,300</b><span>km on rails</span></div>
         <div><b>2</b><span>theme parks</span></div>
         <div><b>12+</b><span>temples &amp; shrines</span></div>

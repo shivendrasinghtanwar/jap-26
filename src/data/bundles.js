@@ -50,7 +50,7 @@ export const CHANGES = {
   5: { status: 'modified', text: 'Tokyo → Fuji moves here: Chureito Pagoda + the lake boat in one day.' },
   6: { status: 'modified', text: 'Sunrise at Oishi Park, then Toyama → Kanazawa swap: Kenrokuen + Higashi Chaya (Music Forest and Iyashi-no-Sato dropped).' },
   7: { status: 'modified', text: 'Adds the Omicho crab breakfast, a booked 19:00 Christmas-Eve dinner and Kyoto Station’s lights after the kimono afternoon.' },
-  8: { status: 'modified', text: 'Adds the 29-minute evening hop to Osaka for Hikari Renaissance’s final night + Midosuji Illumination.' },
+  8: { status: 'modified', text: 'Ends at Kyoto Station’s light show + ramen floor instead of Jay’s free evening — home by 20:00 before the early Kinkaku-ji start.' },
   9: { status: 'unchanged' },
   10: { status: 'modified', text: 'Adds the Yodobashi Umeda Seiko/Orient Star watch stop — 5 minutes from the hotel.' },
   11: { status: 'unchanged' },
