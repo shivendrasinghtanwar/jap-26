@@ -152,13 +152,13 @@
       "day": 2,
       "seq": 5,
       "time": "14:00",
-      "title": "Explore Tokyo Skytree area",
+      "title": "Skytree base & Solamachi — no ascent",
       "place": "Tokyo Skytree",
       "lat": 35.7101,
       "lng": 139.8107,
       "type": "attraction",
       "costIncluded": null,
-      "notes": "",
+      "notes": "Ground level only — Solamachi mall + looking up. We go UP the tower on Day 15 night (1 Jan). Skip the ticket queue today.",
       "blurb": "Tokyo Skytree is Japan's tallest structure at 634 metres, a broadcasting tower with twin observation decks offering panoramic views across the Kanto plain to Mt. Fuji."
     },
     {
@@ -1563,7 +1563,7 @@
       "lng": 139.8107,
       "type": "attraction",
       "costIncluded": false,
-      "notes": "¥3,100 advance; open to 22:00",
+      "notes": "¥3,100 advance; open to 22:00. The ascent we saved — Day 2 was base-only, tonight is the first view from the deck.",
       "blurb": "Tokyo Skytree is Japan's tallest structure at 634 metres, a broadcasting tower with twin observation decks offering panoramic views across the Kanto plain to Mt. Fuji."
     },
     {
@@ -1606,19 +1606,6 @@
     {
       "day": 16,
       "seq": 3,
-      "time": "14:00",
-      "title": "Ginza light encore — NY-sale stroll (optional)",
-      "place": "Ginza (10-min walk from the palace)",
-      "lat": 35.6717,
-      "lng": 139.765,
-      "type": "attraction",
-      "costIncluded": null,
-      "notes": "the minor half: Uniqlo NY sale, Ginza Six rooftop, Muji flagship, depachika, deep Itoya, fukubukuro — palace is the headline today, keep this easy",
-      "blurb": "Ginza is Tokyo's most prestigious shopping district, where century-old flagship stores and depachika food halls launch the New Year with fukubukuro lucky-bag sales."
-    },
-    {
-      "day": 16,
-      "seq": 4,
       "time": "18:00",
       "title": "Farewell dinner",
       "place": "Ginza (restaurant TBD)",
@@ -1670,6 +1657,19 @@
     {
       "day": 17,
       "seq": 4,
+      "time": "15:30",
+      "title": "Ginza NY-sale stroll — direct from Omotesando",
+      "place": "Ginza 4-chome crossing",
+      "lat": 35.6717,
+      "lng": 139.765,
+      "type": "attraction",
+      "costIncluded": false,
+      "notes": "Ginza Line, Omotesando → Ginza direct ~15 min. Hatsu-uri sales still on 3 Jan: Uniqlo NY sale, Ginza Six rooftop, Muji flagship, deep Itoya, fukubukuro if any left.",
+      "blurb": "Ginza is Tokyo's polished luxury quarter; in the first days of January its department stores run hatsu-uri new-year sales and sell fukubukuro lucky bags."
+    },
+    {
+      "day": 17,
+      "seq": 5,
       "time": "19:00",
       "title": "Last-night dinner — open",
       "place": "Tokyo hotel (TBD)",

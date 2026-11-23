@@ -25,8 +25,8 @@ export const DAYS = [
   { day: 13, city: 'tokyo',       date: 'Wed 30 Dec', title: 'Illuminations · Nakano (optional)', route: 'Osaka → Tokyo' },
   { day: 14, city: 'tokyo',       date: 'Thu 31 Dec', title: 'Rest Day · Zojoji Midnight' },
   { day: 15, city: 'tokyo',       date: 'Fri 1 Jan',  title: 'Hatsumode · Skytree' },
-  { day: 16, city: 'tokyo',       date: 'Sat 2 Jan',  title: 'Imperial Greeting · Fukubukuro' },
-  { day: 17, city: 'tokyo',       date: 'Sun 3 Jan',  title: 'Bonus Tokyo Day' },
+  { day: 16, city: 'tokyo',       date: 'Sat 2 Jan',  title: 'Imperial Greeting' },
+  { day: 17, city: 'tokyo',       date: 'Sun 3 Jan',  title: 'Harajuku · Ginza Sales' },
   { day: 18, city: 'tokyo',       date: 'Mon 4 Jan',  title: 'Flight Home', route: 'Tokyo → Haneda' },
 ]
 
@@ -47,8 +47,8 @@ export const RATINGS = {
   13: { score: 8, word: 'Soft landing', note: 'Reserve the 09:15 Nozomi on 30 Nov. Illuminations in the afternoon, Nakano optional — the evening stays light before tomorrow’s midnight.', cost: [5000, 12000], costNote: 'meals; vintage watch budget separate' },
   14: { score: 9, word: 'The midnight you came for', note: 'Zojoji’s bell with Tokyo Tower lit behind it; arrive 22:00–22:30. JR runs all night.', cost: [5000, 11000],  costNote: 'meals; Zojoji is free' },
   15: { score: 8, word: 'First day of 2027', note: 'Hatsumode at Meiji Jingu ~15:00 through the forest approach; Skytree for the first night view.', cost: [11000, 18000], costNote: 'meals + Skytree ¥6,200' },
-  16: { score: 8, word: 'Once-a-year doors', note: 'The palace’s inner grounds open and the Imperial family appears on the balcony; then Ginza’s lucky-bag frenzy.', cost: [5000, 11000],  costNote: 'meals; fukubukuro separate' },
-  17: { score: 8, word: 'Bought back',      note: 'The day the 10:10 flight paid for — Harajuku morning for the Converse flagship (Made-in-Japan · Addict lines), Cat Street afternoon, farewell dinner open. Nothing to haul — you fly tomorrow.', cost: [10000, 30000], costNote: 'meals + sneakers (¥7–18k a pair)' },
+  16: { score: 8, word: 'Once-a-year doors', note: 'The palace’s inner grounds open and the Imperial family appears on the balcony; free afternoon to recover before the farewell dinner.', cost: [5000, 11000],  costNote: 'meals' },
+  17: { score: 8, word: 'Bought back',      note: 'The day the 10:10 flight paid for — Harajuku morning for the Converse flagship (Made-in-Japan · Addict lines), Cat Street lunch, then the Ginza Line straight to the NY sales. Nothing to haul — you fly tomorrow.', cost: [10000, 30000], costNote: 'meals + sneakers (¥7–18k a pair); fukubukuro separate' },
   18: { score: 7, word: 'Fly home',        note: 'Early counter-flow start: leave 06:15, Haneda by 07:10, customs tax refund with the watches in hand before the 10:10 CX departure.', cost: [2000, 4000],   costNote: 'breakfast boxes; snacks' },
 }
 
@@ -71,7 +71,7 @@ export const FLAGS = {
   13: [{ level: 'alert', text: 'Reserve the 30 Dec Shin-Osaka→Tokyo Nozomi on 30 Nov (SmartEX). Nakano Broadway is optional vintage hunting — the building closes Jan 1; call Jack Road 03-3386-9399 before going.' }],
   14: [{ level: 'info',  text: 'Zojoji: bell 21:45–23:00, midnight service, Tokyo Tower backdrop — arrive 22:00–22:30. Skip Shibuya Crossing tonight (countdown cancelled six years running; Hachiko fenced from 06:00). JR Yamanote runs all night.' }],
   15: [{ level: 'info',  text: 'Meiji Jingu stays open all night for hatsumode; mid-afternoon ≈ 1.5–2 h queue through the forest. Skytree open to 22:00 on Jan 1–2 (¥3,100 advance).' }],
-  16: [{ level: 'info',  text: 'Ippan Sanga: arrive Nijubashi Main Gate ~08:15; 2026 pattern was entry 09:30–14:10 with balcony appearances ~10:10/11:00/11:50 — the 2027 notice lands late Dec. The palace is the headline; the Ginza stroll after is the optional minor half — NY-sale Uniqlo, Ginza Six rooftop, deep Itoya, fukubukuro.' }],
+  16: [{ level: 'info',  text: 'Ippan Sanga: arrive Nijubashi Main Gate ~08:15; 2026 pattern was entry 09:30–14:10 with balcony appearances ~10:10/11:00/11:50 — the 2027 notice lands late Dec. The palace is the headline; afternoon is deliberately free (the Ginza NY-sale stroll moved to Day 17) — you’ll have stood in crowds for ~4 hours.' }],
   17: [{ level: 'alert', text: 'The night of 3 Jan is NOT in Jay’s package yet — ask him to extend the Tokyo hotel one night (flight home is now 10:10 on Mon 4 Jan).' }],
   18: [{ level: 'info',  text: 'Tax-free refunds are claimed at customs WITH the goods — watches, boxes and receipts in hand before check-in. Counters close 09:10 for the 10:10 flight.' }],
 }
