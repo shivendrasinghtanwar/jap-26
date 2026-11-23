@@ -48,7 +48,7 @@ export const RATINGS = {
   14: { score: 9, word: 'The midnight you came for', note: 'Zojoji’s bell with Tokyo Tower lit behind it; arrive 22:00–22:30. JR runs all night.', cost: [5000, 11000],  costNote: 'meals; Zojoji is free' },
   15: { score: 8, word: 'First day of 2027', note: 'Hatsumode at Meiji Jingu ~15:00 through the forest approach; Skytree for the first night view.', cost: [11000, 18000], costNote: 'meals + Skytree ¥6,200' },
   16: { score: 8, word: 'Once-a-year doors', note: 'The palace’s inner grounds open and the Imperial family appears on the balcony; then Ginza’s lucky-bag frenzy.', cost: [5000, 11000],  costNote: 'meals; fukubukuro separate' },
-  17: { score: 8, word: 'Bought back',      note: 'The day the 10:10 flight paid for — open. New-Year sales at full tilt (fukubukuro round two), or a quiet shrine morning; plan it closer to the date.', cost: [8000, 16000],  costNote: 'meals + sale damage' },
+  17: { score: 8, word: 'Bought back',      note: 'The day the 10:10 flight paid for — Harajuku morning for the Converse flagship (Made-in-Japan · Addict lines), Cat Street afternoon, farewell dinner open. Nothing to haul — you fly tomorrow.', cost: [10000, 30000], costNote: 'meals + sneakers (¥7–18k a pair)' },
   18: { score: 7, word: 'Fly home',        note: 'Early counter-flow start: leave 06:15, Haneda by 07:10, customs tax refund with the watches in hand before the 10:10 CX departure.', cost: [2000, 4000],   costNote: 'breakfast boxes; snacks' },
 }
 
