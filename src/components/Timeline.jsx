@@ -124,8 +124,20 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
         {stops.map(s => {
           const mkr = seqToMarker[s.seq]
           return (
+          <React.Fragment key={s.seq}>
+          {s.transit && (
+            <li className="tl-row tl-row-transit" aria-label="Getting there">
+              <span className="tl-time" aria-hidden="true" />
+              <span className="tl-dot tl-dot-transit" aria-hidden="true" />
+              <div className="tl-card tl-card-transit">
+                <p className="tl-transit-body">
+                  <span className="tl-transit-icn" aria-hidden="true">🚇</span>
+                  <span><b>Getting there</b> — {s.transit}</span>
+                </p>
+              </div>
+            </li>
+          )}
           <li
-            key={s.seq}
             className={'tl-row' + (mkr != null && mkr === focusIdx ? ' on' : '')}
             data-mkr={mkr}
             onClick={() => mkr != null && onFocusStop && onFocusStop(mkr)}
@@ -136,12 +148,6 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
               ? <span className="tl-num" aria-label={`map marker ${mkr + 1}`}>{mkr + 1}</span>
               : <span className={'tl-dot tl-dot-' + s.type} aria-hidden="true" />}
             <div className="tl-card">
-              {s.transit && (
-                <p className="tl-transit">
-                  <span className="tl-transit-icn" aria-hidden="true">🚇</span>
-                  {s.transit}
-                </p>
-              )}
               <div className="tl-card-top">
                 <span className="tl-icn"><TypeIcon type={s.type} /></span>
                 <span className="tl-title">{s.title}</span>
@@ -163,6 +169,7 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
               {s.notes && <p className="tl-note">{s.notes}</p>}
             </div>
           </li>
+          </React.Fragment>
           )
         })}
       </ol>

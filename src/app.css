@@ -403,18 +403,22 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   .pane-left { order: 1; }
 }
 
-/* ——— per-stop transit directions ("getting there") ——— */
-.tl-transit {
-  display: flex;
-  gap: 7px;
-  align-items: flex-start;
-  margin: 0 0 7px;
-  padding: 7px 9px;
-  font-size: 0.76rem;
-  line-height: 1.5;
-  color: #4a5568;
-  background: #eef2f0;
-  border-left: 3px solid #3f7d63;
-  border-radius: 0 6px 6px 0;
+/* ——— transit connector cards ("getting there") between stops ——— */
+.tl-row-transit { cursor: default; }
+.tl-card-transit {
+  background: #eef2ef !important;
+  border: 1.5px dashed #9dbfae !important;
+  box-shadow: none !important;
+  padding: 9px 12px !important;
 }
-.tl-transit-icn { flex: none; font-size: 0.85rem; line-height: 1.4; }
+.tl-transit-body {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.55;
+  color: #3d5248;
+}
+.tl-transit-body b { color: #2d5c48; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.tl-transit-icn { flex: none; font-size: 0.9rem; line-height: 1.4; }

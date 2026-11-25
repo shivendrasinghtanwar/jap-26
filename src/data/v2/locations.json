@@ -78,9 +78,9 @@
       "seq": 2,
       "time": "21:15",
       "title": "Private car transfer to hotel",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
+      "lat": 35.6945,
+      "lng": 139.7797,
       "type": "transit",
       "costIncluded": true,
       "notes": "private car, ~90 min to central Tokyo — booked for ~21:15, after immigration and bags"
@@ -90,24 +90,24 @@
       "seq": 3,
       "time": "23:00",
       "title": "Hotel check-in and sleep",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
+      "lat": 35.6945,
+      "lng": 139.7797,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "booked base — Higashi-Kanda, JR Bakurocho 350 m"
     },
     {
       "day": 2,
       "seq": 1,
       "time": "07:00",
       "title": "Breakfast",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
+      "lat": 35.6945,
+      "lng": 139.7797,
       "type": "food",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "booked base — Higashi-Kanda, JR Bakurocho 350 m"
     },
     {
       "day": 2,
@@ -121,7 +121,7 @@
       "costIncluded": true,
       "notes": "approximate — venue not named; Ryogoku Kokugikan area",
       "blurb": "Ryogoku is the historic heartland of sumo, home to the Kokugikan national stadium and the training stables where visitors can watch wrestlers' intense morning practice.",
-      "transit": "JR from Tokyo Stn: Yamanote/Keihin-Tohoku 2 min to Akihabara → change to Chuo-Sobu Local (yellow, toward Chiba) 2 stops to Ryogoku — West exit faces the Kokugikan. ~20 min · ¥170 pp, tap Suica."
+      "transit": "Walk 10 min to JR Asakusabashi → Chuo-Sobu Local (yellow, toward Chiba) 1 stop to Ryogoku — West exit faces the Kokugikan. Or just walk it: 20 min straight up Kiyosubashi-dori. ¥150 pp."
     },
     {
       "day": 2,
@@ -170,25 +170,25 @@
       "seq": 6,
       "time": "15:30",
       "title": "Return to hotel and rest",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
+      "lat": 35.6945,
+      "lng": 139.7797,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location",
-      "transit": "Toei Asakusa Line from Oshiage (in Skytree's basement, toward Nishi-magome) → Nihombashi side, direct ~18 min · ¥220 pp."
+      "notes": "booked base — Higashi-Kanda, JR Bakurocho 350 m",
+      "transit": "Toei Asakusa Line from Oshiage (Skytree’s basement, toward Nishi-magome) → Higashi-Nihombashi, ~15 min, ¥220 pp; the hotel is an 8-min walk."
     },
     {
       "day": 3,
       "seq": 1,
       "time": "08:30",
       "title": "Breakfast",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
+      "lat": 35.6945,
+      "lng": 139.7797,
       "type": "food",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "booked base — Higashi-Kanda, JR Bakurocho 350 m"
     },
     {
       "day": 3,
@@ -202,7 +202,7 @@
       "costIncluded": null,
       "notes": "exterior only, 15–20 min; walk Harumi-dori to the Ginza spine",
       "blurb": "Kabuki-za (Kabukiza Theatre) is a historic performing arts venue in Tokyo's Ginza district dedicated to traditional Japanese Kabuki theater.",
-      "transit": "From the hotel: 15-min walk down Chuo-dori, or Metro Marunouchi Line Tokyo Stn → Ginza (1 stop, ¥180) + 4-min walk to Higashi-Ginza — Kabukiza sits right on exit 3."
+      "transit": "8-min walk to Higashi-Nihombashi → Toei Asakusa Line (toward Nishi-magome) direct to Higashi-Ginza, ~11 min, ¥220 pp — Kabukiza sits on exit 3."
     },
     {
       "day": 3,
@@ -376,12 +376,12 @@
       "seq": 1,
       "time": "06:00",
       "title": "Breakfast",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
+      "lat": 35.6945,
+      "lng": 139.7797,
       "type": "food",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "booked base — Higashi-Kanda, JR Bakurocho 350 m"
     },
     {
       "day": 4,
@@ -394,7 +394,7 @@
       "type": "transit",
       "costIncluded": false,
       "notes": "",
-      "transit": "JR Keiyo Line from Tokyo Stn → Maihama (16 min, ¥230 pp) — allow 10 min INSIDE Tokyo Stn to reach the deep Keiyo platforms. Then Disney Resort Line monorail 2 stops to DisneySea Stn, ¥300 pp, Suica OK."
+      "transit": "JR Sobu Rapid from Bakurocho (4-min walk, deep platforms) 1 stop to Tokyo Stn → follow Keiyo Line signs (10-min walk inside the station) → Maihama, 16 min, then Disney Resort Line monorail to DisneySea. ~¥530 pp + ¥300 monorail."
     },
     {
       "day": 4,
@@ -414,37 +414,37 @@
       "seq": 4,
       "time": "17:30",
       "title": "Transfer from Tokyo DisneySea to hotel",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
+      "lat": 35.6945,
+      "lng": 139.7797,
       "type": "transit",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location",
-      "transit": "Reverse: Resort Line monorail → Maihama → JR Keiyo to Tokyo Stn. Buy the return monorail ticket in the morning to skip the closing-time queue."
+      "notes": "booked base — Higashi-Kanda, JR Bakurocho 350 m",
+      "transit": "Reverse: monorail → Maihama → JR Keiyo to Tokyo Stn → Sobu Rapid 1 stop to Bakurocho. Buy the return monorail ticket in the morning to skip the closing queue."
     },
     {
       "day": 5,
       "seq": 1,
       "time": "07:00",
       "title": "Breakfast",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
+      "lat": 35.6945,
+      "lng": 139.7797,
       "type": "food",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "booked base — Higashi-Kanda, JR Bakurocho 350 m"
     },
     {
       "day": 5,
       "seq": 2,
       "time": "08:00",
       "title": "Hotel check-out",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
+      "lat": 35.6945,
+      "lng": 139.7797,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "booked base — Higashi-Kanda, JR Bakurocho 350 m"
     },
     {
       "day": 5,
@@ -458,7 +458,7 @@
       "costIncluded": null,
       "notes": "",
       "blurb": "Arakurayama Sengen Park is a hillside shrine park in Fujiyoshida whose pagoda-and-Mt.-Fuji panorama is one of Japan's most famous postcard views.",
-      "transit": "JR Chuo Rapid Tokyo Stn → Shinjuku (14 min, ¥210), then the Fuji Excursion limited express from Shinjuku (reserved seats, ~¥4,130 pp ≈ ₹2,450) direct to Shimoyoshida, ~1h50m. Seats open 1 month ahead on Eki-net. Big suitcases went to Kyoto by takkyubin last night — duffel only."
+      "transit": "Walk 10 min to JR Asakusabashi → Chuo-Sobu Local direct to Shinjuku, ~25 min, ¥230 pp; then the Fuji Excursion (reserved, ~¥4,130 pp) from Shinjuku to Shimoyoshida. Big suitcases went to Kyoto by takkyubin last night — duffel only."
     },
     {
       "day": 5,
@@ -505,12 +505,12 @@
       "seq": 7,
       "time": "15:00",
       "title": "Transfer to hotel and check-in",
-      "place": "Kawaguchiko hotel (TBD)",
-      "lat": 35.4972,
-      "lng": 138.7647,
+      "place": "La Vista Fuji-Kawaguchiko",
+      "lat": 35.5297,
+      "lng": 138.7628,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location (near Kawaguchiko Station)",
+      "notes": "La Vista Fuji-Kawaguchiko — rooftop onsen with Fuji view; the anniversary night",
       "transit": "10-min taxi from the pier (~¥1,200 total) — La Vista sits on the hillside; the front desk books return taxis too."
     },
     {
@@ -518,24 +518,24 @@
       "seq": 8,
       "time": "16:00",
       "title": "Free time & hotel relaxation",
-      "place": "Kawaguchiko hotel (TBD)",
-      "lat": 35.4972,
-      "lng": 138.7647,
+      "place": "La Vista Fuji-Kawaguchiko",
+      "lat": 35.5297,
+      "lng": 138.7628,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "La Vista Fuji-Kawaguchiko — rooftop onsen with Fuji view; the anniversary night"
     },
     {
       "day": 6,
       "seq": 1,
       "time": "07:00",
       "title": "Breakfast",
-      "place": "Kawaguchiko hotel (TBD)",
-      "lat": 35.4972,
-      "lng": 138.7647,
+      "place": "La Vista Fuji-Kawaguchiko",
+      "lat": 35.5297,
+      "lng": 138.7628,
       "type": "food",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "La Vista Fuji-Kawaguchiko — rooftop onsen with Fuji view; the anniversary night"
     },
     {
       "day": 6,
@@ -556,12 +556,12 @@
       "seq": 3,
       "time": "08:45",
       "title": "Hotel check-out",
-      "place": "Kawaguchiko hotel (TBD)",
-      "lat": 35.4972,
-      "lng": 138.7647,
+      "place": "La Vista Fuji-Kawaguchiko",
+      "lat": 35.5297,
+      "lng": 138.7628,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "La Vista Fuji-Kawaguchiko — rooftop onsen with Fuji view; the anniversary night"
     },
     {
       "day": 6,
@@ -608,14 +608,14 @@
       "day": 6,
       "seq": 7,
       "time": "14:30",
-      "title": "Kanazawa hotel check-in",
-      "place": "Kanazawa hotel (TBD)",
-      "lat": 36.578,
-      "lng": 136.6478,
+      "title": "Hotel Forza check-in",
+      "place": "Hotel Forza Kanazawa (Yasue-cho, beside Omicho)",
+      "lat": 36.573,
+      "lng": 136.6555,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — extension ask; placeholder near Kanazawa Station",
-      "transit": "3-min walk from Kanazawa Stn East (Kenrokuen) exit — hotel assumed station-side."
+      "notes": "book the Comfort or Refresh Double (18 m², 150 cm bed) — the base “Forza Double” bed is 140 cm",
+      "transit": "10-min walk from Kanazawa Stn East exit down Hyakumangoku-odori — the hotel stands beside Omicho Market."
     },
     {
       "day": 6,
@@ -629,7 +629,7 @@
       "costIncluded": null,
       "notes": "",
       "blurb": "Kenrokuen is one of Japan's three great landscape gardens, famed in winter for yukitsuri — conical rope supports that protect its ancient pines from heavy snow.",
-      "transit": "Kanazawa Loop Bus (Right Loop RL) from stop 7, East exit → Kenrokuen-shita·Kanazawajo, ~15 min, ¥210 pp, Suica OK. Taxi ~¥1,300 if the queue is long."
+      "transit": "Kanazawa Loop Bus (Right Loop) from Musashigatsuji · Omicho (3 min from the hotel) → Kenrokuen-shita, ~10 min, ¥210 — or a 25-min walk up through the castle park."
     },
     {
       "day": 6,
@@ -664,12 +664,12 @@
       "seq": 1,
       "time": "07:15",
       "title": "Check-out — bags to bell desk",
-      "place": "Kanazawa hotel",
+      "place": "Hotel Forza Kanazawa",
       "lat": 36.578,
       "lng": 136.6478,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "leave bags at the bell desk or station coin lockers (on the way) — no backtracking after breakfast"
+      "notes": "bags to the bell desk — collected after breakfast on the way to the station"
     },
     {
       "day": 7,
@@ -683,7 +683,7 @@
       "costIncluded": false,
       "notes": "many crab stalls open 08:00; kobako-gani runs ¥5,000–12,000 for two",
       "blurb": "Kanazawa’s 300-year-old covered market — winter snow-crab season at its peak in late December.",
-      "transit": "10-min flat walk from the station-side hotel — the market's crab counters open ~07:30."
+      "transit": "3-min walk — Omicho Market is literally beside the hotel; crab counters open ~07:30."
     },
     {
       "day": 7,
@@ -697,20 +697,20 @@
       "costIncluded": true,
       "notes": "~1h45–2h; grab bags en route to the platform",
       "blurb": "The Hokuriku extension plus the Thunderbird limited express — Kanazawa to Kyoto in under two hours.",
-      "transit": "Walk back to Kanazawa Stn (10 min). Hokuriku Shinkansen (Tsurugi) Kanazawa → Tsuruga ~45 min, cross-platform change to the Thunderbird limited express → Kyoto ~55 min. Through-fare ~¥7,800 pp (≈ ₹4,600); reserve both legs as one booking."
+      "transit": "12-min walk from Omicho down Hyakumangoku-odori to Kanazawa Stn. Hokuriku Shinkansen (Tsurugi) → Tsuruga ~45 min, cross-platform to the Thunderbird → Kyoto ~55 min; through-fare ~¥7,800 pp, one booking."
     },
     {
       "day": 7,
       "seq": 4,
       "time": "11:30",
       "title": "Hotel luggage drop",
-      "place": "Kyoto hotel (TBD)",
-      "lat": 34.9858,
-      "lng": 135.7585,
+      "place": "Comfort Hotel ERA Kyoto Toji",
+      "lat": 34.9791,
+      "lng": 135.7529,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder near Kyoto Station",
-      "transit": "Kyoto hotel assumed ~10 min walk from Kyoto Stn (Hachijo/Toji side) — bags held at the desk till check-in."
+      "notes": "Comfort ERA Kyoto Toji — 13-min flat walk to Kyoto Stn, 1 min to Kintetsu Toji",
+      "transit": "Comfort ERA Kyoto Toji is a 13-min flat walk from Kyoto Stn (Hachijo East exit) — or Kintetsu one stop to Toji, 1-min walk. Bags held at the desk; the takkyubin suitcases from Tokyo should already be waiting (email ahead to confirm)."
     },
     {
       "day": 7,
@@ -827,12 +827,12 @@
       "seq": 1,
       "time": "08:00",
       "title": "Breakfast",
-      "place": "Kyoto hotel (TBD)",
-      "lat": 34.9858,
-      "lng": 135.7585,
+      "place": "Comfort Hotel ERA Kyoto Toji",
+      "lat": 34.9791,
+      "lng": 135.7529,
       "type": "food",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "Comfort ERA Kyoto Toji — 13-min flat walk to Kyoto Stn, 1 min to Kintetsu Toji"
     },
     {
       "day": 8,
@@ -959,25 +959,25 @@
       "seq": 11,
       "time": "20:00",
       "title": "Hotel",
-      "place": "Kyoto hotel (TBD)",
-      "lat": 34.9858,
-      "lng": 135.7585,
+      "place": "Comfort Hotel ERA Kyoto Toji",
+      "lat": 34.9791,
+      "lng": 135.7529,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location. Early night on purpose: 07:30 Kinkaku-ji start tomorrow.",
-      "transit": "10-min walk home — early night on purpose: 07:30 start tomorrow."
+      "notes": "Comfort ERA Kyoto Toji — 13-min flat walk to Kyoto Stn, 1 min to Kintetsu Toji",
+      "transit": "13-min flat walk home down the Miyakomichi arcade — early night on purpose: 07:30 start tomorrow."
     },
     {
       "day": 9,
       "seq": 1,
       "time": "07:30",
       "title": "Breakfast",
-      "place": "Kyoto hotel (TBD)",
-      "lat": 34.9858,
-      "lng": 135.7585,
+      "place": "Comfort Hotel ERA Kyoto Toji",
+      "lat": 34.9791,
+      "lng": 135.7529,
       "type": "food",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "Comfort ERA Kyoto Toji — 13-min flat walk to Kyoto Stn, 1 min to Kintetsu Toji"
     },
     {
       "day": 9,
@@ -1090,37 +1090,37 @@
       "seq": 10,
       "time": "16:20",
       "title": "Hotel rest & free time",
-      "place": "Kyoto hotel (TBD)",
-      "lat": 34.9858,
-      "lng": 135.7585,
+      "place": "Comfort Hotel ERA Kyoto Toji",
+      "lat": 34.9791,
+      "lng": 135.7529,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location",
-      "transit": "10-min walk from the station — feet up; tomorrow is a city switch."
+      "notes": "Comfort ERA Kyoto Toji — 13-min flat walk to Kyoto Stn, 1 min to Kintetsu Toji",
+      "transit": "13-min walk from the station — feet up; tomorrow is a city switch."
     },
     {
       "day": 10,
       "seq": 1,
       "time": "08:00",
       "title": "Breakfast",
-      "place": "Kyoto hotel (TBD)",
-      "lat": 34.9858,
-      "lng": 135.7585,
+      "place": "Comfort Hotel ERA Kyoto Toji",
+      "lat": 34.9791,
+      "lng": 135.7529,
       "type": "food",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "Comfort ERA Kyoto Toji — 13-min flat walk to Kyoto Stn, 1 min to Kintetsu Toji"
     },
     {
       "day": 10,
       "seq": 2,
       "time": "09:00",
       "title": "Hotel check-out",
-      "place": "Kyoto hotel (TBD)",
-      "lat": 34.9858,
-      "lng": 135.7585,
+      "place": "Comfort Hotel ERA Kyoto Toji",
+      "lat": 34.9791,
+      "lng": 135.7529,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "Comfort ERA Kyoto Toji — 13-min flat walk to Kyoto Stn, 1 min to Kintetsu Toji"
     },
     {
       "day": 10,
@@ -1141,13 +1141,13 @@
       "seq": 4,
       "time": "09:50",
       "title": "Transfer to hotel & luggage drop-off",
-      "place": "Hotel Granvia Osaka",
-      "lat": 34.7014,
-      "lng": 135.496,
+      "place": "Hearton Hotel Nishiumeda (Umeda)",
+      "lat": 34.7001,
+      "lng": 135.4929,
       "type": "hotel",
       "costIncluded": true,
-      "notes": "",
-      "transit": "Hotel assumed at Osaka Stn/Umeda — bags to the desk, 5 min."
+      "notes": "Hearton Nishiumeda — 5 min walk west of Osaka Stn (Sakurabashi exit); 24h desk stores bags before check-in",
+      "transit": "Out of Osaka Stn via the Sakurabashi (west) exit — the hotel is a 5-min walk; bags to the 24h desk, back to the station."
     },
     {
       "day": 10,
@@ -1229,16 +1229,16 @@
       "costIncluded": false,
       "notes": "watch buying stop; 09:30–22:00; 2nd pass possible 28 Dec 09:30",
       "blurb": "Yodobashi Umeda is one of Japan's largest electronics megastores, its watch floor stocking the full Seiko and Orient Star ranges alongside eight storeys of gadgets.",
-      "transit": "5-min covered walk — Yodobashi's block faces Osaka Stn's north gate. Watch floor: Seiko/Orient Star at ~10–25% off plus points."
+      "transit": "10–12-min walk through Osaka Station City to the north gate — Yodobashi’s block faces it. Walking home after with the watches: same walk, no metro needed."
     },
     {
       "day": 11,
       "seq": 1,
       "time": "06:30",
       "title": "Breakfast",
-      "place": "Hotel Granvia Osaka",
-      "lat": 34.7014,
-      "lng": 135.496,
+      "place": "Hearton Hotel Nishiumeda (Umeda)",
+      "lat": 34.7001,
+      "lng": 135.4929,
       "type": "food",
       "costIncluded": null,
       "notes": ""
@@ -1287,9 +1287,9 @@
       "seq": 5,
       "time": "18:15",
       "title": "Return to Hotel Granvia Osaka via JR Line",
-      "place": "Hotel Granvia Osaka",
-      "lat": 34.7014,
-      "lng": 135.496,
+      "place": "Hearton Hotel Nishiumeda (Umeda)",
+      "lat": 34.7001,
+      "lng": 135.4929,
       "type": "transit",
       "costIncluded": true,
       "notes": "",
@@ -1300,9 +1300,9 @@
       "seq": 1,
       "time": "08:30",
       "title": "Breakfast",
-      "place": "Hotel Granvia Osaka",
-      "lat": 34.7014,
-      "lng": 135.496,
+      "place": "Hearton Hotel Nishiumeda (Umeda)",
+      "lat": 34.7001,
+      "lng": 135.4929,
       "type": "food",
       "costIncluded": null,
       "notes": ""
@@ -1404,9 +1404,9 @@
       "seq": 9,
       "time": "18:15",
       "title": "Return to hotel",
-      "place": "Hotel Granvia Osaka",
-      "lat": 34.7014,
-      "lng": 135.496,
+      "place": "Hearton Hotel Nishiumeda (Umeda)",
+      "lat": 34.7001,
+      "lng": 135.4929,
       "type": "transit",
       "costIncluded": true,
       "notes": "",
@@ -1417,9 +1417,9 @@
       "seq": 1,
       "time": "08:00",
       "title": "Breakfast",
-      "place": "Hotel Granvia Osaka",
-      "lat": 34.7014,
-      "lng": 135.496,
+      "place": "Hearton Hotel Nishiumeda (Umeda)",
+      "lat": 34.7001,
+      "lng": 135.4929,
       "type": "food",
       "costIncluded": null,
       "notes": ""
@@ -1443,13 +1443,13 @@
       "seq": 3,
       "time": "12:00",
       "title": "Tokyo hotel luggage drop",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
       "type": "hotel",
       "costIncluded": null,
       "notes": "extension night — Jay to quote; placeholder near Tokyo Station",
-      "transit": "JR Sobu Rapid Tokyo → Bakurocho, 1 stop, 3 min, ¥150 pp (NY hotel assumed Nihombashi/Bakurocho belt) — drop the bags."
+      "transit": "JR Sobu Rapid Tokyo → Bakurocho, 1 stop, 3 min, ¥150 pp — APA Bakuroyokoyama is 3 min from the exit; bags to the desk."
     },
     {
       "day": 13,
@@ -1497,21 +1497,21 @@
       "seq": 1,
       "time": "09:30",
       "title": "Slow breakfast",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
       "type": "food",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "booked base — Bakuroyokoyama / Higashi-Nihombashi interchange"
     },
     {
       "day": 14,
       "seq": 2,
       "time": "12:30",
       "title": "Lazy lunch + afternoon rest",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
       "type": "hotel",
       "costIncluded": null,
       "notes": "Nothing scheduled all day on purpose — tonight runs past midnight. Tokyo Tower comes free as the lit backdrop at Zojoji."
@@ -1548,12 +1548,12 @@
       "seq": 1,
       "time": "10:00",
       "title": "Lie-in + brunch",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
       "type": "food",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location"
+      "notes": "booked base — Bakuroyokoyama / Higashi-Nihombashi interchange"
     },
     {
       "day": 15,
@@ -1641,12 +1641,12 @@
       "seq": 1,
       "time": "09:00",
       "title": "Slow breakfast — no alarm",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
       "type": "meal",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location",
+      "notes": "booked base — Bakuroyokoyama / Higashi-Nihombashi interchange",
       "blurb": "The one unhurried morning of the trip — the 10:10 flight moved to tomorrow and bought this whole day back."
     },
     {
@@ -1696,9 +1696,9 @@
       "seq": 5,
       "time": "19:00",
       "title": "Last-night dinner — open",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
       "type": "meal",
       "costIncluded": null,
       "notes": "pick the farewell meal in December; pack tonight — 06:15 start tomorrow",
@@ -1709,12 +1709,12 @@
       "seq": 1,
       "time": "09:45",
       "title": "Breakfast, check-out & luggage",
-      "place": "Tokyo hotel (TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "hotel TBD — placeholder location; packed the night before, relaxed morning"
+      "notes": "booked base — Bakuroyokoyama / Higashi-Nihombashi interchange"
     },
     {
       "day": 18,

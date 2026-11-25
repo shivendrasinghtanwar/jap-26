@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { V2 } from '../data/bundles.js'
 import DayStrip from '../components/DayStrip.jsx'
 import Timeline from '../components/Timeline.jsx'
@@ -22,6 +22,18 @@ export default function MapPage() {
     const n = parseInt(d, 10)
     return Number.isInteger(n) && n >= 1 && n <= bundle.dayCount ? n : 0
   })
+
+  // deep links keep working after mount ('#/map?d=13' from anywhere)
+  useEffect(() => {
+    const f = () => {
+      const { d } = parseMapQuery()
+      const n = parseInt(d, 10)
+      if (Number.isInteger(n) && n >= 1 && n <= bundle.dayCount) setDay(n)
+    }
+    f()
+    window.addEventListener('hashchange', f)
+    return () => window.removeEventListener('hashchange', f)
+  }, [bundle.dayCount])
 
   const stopsByDay = useMemo(() => {
     const m = new Map()

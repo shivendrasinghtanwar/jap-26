@@ -74,36 +74,40 @@ const LEGS = [
   {
     title: 'Kanazawa', dates: '23–24 Dec · 1 night',
     rows: [
-      { name: 'Hotel Forza Kanazawa', sub: 'Korinbo — 12 min walk to Kenrokuen', score: '9.0 (10,461)', price: '₹3,584/n', status: 'pick — audit pending',
+      { name: 'Hotel Forza Kanazawa', sub: 'Yasue-cho — literally beside Omicho Market (3 min to the crab breakfast), 10 min to the station. Book the COMFORT or REFRESH DOUBLE (18 m², 150 cm bed) — the base double is 140 cm.', score: '9.0 (10,461)', price: 'from ₹3,584/n', status: 'decided — Comfort Double',
         link: TRV + 'hotel-forza-kanazawa?search=100-15753816%3Bdr-20261223-20261224%3Brc-1-2' },
-      { name: 'Dormy Inn Kanazawa', sub: 'at the station, real onsen baths', score: '8.6 (10,454)', price: '₹6,281/n', status: 'alternate',
+      { name: 'Dormy Inn Kanazawa', sub: 'at the station — rooftop natural onsen + free 21:30 yonaki ramen; smaller 15 m² rooms. The onsen after a slushy day is its one trump card.', score: '8.6 (10,454)', price: '₹6,281/n', status: 'alternate',
         link: TRV + 'hotel-dormy-inn-kanazawa-natural-hot-spring?search=100-1344588%3Bdr-20261223-20261224%3Brc-1-2' },
     ],
   },
   {
     title: 'Kyoto (Christmas)', dates: '24–27 Dec · 3 nights',
     rows: [
-      { name: 'Comfort Hotel ERA Kyoto Toji', sub: '10 min walk to Kyoto Stn — breakfast included', score: '9.1 (5,948)', price: '₹5,584/n', status: 'pick — audit pending',
+      { name: 'Comfort Hotel ERA Kyoto Toji', sub: '13-min flat walk to Kyoto Stn (or Kintetsu Toji, 1 min, one stop). Book the 160 cm ECONOMY DOUBLE (16–18 m²), high floor away from Kujo-dori — the Standard Double bed is 140 cm. Breakfast is a ¥1,650 plan add-on, 06:30 open. Email to confirm pre-arrival takkyubin + breakfast-in-rate.', score: '9.1 (5,948)', price: '₹5,584/n', status: 'decided — Economy Double',
         link: TRV + 'comfort-hotel-era-kyoto-toji?search=100-23439598%3Bdr-20261224-20261227%3Brc-1-2' },
-      { name: 'HOTEL TAVINOS Kyoto', sub: 'near Kyoto Stn, newest build', score: '8.4 (4,285)', price: '₹4,342/n', status: 'alternate',
+      { name: 'HOTEL TAVINOS Kyoto', sub: '“Near Kyoto Station” is marketing — it sits at Kawaramachi-Gojo, 2 km away, nearest rail Kiyomizu-Gojo (Keihan). Breaks all four station-timed mornings.', score: '8.4 (4,285)', price: '₹4,342/n', status: 'disqualified — location',
         link: TRV + 'hotel-tavinos-kyoto?search=100-24790702%3Bdr-20261224-20261227%3Brc-1-2' },
     ],
   },
   {
     title: 'Osaka', dates: '27–30 Dec · 3 nights',
     rows: [
-      { name: 'KIRIN UMEDA by SpringRest', sub: 'Umeda side — Yodobashi watch run stays a walk away', score: '8.4 (612)', price: '₹4,458/n', status: 'pick — audit pending',
-        link: TRV + 'serviced-apartment-kirin-umeda-by-springrest-osaka?search=100-40286712%3Bdr-20261227-20261230%3Brc-1-2' },
-      { name: 'APA Midosuji Honmachi Ekihigashi', sub: 'Honmachi — 2 stops Umeda, 2 stops Namba', score: '8.2 (3,323)', price: '₹4,932/n', status: 'alternate',
+      { name: 'Hearton Hotel Nishiumeda', sub: '5-min walk from Osaka Stn Sakurabashi (west) exit — 24h desk takes the 09:50 luggage drop, walk home from Yodobashi with the watches, 1 JR stop to Shin-Osaka. Agoda free-canc ₹6,716/n; confirm double-bed width (~140 cm typical).', score: '8.1 (12,930)', price: '₹6,716/n', status: 'decided — Double',
+        link: TRV + 'hearton-hotel-nishiumeda-osaka?search=100-1033428%3Bdr-20261227-20261230%3Brc-1-2' },
+      { name: 'APA Midosuji Honmachi Ekihigashi', sub: 'Honmachi — fine metro access, but the double is 11 m² with a 140 cm bed; the 21 m² Deluxe Twin erodes its price edge.', score: '8.2 (3,323)', price: '₹4,932/n', status: 'alternate',
         link: TRV + 'apa-hotel-midosuji-honmachi-ekihigashi-osaka?search=100-8155980%3Bdr-20261227-20261230%3Brc-1-2' },
+      { name: 'KIRIN UMEDA by SpringRest', sub: 'Not Umeda: Honjohigashi, ~2.3 km / 25-min walk from Osaka Stn; 16:00 self check-in, no confirmed luggage desk, only 612 reviews.', score: '8.4 (612)', price: '₹4,458/n', status: 'disqualified — location + check-in',
+        link: TRV + 'serviced-apartment-kirin-umeda-by-springrest-osaka?search=100-40286712%3Bdr-20261227-20261230%3Brc-1-2' },
     ],
   },
   {
-    title: 'Tokyo · New Year', dates: '30 Dec–4 Jan · 5 nights · sells out first',
+    title: 'Tokyo · New Year', dates: '30 Dec–4 Jan · 5 nights · selling out NOW',
     rows: [
-      { name: 'APA Nihombashi Bakuroyokoyama Ekimae', sub: 'same corridor — Asakusa line direct to Zojoji (NYE) & Skytree', score: '8.5 (6,462)', price: '₹8,606/n', status: 'pick — audit pending',
+      { name: 'APA Nihombashi Bakuroyokoyama Ekimae', sub: '100 m from Higashi-Nihombashi (Asakusa line) — direct to Zojoji/Daimon for NYE incl. the 01:00 walk home, JR Bakurocho for Tokyo Stn. Agoda free-canc ₹8,541/n (Booking ₹9,721). Rooms: pick CORNER COZY or VIEW (140 cm double) or the 22 m² Deluxe Twin — no bigger true double exists here.', score: '8.5 (6,466)', price: '₹8,541/n', status: 'decided — book tonight',
         link: TRV + 'apa-hotel-nihombashi-bakuroyokoyama-ekimae-tokyo?search=100-22860700%3Bdr-20261230-20270104%3Brc-1-2' },
-      { name: 'HOTEL MYSTAYS Ochanomizu', sub: 'Ochanomizu — bigger rooms, 2 lines', score: '8.4 (4,710)', price: '₹9,738/n', status: 'alternate',
+      { name: 'Comfort Hotel ERA Higashi Kanda (NY window)', sub: 'Our Leg-1 hotel is SOLD OUT for New Year — only a ₹30,643/n non-refundable residual remains. Proof the corridor clears 13 months out.', score: '8.9 (4,099)', price: '₹30,643/n', status: 'sold out for NY',
+        link: TRV + 'comfort-hotel-era-tokyo-higashi-kanda?search=100-7300202%3Bdr-20261230-20270104%3Brc-1-2' },
+      { name: 'HOTEL MYSTAYS Ochanomizu', sub: 'Solid rooms but off the Asakusa line — worse for the NYE Zojoji run.', score: '8.4 (4,710)', price: '₹9,665/n', status: 'alternate',
         link: TRV + 'hotel-mystays-ochanomizu-conference-center-tokyo?search=100-1277092%3Bdr-20261230-20270104%3Brc-1-2' },
     ],
   },
@@ -117,9 +121,10 @@ export default function Hotels() {
           <p className="htl-kicker">JAP-26 · self-booked · audited 26 Nov 2026</p>
           <h1>Hotels</h1>
           <p className="htl-sub">
-            17 nights across six legs. Tokyo Leg 1 is audited down to two finalists below —
-            reviews read, transit timed, food scouted. Every link opens the live search for our
-            exact dates, 2 adults.
+            17 nights, six legs, all audited — reviews read, geography verified, room types
+            checked down to bed width. Every leg has a decided pick; every link opens the live
+            search for our exact dates, 2 adults. Book the free-cancellation rates now — the
+            New-Year corridor is already selling out.
           </p>
         </header>
 
