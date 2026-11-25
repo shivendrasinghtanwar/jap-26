@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Home from './pages/Home.jsx'
 import MapPage from './pages/MapPage.jsx'
-import Review from './pages/Review.jsx'
 import Costs from './pages/Costs.jsx'
-import Compare from './pages/Compare.jsx'
 import Watches from './pages/Watches.jsx'
 import Flights from './pages/Flights.jsx'
+import Hotels from './pages/Hotels.jsx'
 
 // The Pair stays a local-only surprise: on the deployed site the tab disappears
 // and '#/watches' falls back to home (route matching below only knows TABS).
@@ -14,10 +13,9 @@ const IS_LOCAL = /^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(window.location.ho
 const TABS = [
   { hash: '#/', label: 'The Trip' },
   { hash: '#/map', label: 'Itinerary & Map' },
-  { hash: '#/compare', label: 'V1 vs V2' },
   { hash: '#/flights', label: 'Flights' },
+  { hash: '#/hotels', label: 'Hotels' },
   { hash: '#/watches', label: 'The Pair' },
-  { hash: '#/review', label: 'Review' },
   { hash: '#/costs', label: 'Costs' },
 ].filter(t => IS_LOCAL || t.hash !== '#/watches')
 
@@ -58,7 +56,7 @@ export default function App() {
   }
 
   return (
-    <div className={'shell' + (route === '#/map' || route === '#/watches' || route === '#/flights' ? ' shell-map' : '')}>
+    <div className={'shell' + (route === '#/map' || route === '#/watches' || route === '#/flights' || route === '#/hotels' ? ' shell-map' : '')}>
       <header className="hdr">
         <div className="hdr-row">
           <span className="hdr-title">
@@ -109,10 +107,9 @@ export default function App() {
 
       {route === '#/' && <Home />}
       {route === '#/map' && <MapPage />}
-      {route === '#/compare' && <Compare />}
       {route === '#/flights' && <Flights />}
+      {route === '#/hotels' && <Hotels />}
       {route === '#/watches' && <Watches />}
-      {route === '#/review' && <Review />}
       {route === '#/costs' && <Costs />}
     </div>
   )

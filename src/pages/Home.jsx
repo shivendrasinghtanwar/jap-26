@@ -16,7 +16,6 @@ const ROUTE = [
 ]
 
 export default function Home() {
-  const alerts = Object.values(V2.flags).flat().filter(f => f.level === 'alert').length
   return (
     <main className="home">
       <section className="hero">
@@ -30,7 +29,7 @@ export default function Home() {
           </p>
           <nav className="cv-toc" aria-label="Contents">
             <a href="#/map"><i>I.</i><span>Itinerary &amp; Map</span><em aria-hidden="true" /><b>day by day</b></a>
-            <a href="#/review"><i>II.</i><span>The Review</span><em aria-hidden="true" /><b>{alerts} flags</b></a>
+            <a href="#/flights"><i>II.</i><span>Flights</span><em aria-hidden="true" /><b>ticketed</b></a>
             <a href="#/costs"><i>III.</i><span>Cost Analysis</span><em aria-hidden="true" /><b>the numbers</b></a>
             {IS_LOCAL && <a href="#/watches"><i>IV.</i><span>The Pair</span><em aria-hidden="true" /><b>two open hearts</b></a>}
           </nav>
@@ -59,6 +58,36 @@ export default function Home() {
         ))}
       </section>
 
+      <section className="home-kit" aria-label="Japan essentials">
+        <h2 className="home-kit-title">The make-life-easy kit</h2>
+        <div className="home-kit-grid">
+          <div className="home-kit-card">
+            <h3>Suica on the iPhone</h3>
+            <p>Add Suica to Apple Wallet <b>before flying</b> (Wallet → + → Transit Card → Suica), top up with Apple Pay. One tap rides every metro, JR local and bus in all five cities — and pays at konbini and vending machines. Android from India can&rsquo;t run Mobile Suica: get a physical <b>Welcome Suica</b> at Narita T2 arrivals instead.</p>
+          </div>
+          <div className="home-kit-card">
+            <h3>Taxi apps</h3>
+            <p><b>GO</b> is Japan&rsquo;s main taxi app — English UI, foreign cards accepted. Uber works in Tokyo/Kyoto/Osaka too (it dispatches regular taxis at meter rates). Base fare ¥500–730, no tipping, doors open themselves. Use for: kimono day hops, Kawaguchiko, late-night Gion.</p>
+          </div>
+          <div className="home-kit-card">
+            <h3>Money</h3>
+            <p>Carry <b>¥25–30k cash</b> — shrines, omamori, market stalls and small ramen-ya are cash-only. Refill at any <b>7-Eleven ATM</b> (takes Indian Visa/MC, 24/7, fair rate). Cards + Apple Pay cover hotels, trains, Uniqlo, Yodobashi, konbini and chain restaurants.</p>
+          </div>
+          <div className="home-kit-card">
+            <h3>The day-pass rule</h3>
+            <p>Taking <b>4 or fewer</b> metro rides in a day (most of our days): just tap Suica — it also works on JR, which passes don&rsquo;t. Taking <b>5+</b> subway-only rides: the Tokyo Subway 24-hour ticket, ¥1,000/adult, pays for itself (Metro + Toei lines only, not JR).</p>
+          </div>
+          <div className="home-kit-card">
+            <h3>Data &amp; navigation</h3>
+            <p>Buy an <b>eSIM before flying</b> (Ubigi/Airalo, ~₹800–1,200 for 10 GB). Google Maps transit directions are gospel in Japan — platform numbers, car positions, exact fares. Each stop below also carries its own &ldquo;getting there&rdquo; line on the map page.</p>
+          </div>
+          <div className="home-kit-card">
+            <h3>Comfort tricks</h3>
+            <p><b>Takkyubin</b>: any hotel desk ships a suitcase to any other hotel overnight, ~¥2,500/bag — we use it Tokyo → Kyoto on Day 5. Coin lockers at every station (¥400–700). Konbini solve breakfast, ATM and midnight snacks. Passport stays ON you — it&rsquo;s the law, and it&rsquo;s the tax-free discount.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="home-mapband" aria-label="Route map">
         <div className="home-mapband-head">
           <h2 className="home-map-title">The Route, on the map</h2>
@@ -79,29 +108,24 @@ export default function Home() {
       <section className="home-grid">
         <a className="home-card" href="#/map">
           <h3>Itinerary &amp; Map</h3>
-          <p>Every day as a timeline, synced to a map — numbered stops, route lines, what&rsquo;s included and what isn&rsquo;t.</p>
+          <p>Every day as a timeline, synced to a map — numbered stops, route lines, and station-by-station transit directions.</p>
           <span className="home-card-go">Day by day →</span>
         </a>
-        <a className="home-card" href="#/compare">
-          <h3>V1 vs V2</h3>
-          <p>Every date side by side — what we changed, added, and why.</p>
-          <span className="home-card-go">Compare the plans →</span>
-        </a>
-        <a className="home-card" href="#/review">
-          <h3>The Review</h3>
-          <p>What Jay&rsquo;s plan gets right, the {alerts} flags on your actual dates, and the questions to send back before anything locks.</p>
-          <span className="home-card-go">Verdict &amp; flags →</span>
+        <a className="home-card" href="#/flights">
+          <h3>Flights</h3>
+          <p>Ticketed and paid: all-Cathay via Hong Kong, into Narita 18 Dec, home from Narita 4 Jan.</p>
+          <span className="home-card-go">The booking →</span>
         </a>
         <a className="home-card" href="#/costs">
           <h3>Cost Analysis</h3>
-          <p>What the package covers versus what you two pay on the ground — park tickets, meals, yen-to-rupee, and the cash to carry.</p>
+          <p>The full self-booked budget — flights, hotels, rail, parks, meals, yen-to-rupee, and the cash to carry.</p>
           <span className="home-card-go">The numbers →</span>
         </a>
       </section>
 
       <p className="home-foot">
-        Proposed itinerary v1 · received 17 Nov 2026 from GuavaTrips · research verified Nov 2026 ·
-        this plan will change — treat every day as a draft.
+        Our own plan, self-booked · research verified Nov 2026 · flights ticketed 24 Nov 2026 ·
+        128 stops across 18 days — every one of them ours.
       </p>
     </main>
   )

@@ -1,39 +1,27 @@
 import React, { useMemo, useState } from 'react'
-import { BUNDLES, V1, V2 } from '../data/bundles.js'
+import { V2 } from '../data/bundles.js'
 import DayStrip from '../components/DayStrip.jsx'
 import Timeline from '../components/Timeline.jsx'
 import Overview from '../components/Overview.jsx'
 import MapView, { groupStops } from '../components/MapView.jsx'
 
-// Deep links: '#/map?v=v2&d=13' — parsed once on mount.
+// Deep links: '#/map?d=13' — parsed once on mount.
 function parseMapQuery() {
   const hash = window.location.hash || ''
   const qi = hash.indexOf('?')
   if (qi === -1) return {}
   const params = new URLSearchParams(hash.slice(qi + 1))
-  return { v: params.get('v'), d: params.get('d') }
+  return { d: params.get('d') }
 }
 
 export default function MapPage() {
-  const [version, setVersion] = useState(() => {
-    const { v } = parseMapQuery()
-    return v === 'v1' ? 'v1' : 'v2' // default v2
-  })
+  const bundle = V2
   // 0 = route overview, 1..dayCount = a day
   const [day, setDay] = useState(() => {
-    const { v, d } = parseMapQuery()
-    const count = (v === 'v1' ? V1 : V2).dayCount
+    const { d } = parseMapQuery()
     const n = parseInt(d, 10)
-    return Number.isInteger(n) && n >= 1 && n <= count ? n : 0
+    return Number.isInteger(n) && n >= 1 && n <= bundle.dayCount ? n : 0
   })
-
-  const bundle = BUNDLES[version]
-
-  const switchVersion = (key) => {
-    if (key === version) return
-    setVersion(key)
-    setDay(d => (d > BUNDLES[key].dayCount ? 0 : d))
-  }
 
   const stopsByDay = useMemo(() => {
     const m = new Map()
@@ -59,34 +47,9 @@ export default function MapPage() {
   }, [dayStops])
   const focusMarker = (idx) => setFocus({ idx, t: Date.now() })
 
-  const segStyle = {
-    display: 'flex',
-    gap: 6,
-    flex: 'none',
-    padding: '12px 14px 12px 0',
-    marginRight: 10,
-    borderRight: '1px solid var(--line)',
-  }
-
   return (
     <>
       <div className="strip-row" style={{ display: 'flex', alignItems: 'center' }}>
-        <div style={segStyle} role="group" aria-label="Itinerary version">
-          <button
-            className={'chip chip-route' + (version === 'v1' ? ' on' : '')}
-            aria-pressed={version === 'v1'}
-            onClick={() => switchVersion('v1')}
-          >
-            V1 · Jay · 14d
-          </button>
-          <button
-            className={'chip chip-route' + (version === 'v2' ? ' on' : '')}
-            aria-pressed={version === 'v2'}
-            onClick={() => switchVersion('v2')}
-          >
-            V2 · Ours · 18d
-          </button>
-        </div>
         <div style={{ flex: 1, minWidth: 0 }}>
           <DayStrip
             days={bundle.days}
@@ -98,7 +61,7 @@ export default function MapPage() {
         </div>
       </div>
       <main className="main">
-        <section className="pane-left" key={version + '-' + day}>
+        <section className="pane-left" key={day}>
           {day === 0 ? (
             <Overview
               days={bundle.days}
@@ -107,7 +70,6 @@ export default function MapPage() {
               cities={bundle.locations.cities}
               ratings={bundle.ratings}
               cityColors={bundle.cityColors}
-              version={version}
               onSelect={setDay}
             />
           ) : (

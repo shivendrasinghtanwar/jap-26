@@ -136,6 +136,12 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
               ? <span className="tl-num" aria-label={`map marker ${mkr + 1}`}>{mkr + 1}</span>
               : <span className={'tl-dot tl-dot-' + s.type} aria-hidden="true" />}
             <div className="tl-card">
+              {s.transit && (
+                <p className="tl-transit">
+                  <span className="tl-transit-icn" aria-hidden="true">🚇</span>
+                  {s.transit}
+                </p>
+              )}
               <div className="tl-card-top">
                 <span className="tl-icn"><TypeIcon type={s.type} /></span>
                 <span className="tl-title">{s.title}</span>
