@@ -23,32 +23,32 @@ const KINDS = {
 /* d = sortable day index: Dec = day, Jan = day + 31, "before flying" = 1; fraction = time of day */
 const ITEMS = [
   // ——— Hotels (all free-cancellation) ———
-  { cat: 'Hotels', jay: 'other', kind: 'hotel', d: 18.6, date: '18 Dec', time: 'check-in',
+  { cat: 'Hotels', jay: 'no', kind: 'hotel', d: 18.6, date: '18 Dec', time: 'check-in',
     place: 'Higashi-Kanda, Tokyo', name: 'Comfort ERA Tokyo Higashi Kanda', sub: 'Queen · 4n',
     detail: 'Booking.com room-only · email: bed width + takkyubin',
     platform: 'trivago', price: '₹48,370', inr: 48370, by: 'NOW', rank: 0,
     link: 'https://www.trivago.in/en-IN/lm/comfort-hotel-era-tokyo-higashi-kanda?search=100-7300202%3Bdr-20261218-20261222%3Brc-1-2' },
-  { cat: 'Hotels', jay: 'other', kind: 'hotel', d: 22.6, date: '22 Dec', time: 'check-in',
+  { cat: 'Hotels', jay: 'no', kind: 'hotel', d: 22.6, date: '22 Dec', time: 'check-in',
     place: 'Kawaguchiko', name: 'Mizno Hotel', sub: 'Terrace Twin NAGOMI · 1n',
     detail: 'Anniversary plan (dinner+drinks) · or Booking ₹25,422 + dinner · email for cake',
     platform: 'Jalan', price: '~₹40,000', inr: 40000, by: 'NOW', rank: 0,
     link: 'https://www.jalan.net/yad317230/plan/' },
-  { cat: 'Hotels', jay: 'other', kind: 'hotel', d: 23.6, date: '23 Dec', time: 'check-in',
+  { cat: 'Hotels', jay: 'no', kind: 'hotel', d: 23.6, date: '23 Dec', time: 'check-in',
     place: 'Kanazawa', name: 'Hotel Forza Kanazawa', sub: 'Comfort/Refresh Double · 1n',
     detail: '150 cm bed — NOT the Forza(140)/Business(130) doubles',
     platform: 'trivago', price: '~₹4,500', inr: 4500, by: 'NOW', rank: 0,
     link: 'https://www.trivago.in/en-IN/lm/hotel-forza-kanazawa?search=100-15753816%3Bdr-20261223-20261224%3Brc-1-2' },
-  { cat: 'Hotels', jay: 'other', kind: 'hotel', d: 24.6, date: '24 Dec', time: 'check-in',
+  { cat: 'Hotels', jay: 'no', kind: 'hotel', d: 24.6, date: '24 Dec', time: 'check-in',
     place: 'Toji, Kyoto', name: 'Comfort ERA Kyoto Toji', sub: 'Queen Economy · 3n',
     detail: 'High floor WEST · email: takkyubin + breakfast',
     platform: 'trivago', price: '₹16,628', inr: 16628, by: 'NOW', rank: 0,
     link: 'https://www.trivago.in/en-IN/lm/comfort-hotel-era-kyoto-toji?search=100-23439598%3Bdr-20261224-20261227%3Brc-1-2' },
-  { cat: 'Hotels', jay: 'other', kind: 'hotel', d: 27.6, date: '27 Dec', time: 'check-in',
+  { cat: 'Hotels', jay: 'no', kind: 'hotel', d: 27.6, date: '27 Dec', time: 'check-in',
     place: 'Umeda, Osaka', name: 'DEL style Shin-Umeda', sub: 'Daiwa Roynet · 3n',
     detail: 'Klook free-canc · Booking ₹8,217/n fallback',
     platform: 'trivago', price: '₹21,752', inr: 21752, by: 'NOW', rank: 0,
     link: 'https://www.trivago.in/en-IN/lm/del-style-osaka-shin-umeda-by-daiwa-roynet-hotel?search=100-19759854%3Bdr-20261227-20261230%3Brc-1-2' },
-  { cat: 'Hotels', jay: 'other', kind: 'hotel', d: 30.6, date: '30 Dec', time: 'check-in',
+  { cat: 'Hotels', jay: 'no', kind: 'hotel', d: 30.6, date: '30 Dec', time: 'check-in',
     place: 'Kanda, Tokyo', name: 'APA Kanda Ekimae', sub: 'New Year · 5n',
     detail: 'Agoda free-canc · non-smoking, high floor off the tracks',
     platform: 'trivago', price: '₹49,408', inr: 49408, by: 'NOW', rank: 0,
@@ -249,7 +249,6 @@ export default function Bookings() {
           <select className="bk-select" value={scope} onChange={e => setScope(e.target.value)}>
             <option value="all">All</option>
             <option value="yes">Jay quoted ✓</option>
-            <option value="other">Quoted — different hotel</option>
             <option value="no">Not quoted</option>
           </select>
           {(q || cat !== 'all' || scope !== 'all') && (
@@ -286,7 +285,7 @@ export default function Bookings() {
               </div>
               <span className={'bk-kind bk-k-' + i.kind}>{KINDS[i.kind][0]} {KINDS[i.kind][1]}</span>
               <a className="bk-plat" href={i.link} target="_blank" rel="noopener">{i.platform} ↗</a>
-              <span className={'bk-badge ' + (i.jay === 'yes' ? 'jay' : i.jay === 'other' ? 'oth' : 'ours')}>{i.jay === 'yes' ? 'QUOTED ✓' : i.jay === 'other' ? 'QUOTED · OTHER HOTEL' : 'NOT QUOTED'}</span>
+              <span className={'bk-badge ' + (i.jay === 'yes' ? 'jay' : 'ours')}>{i.jay === 'yes' ? 'QUOTED ✓' : 'NOT QUOTED'}</span>
               <span className="bk-price num">{i.price}<small>≈ ₹{i.inr.toLocaleString('en-IN')}</small></span>
               <span className={'bk-by' + (i.rank === 0 ? ' hot' : '')}>{i.by}</span>
             </div>
