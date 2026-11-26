@@ -1543,13 +1543,18 @@
       "seq": 3,
       "time": "12:00",
       "title": "Tokyo hotel luggage drop",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
+      "place": "APA Hotel Kanda Ekimae",
+      "lat": 35.69376,
+      "lng": 139.77229,
       "type": "hotel",
       "costIncluded": null,
       "notes": "extension night — Jay to quote; placeholder near Tokyo Station",
-      "transit": "Off the Nozomi at Tokyo Stn, follow the Sobu Rapid (Yokosuka/Sobu line) signs DOWN — the platforms are deep, ~10 min inside the station — then 1 stop to Bakurocho, 3 min, ¥150 pp; APA Bakuroyokoyama is 3 min from the exit; bags to the desk."
+      "transit": "Off the Nozomi at Tokyo Stn, JR Yamanote/Keihin-Tohoku 1 stop to Kanda (2 min, ¥150 pp); APA Kanda Ekimae is a 3-min walk from the station; bags to the desk.",
+      "via": {
+        "name": "Tokyo Station (JR local platforms)",
+        "lat": 35.68124,
+        "lng": 139.76712
+      }
     },
     {
       "day": 13,
@@ -1563,11 +1568,11 @@
       "costIncluded": null,
       "notes": "",
       "blurb": "Marunouchi Naka-dori is Tokyo's elegant tree-lined boulevard beside the station, whose champagne-gold winter illumination of over a million LEDs adjoins the Hibiya district's displays.",
-      "transit": "5-min walk back to JR Bakurocho, then one stop to Tokyo Stn, Marunouchi side — Naka-dori's champagne-gold lights run 1.2 km to Hibiya; walk it as the light fades.",
+      "transit": "3-min walk back to JR Kanda, 1 stop to Tokyo Stn, Marunouchi side — Naka-dori's champagne-gold lights run 1.2 km to Hibiya; walk it as the light fades.",
       "via": {
-        "name": "JR Bakurocho Station",
-        "lat": 35.69323,
-        "lng": 139.78219
+        "name": "JR Kanda Station",
+        "lat": 35.69169,
+        "lng": 139.77088
       }
     },
     {
@@ -1594,13 +1599,13 @@
       "seq": 6,
       "time": "18:30",
       "title": "Dinner",
-      "place": "Bakurocho / Higashi-Nihombashi area",
+      "place": "Kanda station izakaya alleys",
       "lat": 35.6935,
-      "lng": 139.782,
+      "lng": 139.7715,
       "type": "food",
       "costIncluded": false,
       "notes": "",
-      "transit": "5-min walk back down the Sun Mall arcade to JR Nakano Stn, then Chuo Rapid back to Tokyo Stn + Sobu Rapid 1 stop to Bakurocho (~30 min, ¥230) — dinner in the hotel blocks; big day tomorrow night.",
+      "transit": "5-min walk back down the Sun Mall arcade to JR Nakano Stn, then Chuo Rapid DIRECT back to Kanda (~18 min, ¥230) — dinner in the izakaya alleys under the Kanda tracks; big day tomorrow night.",
       "via": {
         "name": "JR Nakano Station",
         "lat": 35.70566,
@@ -1612,9 +1617,9 @@
       "seq": 1,
       "time": "09:30",
       "title": "Slow morning — breakfast, lazy lunch, rest for tonight",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
+      "place": "APA Hotel Kanda Ekimae",
+      "lat": 35.69376,
+      "lng": 139.77229,
       "type": "food",
       "costIncluded": null,
       "notes": "NYE is a late one — recover till ~15:00; konbini + Takashimaya depachika runs"
@@ -1631,25 +1636,25 @@
       "costIncluded": null,
       "notes": "",
       "blurb": "Zojoji is the Tokugawa shoguns' family temple, founded in 1393, whose forecourt beneath the lit Tokyo Tower is the classic stage for New Year's Eve bell-ringing.",
-      "transit": "Toei Asakusa Line from Higashi-Nihombashi (same block as the hotel) → Daimon, direct ~15 min, ¥220 pp; exit A6, 7-min walk up to Zojoji — Tokyo Tower lit dead ahead. Arrive 22:00–22:30 for a bell-queue spot.",
+      "transit": "JR Yamanote from Kanda (3-min walk, toward Tokyo/Shinagawa) → Hamamatsucho, direct ~12 min, ¥170 pp; exit toward Tokyo Tower, 10-min walk up to Zojoji. Arrive 22:00–22:30 for a bell-queue spot.",
       "via": {
-        "name": "Higashi-Nihombashi Station (Asakusa line)",
-        "lat": 35.69262,
-        "lng": 139.78523
+        "name": "JR Kanda Station",
+        "lat": 35.69169,
+        "lng": 139.77088
       }
     },
     {
       "day": 14,
       "seq": 4,
       "time": "00:30",
-      "title": "Akihabara Station — off the all-night Yamanote",
-      "place": "Akihabara Station",
-      "lat": 35.6984,
-      "lng": 139.7731,
+      "title": "Kanda Station — off the all-night Yamanote",
+      "place": "JR Kanda Station",
+      "lat": 35.69169,
+      "lng": 139.77088,
       "type": "transit",
       "costIncluded": false,
       "notes": "",
-      "transit": "10-min walk back down from Zojoji to JR Hamamatsucho (Tokyo Tower behind you), then JR Yamanote — it runs ALL NIGHT tonight — ~10 min toward Kanda/Akihabara, ¥170 pp; get off at Akihabara, then a 15-min walk or ¥1,000 cab home. The Toei subway does NOT run overnight (last Asakusa-line train from Daimon ~00:20) — so it's this JR route, or a ¥3,000–4,500 taxi.",
+      "transit": "10-min walk back down from Zojoji to JR Hamamatsucho (Tokyo Tower behind you), then the ALL-NIGHT Yamanote straight back to Kanda — direct, no transfer, ~12 min, ¥170 pp. (The Toei subway does NOT run overnight.)",
       "via": {
         "name": "JR Hamamatsucho Station",
         "lat": 35.6554,
@@ -1661,25 +1666,25 @@
       "seq": 5,
       "time": "01:15",
       "title": "Back at the hotel — Happy New Year 🎍",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
+      "place": "APA Hotel Kanda Ekimae",
+      "lat": 35.69376,
+      "lng": 139.77229,
       "type": "hotel",
       "costIncluded": null,
       "notes": "",
-      "transit": "Off the Yamanote at Akihabara — 15-min walk or a ¥1,000 cab, door at ~01:15. Happy New Year. 🎍"
+      "transit": "3-min walk from Kanda station — door at ~00:50. Happy New Year. 🎍"
     },
     {
       "day": 15,
       "seq": 1,
       "time": "10:00",
       "title": "Lie-in + brunch",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
+      "place": "APA Hotel Kanda Ekimae",
+      "lat": 35.69376,
+      "lng": 139.77229,
       "type": "food",
       "costIncluded": null,
-      "notes": "booked base — Bakuroyokoyama / Higashi-Nihombashi interchange"
+      "notes": "booked base — Kanda, 1 JR stop from Tokyo Stn"
     },
     {
       "day": 15,
@@ -1693,11 +1698,11 @@
       "costIncluded": null,
       "notes": "1.5–2 h queue expected",
       "blurb": "Meiji Jingu is Tokyo's grandest Shinto shrine, enshrining Emperor Meiji within a 100,000-tree planted forest and drawing Japan's largest hatsumode crowds each New Year.",
-      "transit": "Walk ~7 min to JR Asakusabashi, then Chuo-Sobu Local (yellow) → Yoyogi, direct ~24 min, ¥230 pp — the quiet north forest approach to Meiji Jingu starts 8 min from the West exit. Join the hatsumode river from there.",
+      "transit": "JR Chuo Rapid from Kanda → Shinjuku (~13 min), cross to the Yamanote (2 stops) → Harajuku; the quiet north forest approach to Meiji Jingu starts 8 min from the West exit. ~25 min, ¥230 pp.",
       "via": {
-        "name": "JR Asakusabashi Station",
-        "lat": 35.69858,
-        "lng": 139.78568
+        "name": "JR Kanda Station",
+        "lat": 35.69169,
+        "lng": 139.77088
       }
     },
     {
@@ -1737,13 +1742,13 @@
       "seq": 5,
       "time": "21:30",
       "title": "Back at the hotel — night in",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
+      "place": "APA Hotel Kanda Ekimae",
+      "lat": 35.69376,
+      "lng": 139.77229,
       "type": "hotel",
       "costIncluded": null,
       "notes": "",
-      "transit": "Toei Asakusa Line from Oshiage (Skytree's basement, toward Nishi-magome) → Higashi-Nihombashi, direct ~15 min, ¥220 pp; 2-min walk home.",
+      "transit": "Toei Asakusa Line from Oshiage (Skytree's basement) 2 stops to Asakusa, cross to the Ginza Line → Kanda direct; ~25 min total, ~¥400 pp; 3-min walk home.",
       "via": {
         "name": "Oshiage Station (Asakusa line)",
         "lat": 35.7103,
@@ -1755,9 +1760,9 @@
       "seq": 0,
       "time": "07:15",
       "title": "Breakfast & out the door",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
+      "place": "APA Hotel Kanda Ekimae",
+      "lat": 35.69376,
+      "lng": 139.77229,
       "type": "food",
       "costIncluded": null,
       "notes": "konbini breakfast — be in the Palace security line by 08:15"
@@ -1774,11 +1779,11 @@
       "costIncluded": null,
       "notes": "2027 notice due late Dec",
       "blurb": "Ippan Sanga is one of only two days a year the Imperial Palace's inner grounds open, as the Emperor and family greet the public from the Chowa-den balcony.",
-      "transit": "5-min walk to JR Bakurocho, Sobu Rapid 1 stop to Tokyo Stn (3 min, ¥150), then a 10-min walk across Marunouchi to the Nijubashi plaza — in the security line by 08:15 with IDs; no big bags.",
+      "transit": "3-min walk to JR Kanda, 1 stop to Tokyo Stn (2 min, ¥150), then a 10-min walk across Marunouchi to the Nijubashi plaza — in the security line by 08:15 with IDs; no big bags.",
       "via": {
-        "name": "JR Bakurocho Station",
-        "lat": 35.69323,
-        "lng": 139.78219
+        "name": "JR Kanda Station",
+        "lat": 35.69169,
+        "lng": 139.77088
       }
     },
     {
@@ -1812,17 +1817,17 @@
       "seq": 4,
       "time": "21:00",
       "title": "Back at the hotel — night in",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
+      "place": "APA Hotel Kanda Ekimae",
+      "lat": 35.69376,
+      "lng": 139.77229,
       "type": "hotel",
       "costIncluded": null,
       "notes": "",
-      "transit": "Toei Asakusa Line from Higashi-Ginza (right under Kabukiza) → Higashi-Nihombashi, direct ~11 min, ¥220 pp; 2-min walk home.",
+      "transit": "3-min walk from Kabukiza to Ginza Stn, then Tokyo Metro Ginza Line (toward Asakusa) → Kanda, direct ~8 min, ¥180 pp; 3-min walk home.",
       "via": {
-        "name": "Higashi-Ginza Station (Asakusa line)",
-        "lat": 35.6695,
-        "lng": 139.7672
+        "name": "Ginza Station (Ginza line)",
+        "lat": 35.67183,
+        "lng": 139.76391
       }
     },
     {
@@ -1830,12 +1835,12 @@
       "seq": 1,
       "time": "09:00",
       "title": "Slow breakfast — no alarm",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
+      "place": "APA Hotel Kanda Ekimae",
+      "lat": 35.69376,
+      "lng": 139.77229,
       "type": "meal",
       "costIncluded": null,
-      "notes": "booked base — Bakuroyokoyama / Higashi-Nihombashi interchange",
+      "notes": "booked base — Kanda, 1 JR stop from Tokyo Stn",
       "blurb": "The one unhurried morning of the trip — the 10:10 flight moved to tomorrow and bought this whole day back."
     },
     {
@@ -1850,11 +1855,11 @@
       "costIncluded": null,
       "notes": "Japan-licensee flagship — Made-in-Japan + Addict lines not sold outside Japan; NY sales still on; confirm 3 Jan hours (~11:00–20:00)",
       "blurb": "Converse Japan is a separate licensee from Nike's Converse, and this Cat Street flagship (opened 2024) carries the Made-in-Japan and Addict lines you cannot buy outside the country.",
-      "transit": "Bakuroyokoyama Stn is 1 min from the hotel door: Toei Shinjuku Line → Shinjuku-sanchome (~12 min, ¥280), change to Metro Fukutoshin, 1 stop → Meiji-jingumae (¥180); exit 7, Cat Street is 6 min down. Total ~30 min.",
+      "transit": "JR Chuo Rapid from Kanda → Shinjuku (~13 min), Yamanote 2 stops → Harajuku (¥230 total); exit toward Omotesando, Cat Street is 6 min down. ~25 min.",
       "via": {
-        "name": "Bakuroyokoyama Station (Shinjuku line)",
-        "lat": 35.692,
-        "lng": 139.7823
+        "name": "JR Kanda Station",
+        "lat": 35.69169,
+        "lng": 139.77088
       }
     },
     {
@@ -1895,13 +1900,13 @@
       "seq": 5,
       "time": "19:00",
       "title": "Last-night dinner — open",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
+      "place": "APA Hotel Kanda Ekimae",
+      "lat": 35.69376,
+      "lng": 139.77229,
       "type": "meal",
       "costIncluded": null,
       "notes": "pick the farewell meal in December; pack tonight — 06:15 start tomorrow",
-      "transit": "Ginza Line → Nihombashi (3 stops, ¥180 pp), then Asakusa Line 1 stop to Higashi-Nihombashi (¥180) or a ~12-min walk up Ningyocho-dori — pack tonight, bags close at 23:00.",
+      "transit": "Ginza Line from Ginza Stn (toward Asakusa) → Kanda, direct ~8 min, ¥180 pp, 3-min walk home — pack tonight, bags close at 23:00.",
       "via": {
         "name": "Ginza Station (Ginza line)",
         "lat": 35.67183,
@@ -1913,12 +1918,12 @@
       "seq": 1,
       "time": "09:45",
       "title": "Breakfast, check-out & luggage",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
+      "place": "APA Hotel Kanda Ekimae",
+      "lat": 35.69376,
+      "lng": 139.77229,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "booked base — Bakuroyokoyama / Higashi-Nihombashi interchange"
+      "notes": "booked base — Kanda, 1 JR stop from Tokyo Stn"
     },
     {
       "day": 18,
@@ -1931,7 +1936,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "private car, 75–90 min against no morning rush",
-      "transit": "Pre-booked private car, 10:15 pickup at the hotel entrance — ~75 min to Narita T2 departures. Fallback: Keisei Access Express direct from Higashi-Nihombashi to NRT (~60 min, ¥1,310 pp), doable but clumsy with all the bags."
+      "transit": "Pre-booked private car, 10:15 pickup at the hotel entrance — ~75 min to Narita T2 departures. Fallback: JR 1 stop to Tokyo Stn + Narita Express (~55 min), clumsier with all the bags."
     },
     {
       "day": 18,
