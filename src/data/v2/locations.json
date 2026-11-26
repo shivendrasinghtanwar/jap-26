@@ -722,8 +722,8 @@
       "time": "07:15",
       "title": "Check-out — bags to bell desk",
       "place": "Hotel Forza Kanazawa",
-      "lat": 36.578,
-      "lng": 136.6478,
+      "lat": 36.573,
+      "lng": 136.6555,
       "type": "hotel",
       "costIncluded": null,
       "notes": "bags to the bell desk — collected after breakfast on the way to the station"
@@ -1636,13 +1636,13 @@
       "seq": 6,
       "time": "18:30",
       "title": "Dinner",
-      "place": "Tokyo (restaurant TBD)",
-      "lat": 35.6812,
-      "lng": 139.7671,
+      "place": "Bakurocho / Higashi-Nihombashi area",
+      "lat": 35.6935,
+      "lng": 139.782,
       "type": "food",
       "costIncluded": false,
       "notes": "",
-      "transit": "5-min walk back down the Sun Mall arcade to JR Nakano Stn, then Chuo Rapid back toward Tokyo/Kanda, ~20 min — dinner near the hotel; big day tomorrow night.",
+      "transit": "5-min walk back down the Sun Mall arcade to JR Nakano Stn, then Chuo Rapid back to Tokyo Stn + Sobu Rapid 1 stop to Bakurocho (~30 min, ¥230) — dinner in the hotel blocks; big day tomorrow night.",
       "via": {
         "name": "JR Nakano Station",
         "lat": 35.70566,
@@ -1703,7 +1703,7 @@
       "type": "transit",
       "costIncluded": false,
       "notes": "",
-      "transit": "JR Yamanote from Hamamatsucho — it runs ALL NIGHT tonight — ~10 min toward Kanda/Akihabara, ¥170 pp; the Toei subway does NOT run overnight (last Asakusa-line train from Daimon ~00:20) — so it’s this JR route, or a ¥3,000–4,500 taxi."
+      "transit": "JR Yamanote from Hamamatsucho — it runs ALL NIGHT tonight — ~10 min toward Kanda/Akihabara, ¥170 pp; get off at Akihabara, then a 15-min walk or ¥1,000 cab home. The Toei subway does NOT run overnight (last Asakusa-line train from Daimon ~00:20) — so it's this JR route, or a ¥3,000–4,500 taxi."
     },
     {
       "day": 15,
@@ -1945,6 +1945,129 @@
       "type": "airport",
       "costIncluded": null,
       "notes": "TICKETED: CX527 NRT 14:25 → HKG 18:55, CX601 HKG 21:05 → HYD 00:50 (Tue 5 Jan)"
+    },
+    {
+      "day": 3,
+      "seq": 15,
+      "time": "20:30",
+      "title": "Back to the hotel — Ginza Line + Asakusa Line",
+      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
+      "lat": 35.6945,
+      "lng": 139.7797,
+      "type": "hotel",
+      "costIncluded": null,
+      "notes": "",
+      "transit": "Ginza Line from Shibuya (it's the terminus — you'll get seats) → Nihombashi, direct ~22 min, ¥260 pp; cross to the Toei Asakusa Line → Higashi-Nihombashi, 2 stops, ¥180; 8-min walk home. ~45 min door to door.",
+      "via": {
+        "name": "Shibuya Station (Ginza line)",
+        "lat": 35.6591,
+        "lng": 139.7025
+      }
+    },
+    {
+      "day": 6,
+      "seq": 11,
+      "time": "20:30",
+      "title": "Back to Forza — walk or bus",
+      "place": "Hotel Forza Kanazawa",
+      "lat": 36.573,
+      "lng": 136.6555,
+      "type": "hotel",
+      "costIncluded": null,
+      "notes": "",
+      "transit": "20-min flat walk up Hyakumangoku-odori — or any Hokutetsu bus from the Katamachi stop toward Kanazawa Stn, 4 stops to Musashigatsuji·Omicho (~¥210, frequent till ~22:00), or a ¥900 taxi, 5 min.",
+      "via": {
+        "name": "Katamachi bus stop",
+        "lat": 36.5606,
+        "lng": 136.6529
+      }
+    },
+    {
+      "day": 7,
+      "seq": 13,
+      "time": "22:15",
+      "title": "Taxi back to the hotel",
+      "place": "Comfort Hotel ERA Kyoto Toji",
+      "lat": 34.9791,
+      "lng": 135.7529,
+      "type": "hotel",
+      "costIncluded": null,
+      "notes": "",
+      "transit": "Taxi home on the GO app — ~12 min, ~¥1,300 total; buses have thinned by 22:00. Hot bath — big sunrise start tomorrow."
+    },
+    {
+      "day": 10,
+      "seq": 11,
+      "time": "19:30",
+      "title": "Walk home with the watches",
+      "place": "DEL style Osaka Shin-Umeda by Daiwa Roynet",
+      "lat": 34.70057,
+      "lng": 135.48898,
+      "type": "hotel",
+      "costIncluded": null,
+      "notes": "",
+      "transit": "9-min walk — out of Yodobashi's north face, west past Grand Front, straight to the hotel. No metro needed."
+    },
+    {
+      "day": 15,
+      "seq": 5,
+      "time": "21:30",
+      "title": "Back to the hotel — Asakusa Line direct",
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
+      "type": "hotel",
+      "costIncluded": null,
+      "notes": "",
+      "transit": "Toei Asakusa Line from Oshiage (Skytree's basement, toward Nishi-magome) → Higashi-Nihombashi, direct ~15 min, ¥220 pp; 2-min walk home.",
+      "via": {
+        "name": "Oshiage Station (Asakusa line)",
+        "lat": 35.7103,
+        "lng": 139.8131
+      }
+    },
+    {
+      "day": 16,
+      "seq": 4,
+      "time": "21:00",
+      "title": "Back to the hotel — Asakusa Line direct",
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
+      "type": "hotel",
+      "costIncluded": null,
+      "notes": "",
+      "transit": "Toei Asakusa Line from Higashi-Ginza (right under Kabukiza) → Higashi-Nihombashi, direct ~11 min, ¥220 pp; 2-min walk home.",
+      "via": {
+        "name": "Higashi-Ginza Station (Asakusa line)",
+        "lat": 35.6695,
+        "lng": 139.7672
+      }
+    },
+    {
+      "day": 14,
+      "seq": 5,
+      "time": "01:15",
+      "title": "Home — collapse",
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
+      "type": "hotel",
+      "costIncluded": null,
+      "notes": "",
+      "transit": "Off the Yamanote at Akihabara — 15-min walk or a ¥1,000 cab, door at ~01:15. Happy New Year. 🎍"
+    },
+    {
+      "day": 16,
+      "seq": 0,
+      "time": "07:15",
+      "title": "Breakfast & out the door",
+      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
+      "lat": 35.6925,
+      "lng": 139.7832,
+      "type": "food",
+      "costIncluded": null,
+      "notes": "konbini breakfast — be in the Palace security line by 08:15"
     }
   ]
 }
