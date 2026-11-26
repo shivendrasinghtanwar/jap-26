@@ -1,9 +1,9 @@
 import './hotels.css'
 
-/* Hotel audit — all six legs decided (26 Nov 2026).
-   Every leg shows exactly its bookable options as full cards — a #1 pick
-   plus at least one good alternate. Disqualified/sold-out hotels are not
-   shown. All trivago links are pre-dated searches: exact nights, 2 adults. */
+/* Hotel audit v2 — all six legs re-audited 26 Nov 2026 by six adversarial
+   agents + breakfast fact-check + Google-review pass. Every leg shows its two
+   bookable options as full cards; every card carries a breakfast chip.
+   All trivago links are pre-dated searches: exact nights, 2 adults. */
 
 const TRV = 'https://www.trivago.in/en-IN/lm/'
 const BKG = 'https://www.booking.com/searchresults.html?ss='
@@ -22,7 +22,7 @@ function Featured({ pick, badge, name, area, score, reviews, price, total, chips
           <h3>{name}</h3>
           <span className="htl-area">{area}</span>
         </div>
-        <div className="htl-score"><b>{score}</b><small>{reviews} reviews</small></div>
+        <div className="htl-score"><b>{score}</b><small>{reviews}</small></div>
         <div className="htl-price"><b>{price}</b><small>{total}</small></div>
       </div>
 
@@ -71,16 +71,16 @@ const LEGS = [
       {
         pick: true, badge: '#1 pick',
         name: 'Comfort Hotel ERA Tokyo Higashi Kanda',
-        area: 'Higashi-Kanda — JR Bakurocho 350 m, Bakuroyokoyama 450 m, Higashi-Nihombashi (Asakusa line) 8 min',
-        score: '8.9', reviews: '4,099 on Booking',
-        price: '₹48,734 · Queen', total: '4 nights, room-only · ₹12,183/n',
+        area: 'Higashi-Kanda — JR Bakurocho 4 min, Bakuroyokoyama 5 min, Higashi-Nihombashi (Asakusa line) ~8 min',
+        score: '8.9', reviews: 'Booking 4,099+ · Google 4.3/1,210',
+        price: '₹48,370 · Queen', total: '4 nights, room-only · free-canc',
         chips: [
-          ['yes', '✓ Queen = 1 large double bed'],
-          ['yes', '✓ Free cancellation to 16 Dec'],
-          ['yes', '✓ Pay nothing until 14 Dec'],
-          ['', 'Breakfast buffet +₹1,051/person/day'],
-          ['yes', '✓ 24h front desk · luggage + takkyubin'],
-          ['warn', '⚠ 4 Queen rooms left — book now'],
+          ['warn', '⚠ Email hotel: confirm Queen bed width (160 vs 140 cm)'],
+          ['yes', '✓ Free cancellation to 16 Dec · pay 14 Dec'],
+          ['yes', '✓ Refreshed Feb 2025 — new Serta mattresses'],
+          ['', 'Breakfast add-on ¥1,800 · buffet 06:30–09:30'],
+          ['yes', '✓ 24h front desk + luggage storage'],
+          ['', '10:00 checkout — earlier than most'],
         ],
         transit: [
           ['Sumo · Ryogoku (D2)', 'JR 1 stop · 10 min'],
@@ -90,11 +90,11 @@ const LEGS = [
           ['Shinjuku — Fuji train (D5)', 'Sobu direct · 28 min'],
           ['Akihabara', 'walk · 8 min'],
         ],
-        near: ['Konbini ×3 in 2 min', 'Kanda coffee kissaten', 'Akihabara food streets 8 min', 'Bakurocho lunch spots', 'Chain gyudon/soba 24h', 'Indian restaurants in Akiba 10 min'],
+        near: ['Konbini ×3 in 2 min', 'Kanda coffee kissaten', 'Akihabara food streets 8 min', 'Indian: GANGA/Bole Baba at Asakusabashi ~10 min', 'Pure-veg: Vege Herb Saga, 5-min JR hop', 'Chain gyudon/soba 24h'],
         watch: [
-          'Book the QUEEN room-only rate (₹48,734) — the with-breakfast rate adds ₹15.7k; buy breakfast à la carte instead.',
-          'Opened Apr 2017; Booking couples score 8.8, staff 9.5, cleanliness 9.3.',
-          'Small Tokyo accommodation tax (~¥200/person/night) paid at the desk.',
+          'One email before booking final: confirm the Queen bed is 160 cm and that they accept a pre-arrival takkyubin parcel — if the bed is 140 cm, book their TWIN (20–28 m², 2×120 cm) instead.',
+          'Book the QUEEN room-only free-canc rate (live ₹48,370/4n Booking); the with-breakfast rate adds ~₹15.7k — add breakfast à la carte (¥1,800) only on the days you want it.',
+          'Rebranded ERA in Feb 2025 with a real refresh (Serta 7-zone mattresses, nano-bubble showers) — pre-2025 reviews describe the old hotel.',
         ],
         links: [
           ['Check live rates — trivago', TRV + 'comfort-hotel-era-tokyo-higashi-kanda?search=100-7300202%3Bdr-20261218-20261222%3Brc-1-2'],
@@ -104,16 +104,15 @@ const LEGS = [
       {
         badge: '#2 backup',
         name: 'HOTEL MYSTAYS Asakusabashi',
-        area: 'Asakusabashi — 1–2 min to JR Sobu + Toei Asakusa line',
-        score: '8.4', reviews: '6,892',
-        price: '₹9,368/n', total: '₹37,470 · 4 nights',
+        area: 'Asakusabashi — JR Sobu 30 seconds, Toei Asakusa line 4 min',
+        score: '8.4', reviews: '6,888 · Google 4.1/1,368',
+        price: '₹8,970/n', total: '₹35,878 · 4 nights · Agoda free-canc',
         chips: [
-          ['no', '✗ No breakfast — Lawson attached'],
+          ['no', '✗ No breakfast — 24h Lawson attached (1F)'],
+          ['warn', '⚠ NO bed wider than 140 cm — only the 6 Twin rooms work'],
           ['yes', '✓ Free cancellation'],
-          ['yes', '✓ 24h Lawson in the building'],
-          ['yes', '✓ 24h front desk'],
-          ['yes', '✓ Luggage storage + takkyubin'],
-          ['warn', '⚠ Semi-double trap — book DOUBLE'],
+          ['yes', '✓ 24h front desk + luggage storage'],
+          ['warn', '⚠ Oct 2026 data-breach notice — book via OTA, not direct'],
         ],
         transit: [
           ['Sumo · Ryogoku (D2)', 'JR 1 stop · 5 min'],
@@ -123,10 +122,10 @@ const LEGS = [
           ['Shinjuku — Fuji train (D5)', 'Sobu one-seat · 23 min'],
           ['Skytree / Oshiage', '4 stops direct · 9 min'],
         ],
-        near: ['Lawson 24h — in building', 'My Basket supermarket', 'Doutor · Tully’s', 'Sukiya 24h', 'Rail-arch ramen & yakitori', 'Yakiniku Like'],
+        near: ['Lawson 24h — in building', 'My Basket supermarket', 'Doutor · Tully’s', 'Sukiya 24h', 'Rail-arch ramen & yakitori', 'Indian: GANGA/Bole Baba at the station'],
         watch: [
-          'Reviews flag small beds even in doubles, smoke smell on some floors, 6 am housekeeping carts.',
-          'Book SUPERIOR DOUBLE, non-smoking confirmed, high floor AWAY from the JR tracks.',
+          'The hotel itself confirmed (review reply, Nov 2026) it owns NO bed ≥150 cm — so for a couple, only the TWIN (18–20 m², 2×120 cm) works, and just 6 exist. Book early or not at all.',
+          'Reviews flag small rooms (14–15 m²), a wall-facing window type, and a "strange smell" filter on Trip.com — ask for high floor away from the JR tracks.',
           'Don’t confuse with MYSTAYS Asakusa (different hotel, Sumida).',
         ],
         links: [
@@ -141,63 +140,64 @@ const LEGS = [
     cards: [
       {
         pick: true, badge: '#1 pick',
-        name: 'La Vista Fuji-Kawaguchiko',
-        area: 'Kawaguchiko hillside — rooftop onsen baths facing Mt. Fuji',
-        score: '8.9', reviews: '5,123',
-        price: '₹34,664', total: '1 night · the splurge, KEPT',
+        name: 'Mizno Hotel (湖のホテル)',
+        area: 'Hillside above Asakawa, north-east shore — EVERY room faces Fuji over the lake',
+        score: '9.5', reviews: '5,337 · Google 4.7/1,214',
+        price: '₹25,422', total: 'room-only free-canc · anniversary plan ~₹40k',
         chips: [
-          ['yes', '✓ Rooftop open-air baths facing Fuji'],
-          ['yes', '✓ Fuji-view rooms available'],
-          ['yes', '✓ Free cancellation rates exist'],
-          ['warn', '⚠ Dinner plans sell out — add at booking'],
-          ['', 'Onsen resort — yukata, slow evening'],
+          ['yes', '✓ Every room has the Fuji-over-lake view (official)'],
+          ['yes', '✓ PRIVATE rooftop onsen for two — reserved slot'],
+          ['yes', '✓ Anniversary plan: dinner course + drinks ¥70,200/2'],
+          ['', 'Breakfast plan: Western egg+fruit, Fuji-view terrace'],
+          ['warn', '⚠ Rooftop closes in rain (Dec = driest month)'],
+          ['', 'Rooms are shower-only — bathing is rooftop/large bath'],
         ],
         transit: [
-          ['Kawaguchiko Stn', 'shuttle/taxi · ~5 min'],
-          ['Chureito Pagoda (D5 arr)', 'Fujikyu from Shimoyoshida · ~12 min'],
-          ['Oishi Park — lake Fuji view', 'Red Line bus · ~20 min'],
-          ['Lake north shore stroll', 'bus or taxi'],
-          ['Onward to Kanazawa (D6)', 'per itinerary — morning departure'],
+          ['Kawaguchiko Stn (arrive D5)', 'call for pickup · 5–10 min'],
+          ['Dep to Kanazawa (D6 morning)', 'free shuttle every 30 min, 08:00–11:00 — no booking'],
+          ['Oishi Park sunrise (D6)', 'taxi · ~10 min'],
+          ['Lake shore stroll', 'down the hill'],
         ],
-        near: ['Hotel kaiseki / buffet dinner', 'Houtou noodle houses in town', 'Fuji-view Lawson (famous one)', 'Konbini near the station'],
+        near: ['SEIKOUKI French dinner — in-house, Paris-trained chef', 'Library bar "Authors" 16:00–23:00', 'Nothing walkable — dine in-house', 'Konbini: 5-min taxi to town'],
         watch: [
-          'Book a FUJI-VIEW room — the view at dawn is the whole point of the splurge.',
-          'Add the dinner plan at booking: it’s 22 Dec, restaurants in town close early, and it’s the anniversary night.',
-          'Private rooftop baths are first-come — ask for a dusk slot at check-in; Fuji silhouettes at sunset.',
+          'Book the ANNIVERSARY PLAN on Jalan — Terrace Twin "NAGOMI" + French course + drinks, ¥70,200 for two (~₹40k). Or the Booking ₹25,422 room-only + a SEIKOUKI dinner reservation at minimum: dinner is reservation-only and nothing else is walkable.',
+          'At check-in, immediately book the rooftop private bath’s post-sunset slot (~¥1,100/person/30 min) — and email ahead (info@mzn.co.jp) for a cake.',
+          'Check in by ~17:30 if dining; when booking, confirm the rooftop’s winter hours and that the Jun-2026 closure notice is history (OTAs are selling the night).',
         ],
         links: [
-          ['Check live rates — trivago', TRV + 'resort-la-vista-fuji-kawaguchiko-fujikawaguchiko?search=100-6225322%3Bdr-20261222-20261223%3Brc-1-2'],
-          ['Booking.com — search', BKG + 'La+Vista+Fuji+Kawaguchiko', true],
+          ['Booking.com — ₹25,422 free-canc', 'https://www.booking.com/hotel/jp/mizuno.html'],
+          ['Jalan — anniversary plan ¥70,200', 'https://www.jalan.net/yad317230/plan/', true],
         ],
       },
       {
-        badge: '#2 backup',
-        name: 'HOTEL MYSTAYS Fuji Onsen Resort',
-        area: 'Fujiyoshida side, by Fuji-Q Highland — onsen resort at a third of La Vista’s price',
-        score: '8.6', reviews: '13,642',
-        price: '₹11,513/n', total: '1 night · Agoda (non-ref) · free-canc ₹14,588',
+        badge: '#2 alternate',
+        name: 'La Vista Fuji-Kawaguchiko',
+        area: 'Kawaguchiko hillside — Fuji-view onsen baths (2nd floor) + 4 free private baths',
+        score: '8.9', reviews: '5,126 · Google 4.4/1,932',
+        price: '₹34,404', total: 'room-only free-canc · anniv cake plan ~₹62k',
         chips: [
-          ['yes', '✓ Onsen baths with Fuji views'],
-          ['yes', '✓ Huge, well-reviewed — 13.6k reviews'],
-          ['warn', '⚠ Cheapest rate is NON-refundable'],
-          ['', 'Free-canc rate ₹14,588 (Priceline/Trip.com)'],
-          ['no', '✗ Not lakeside — Fuji-Q side of town'],
+          ['yes', '✓ 4 FREE private baths — first-come, no booking'],
+          ['yes', '✓ Rooms with private Fuji-view tub exist'],
+          ['yes', '✓ Weatherproof — indoor private baths'],
+          ['warn', '⚠ Anniversary cake plan ¥109,120 — 2 rooms left'],
+          ['', 'Breakfast/dinner are plan-based — take the 2-meal plan'],
+          ['', 'Shuttle is reserve-only, fixed slots 14:00–18:00'],
         ],
         transit: [
-          ['Kawaguchiko Stn', 'shuttle (reserve) / taxi · ~10 min'],
-          ['Chureito Pagoda (D5)', 'same side of town — short taxi'],
-          ['Fuji-Q Highland', 'next door'],
-          ['Lake north shore', 'bus/taxi · ~20 min'],
+          ['Kawaguchiko Stn', 'reserve-only shuttle / taxi · 10 min'],
+          ['Chureito Pagoda (D5)', 'Fujikyu from Shimoyoshida · ~12 min'],
+          ['Oishi Park', 'taxi · ~15 min'],
+          ['Dep to Kanazawa (D6)', 'taxi to station — book the night before'],
         ],
-        near: ['Hotel dinner buffet', 'Fujiyoshida udon houses', 'Konbini short walk', 'Fuji-Q gate eats'],
+        near: ['Petit Poche French dinner — in-house, 8 courses', 'Houtou noodle houses in town (taxi)', 'Fuji-view Lawson (famous one)', 'Konbini near the station'],
         watch: [
-          'Backup only: saves ~₹20k vs La Vista but loses the rooftop-bath anniversary magic.',
-          'If taking it, pay the free-canc rate (~₹14.6k) — the ₹11.5k Agoda rate is non-refundable.',
-          'Book a Fuji-view room here too — garden-side rooms miss the point.',
+          'The weatherproof pick: if gambling the once-only night on a rooftop that shuts in rain bothers you, La Vista’s indoor private baths + in-room view tub can’t be rained off.',
+          'Book the FUJI-VIEW room category with the 2-meal or anniversary-cake plan (¥105–109k/2 on Jalan; inventory already thin — 1–2 rooms left). Dinner is reservation-mandatory, nothing walkable.',
+          'Reality check from reviews: baths are 2nd-floor hillside (not rooftop), private baths queue on sold-out nights, rooms "cosy but not modern".',
         ],
         links: [
-          ['Check live rates — trivago', TRV + 'hotel-mystays-fuji-onsen-resort-fujikawaguchiko?search=100-5952006%3Bdr-20261222-20261223%3Brc-1-2'],
-          ['Booking.com — search', BKG + 'Hotel+Mystays+Fuji+Onsen+Resort', true],
+          ['Check live rates — trivago', TRV + 'resort-la-vista-fuji-kawaguchiko-fujikawaguchiko?search=100-6225322%3Bdr-20261222-20261223%3Brc-1-2'],
+          ['Jalan — plans for 22 Dec', 'https://www.jalan.net/yad343640/plan/', true],
         ],
       },
     ],
@@ -208,13 +208,14 @@ const LEGS = [
       {
         pick: true, badge: '#1 pick',
         name: 'Hotel Forza Kanazawa',
-        area: 'Yasue-cho — literally beside Omicho Market, 10 min walk to Kanazawa Stn',
-        score: '9.0', reviews: '10,461',
-        price: 'from ₹3,584/n', total: '1 night · Comfort/Refresh Double',
+        area: 'Yasue-cho — beside Omicho Market (3–4 min), 10 min walk to Kanazawa Stn',
+        score: '9.0', reviews: '10,458 · Google 4.5/1,352',
+        price: 'from ₹3,557/n', total: '1 night · Comfort/Refresh Double ~₹4–5k',
         chips: [
           ['yes', '✓ Omicho Market crab breakfast — 3 min'],
           ['warn', '⚠ Book COMFORT or REFRESH Double (150 cm)'],
-          ['no', '✗ Base double is only 140 cm'],
+          ['no', '✗ Base "Forza Double" 140 cm · "Business Double" only 130 cm'],
+          ['', 'Breakfast add-on ¥2,300 · buffet 06:30–10:30'],
           ['yes', '✓ Free cancellation'],
           ['no', '✗ No onsen — Dormy Inn has one'],
         ],
@@ -227,39 +228,39 @@ const LEGS = [
         ],
         near: ['Omicho Market — next door', 'Kanazawa oden izakayas', 'Station Rinto/Anto malls', 'Konbini in 1 min'],
         watch: [
-          'Book the COMFORT or REFRESH DOUBLE — 18 m², 150 cm bed. The plain Double is 140 cm.',
-          'One night only: you arrive from Fuji in the evening — drop bags, Higashi Chaya is lit and walkable.',
-          'Omicho stalls open ~07:00 — crab breakfast, then the 10-min walk to the station for Kyoto.',
+          'Room-name trap confirmed on the official site: COMFORT and REFRESH Double = 18 m²/150 cm; the base FORZA Double is 140 cm, and the BUSINESS Double is a bigger room with a smaller 130 cm bed — don’t be fooled by its size.',
+          'Skip the ¥2,300 hotel buffet — Omicho Market stalls open ~07:00 three minutes away; that IS the breakfast plan.',
+          'One night only: arrive from Fuji in the evening, drop bags, Higashi Chaya is lit and walkable.',
         ],
         links: [
           ['Check live rates — trivago', TRV + 'hotel-forza-kanazawa?search=100-15753816%3Bdr-20261223-20261224%3Brc-1-2'],
-          ['Booking.com — search', BKG + 'Hotel+Forza+Kanazawa', true],
+          ['Official site (FJ Hotels)', 'https://www.hotelforza.jp/kanazawa/', true],
         ],
       },
       {
         badge: '#2 alternate',
         name: 'Dormy Inn Kanazawa',
-        area: 'At Kanazawa Stn (3-min walk) — natural hot-spring baths on the top floor',
-        score: '8.6', reviews: '10,454',
-        price: '₹6,281/n', total: '1 night',
+        area: 'At Kanazawa Stn (2–3 min walk) — natural hot-spring baths on the top (14th) floor',
+        score: '8.6', reviews: '10,457 · Google 4.2/2,769',
+        price: '₹6,234/n', total: '1 night · Booking free-canc',
         chips: [
-          ['yes', '✓ Rooftop natural onsen'],
-          ['yes', '✓ Free yonaki ramen at 21:30'],
+          ['yes', '✓ Rooftop natural onsen (gender-separated, 15:00–10:00)'],
+          ['warn', '⚠ Free 21:30 ramen is PORK broth — not veg'],
+          ['', 'Breakfast ¥2,500 — seafood-centric buffet'],
+          ['warn', '⚠ Opened ~2007 — reviews say dated, onsen crowds at night'],
           ['yes', '✓ Station-side — easy D7 departure'],
-          ['warn', '⚠ Rooms are 15 m² — smaller than Forza'],
-          ['yes', '✓ Free cancellation'],
         ],
         transit: [
-          ['Kanazawa Stn', 'walk · 3 min'],
+          ['Kanazawa Stn', 'walk · 2–3 min'],
           ['Omicho Market (D7 breakfast)', 'walk · ~12 min'],
           ['Kenroku-en + castle', 'loop bus · ~15 min'],
           ['Higashi Chaya district', 'loop bus · ~12 min'],
         ],
-        near: ['Station Rinto & Anto malls', 'Kanazawa Forus dining floors', 'Free 21:30 ramen — in-house', 'Konbini at the station'],
+        near: ['Station Rinto & Anto malls', 'Kanazawa Forus dining floors', 'Konbini at the station', 'Free 21:30 ramen (pork) — in-house'],
         watch: [
-          'Pick this over Forza only if the onsen matters more than sleeping beside Omicho — after a slushy December day it’s a real argument.',
-          'Rooms run 15 m²; fine for one night with bags half-packed.',
-          'The free yonaki ramen at 21:30 is the Dormy party trick — don’t miss it.',
+          'Pick this over Forza only if a hot-spring soak after a slushy day beats sleeping beside Omicho — and know the bath is gender-separated, smaller on the women’s side, and crowded late evening.',
+          'Rooms run 15 m² with 140 cm doubles; the building is ~2007 and reviews call it dated.',
+          'Its breakfast is a kaisen-don seafood spread — skip for the veg half; eggs/salad/bread exist but you’re paying for fish.',
         ],
         links: [
           ['Check live rates — trivago', TRV + 'hotel-dormy-inn-kanazawa-natural-hot-spring?search=100-1344588%3Bdr-20261223-20261224%3Brc-1-2'],
@@ -274,18 +275,18 @@ const LEGS = [
       {
         pick: true, badge: '#1 pick',
         name: 'Comfort Hotel ERA Kyoto Toji',
-        area: 'Minami-ku — Kintetsu Toji 1 min, Kyoto Stn a 13-min flat walk (or 1 train stop)',
-        score: '9.1', reviews: '5,948',
-        price: '₹5,584/n', total: '3 nights · Economy Double',
+        area: 'Minami-ku — Kintetsu Toji 1 min, Kyoto Stn a flat 14-min walk (or 1 train stop)',
+        score: '9.1', reviews: '5,950 · Google 4.5/735',
+        price: '₹5,543/n', total: '3 nights · Booking free-canc ₹16,628',
         chips: [
-          ['yes', '✓ 160 cm "Economy Double" — book this'],
+          ['yes', '✓ 160 cm "QUEEN ECONOMY" room — book this'],
           ['no', '✗ Standard Double is only 140 cm'],
-          ['', 'Breakfast = ¥1,650 add-on · opens 06:30'],
-          ['yes', '✓ Free cancellation'],
-          ['warn', '⚠ Email: confirm takkyubin + breakfast'],
+          ['warn', '⚠ Queen Economy may have a frosted no-view window'],
+          ['', 'Breakfast add-on ¥1,800 · veg-friendly buffet 06:30'],
+          ['yes', '✓ Free cancellation · 24h desk'],
         ],
         transit: [
-          ['Kyoto Stn — all 4 mornings', 'flat walk 13 min · Kintetsu 1 stop'],
+          ['Kyoto Stn — all 4 mornings', 'flat walk 14 min · Kintetsu 1 stop'],
           ['Fushimi Inari sunrise (D8)', 'via Kyoto Stn · JR 2 stops'],
           ['Arashiyama (D9)', 'JR Sagano line · ~16 min'],
           ['Gion / Kiyomizu-dera', 'bus 206 · ~20 min'],
@@ -293,9 +294,9 @@ const LEGS = [
         ],
         near: ['Kyoto Stn Ramen Koji (10F)', 'Kyoto Tower Sando food hall', 'AEON Mall Kyoto', 'Konbini beside the hotel'],
         watch: [
-          'Book the ECONOMY DOUBLE (160 cm, 16–18 m²), high floor away from Kujo-dori — the Standard Double bed is 140 cm.',
-          'Breakfast is NOT auto-included: ¥1,650/person plan add-on, opens 06:30 — works for the sunrise mornings.',
-          'One email before you fly: confirm they’ll hold the takkyubin bags sent from Tokyo (D5 → arrives before you do) + add breakfast to the rate.',
+          'Book the QUEEN ECONOMY (160 cm, 16–18 m², 28 rooms exist) — and request HIGH FLOOR, WEST-FACING: the real noise is the Kintetsu tracks east of the hotel (trains ~05:30–24:00), not just Kujo-dori. East/south rooms have fixed frosted windows — quiet, but no view.',
+          'Breakfast is NOT included: ¥1,800/adult "vegetable-forward" buffet from 06:30 — the most veg-friendly cheap buffet of the trip, and it works for sunrise mornings if you eat at opening.',
+          'One email before you fly (+81 75-662-0311): confirm they’ll hold the takkyubin bags from Tokyo (label: フロント気付 + name + check-in 24 Dec) — the policy isn’t published, so don’t ship blind. Checkout is 10:00.',
         ],
         links: [
           ['Check live rates — trivago', TRV + 'comfort-hotel-era-kyoto-toji?search=100-23439598%3Bdr-20261224-20261227%3Brc-1-2'],
@@ -305,27 +306,27 @@ const LEGS = [
       {
         badge: '#2 alternate',
         name: 'Hotel Vischio Kyoto by GRANVIA',
-        area: 'Right by Kyoto Stn (south/Hachijo side) — ~3-min walk to the concourse',
-        score: '9.1', reviews: '9,330',
+        area: 'Kyoto Stn, south/Hachijo exit — 2-min walk; perfect side for the D10 Osaka departure',
+        score: '9.1', reviews: '9,330 · Google 4.5/1,601',
         price: '₹8,489/n', total: '3 nights · Agoda free-canc ₹25,467',
         chips: [
-          ['yes', '✓ Practically ON the station — zero morning tax'],
+          ['yes', '✓ Moderate Double = 180 cm KING, 21.5 m²'],
+          ['yes', '✓ Guest-only big bath + sauna (not onsen)'],
           ['yes', '✓ Agoda free-cancellation rate'],
-          ['yes', '✓ 4★ · 2018 build, big bath floor'],
-          ['', 'Breakfast not included on the cheap rate'],
-          ['warn', '⚠ ~₹2.9k/n more than ERA Toji'],
+          ['', 'Famous 100+ dish buffet — now ¥4,500/adult'],
+          ['warn', '⚠ Hachijo side: +5–8 min station crossing for JR mornings'],
         ],
         transit: [
-          ['Kyoto Stn — all 4 mornings', 'walk · ~3 min'],
-          ['Fushimi Inari sunrise (D8)', 'JR Nara line · 2 stops'],
-          ['Arashiyama (D9)', 'JR Sagano line · ~16 min'],
+          ['Kyoto Stn (Hachijo exit)', 'walk · 2 min'],
+          ['JR platforms (Fushimi/Arashiyama)', '+5–8 min through the station'],
           ['Gion / Kiyomizu-dera', 'bus 206 from the station · ~20 min'],
+          ['Dep to Osaka (D10)', 'same side as Shinkansen/Hachijo gates'],
         ],
-        near: ['Kyoto Stn Ramen Koji (10F)', 'Porta underground mall', 'Kyoto Tower Sando food hall', 'Konbini in the station'],
+        near: ['Vischio Garden buffet — Kyoto obanzai spread', 'Porta underground mall', 'Kyoto Stn Ramen Koji (10F)', 'Konbini in the station'],
         watch: [
-          'The upgrade option: identical 9.1 score, newer 4★ hardware, and the station at the door — worth it if the ₹8.7k/3n premium over ERA feels cheap for Christmas.',
-          'Lock the Agoda free-canc rate (₹8,489/n); the non-ref rates aren’t worth the risk 13 months out.',
-          'Standard doubles here are real doubles — still confirm width at booking if you want 160 cm.',
+          'The comfort upgrade: same 9.1 score as ERA, a real 180 cm king, 2019 hardware, big bath + sauna, 11:00 checkout — for ~₹8.8k more over 3 nights.',
+          'Its famous buffet is now ¥4,500/head (¥9,000/day for two) — do it ONCE as the Christmas-morning treat, konbini the other days.',
+          'Recent gripes to know: compact rooms for the class, a few "hard bed/dusty corners" reviews — ask high floor; opened 2019.',
         ],
         links: [
           ['Check live rates — trivago', TRV + 'hotel-vischio-kyoto-by-granvia?search=100-11217144%3Bdr-20261224-20261227%3Brc-1-2'],
@@ -339,59 +340,60 @@ const LEGS = [
     cards: [
       {
         pick: true, badge: '#1 pick',
-        name: 'Hearton Hotel Nishiumeda',
-        area: 'Umeda — 5-min walk from Osaka Stn Sakurabashi (west) exit',
-        score: '8.1', reviews: '12,930',
-        price: '₹6,716/n', total: '3 nights · Agoda free-canc',
+        name: 'DEL style Osaka Shin-Umeda by Daiwa Roynet',
+        area: 'Shin-Umeda — ~7-min walk north-west of Osaka Stn; 2019 building, 4★',
+        score: '8.4', reviews: '4,947',
+        price: '₹7,251/n', total: '3 nights · Klook free-canc ₹21,752',
         chips: [
-          ['yes', '✓ 24h front desk — takes the 09:50 D10 bag drop'],
-          ['yes', '✓ Agoda free-cancellation rate'],
-          ['yes', '✓ Walk home from Yodobashi with the watches'],
-          ['warn', '⚠ Double ~140 cm typical — confirm width'],
-          ['', '1 JR stop to Shin-Osaka (D13 Nozomi)'],
+          ['yes', '✓ Free-canc ₹7,251/n (Klook) · ₹8,217 Booking'],
+          ['yes', '✓ 2019 build — the newest option in Umeda'],
+          ['yes', '✓ Daiwa Roynet standard: 24h desk + bag storage'],
+          ['', 'Breakfast ¥2,200 fixed set — skip it, Umeda feeds you better'],
+          ['', '~9-min walk to Yodobashi with the watches'],
         ],
         transit: [
-          ['Osaka Stn / Umeda', 'walk · 5 min'],
+          ['Osaka Stn / Umeda', 'walk · ~7 min'],
           ['USJ (D11)', 'JR Loop → Universal City · ~20 min'],
-          ['Dotonbori / Namba', 'Midosuji subway · ~10 min'],
-          ['Yodobashi Umeda — watch run', 'walk · ~8 min'],
-          ['Shin-Osaka (D13 Nozomi)', 'JR 1 stop · 4 min'],
-          ['Umeda Sky Building', 'walk · ~12 min'],
+          ['Dotonbori / Namba', 'Midosuji from Umeda · ~10 min'],
+          ['Yodobashi Umeda — watch run', 'walk · ~9 min'],
+          ['Shin-Osaka (D13 Nozomi)', 'JR 1 stop from Osaka Stn · 4 min'],
         ],
-        near: ['Shin-Umeda Shokudogai izakaya alley', 'Hanshin/Hankyu depachika', 'Kiji okonomiyaki (Sky Bldg)', 'Konbini everywhere'],
+        near: ['Shin-Umeda Shokudogai izakaya alley', 'Hanshin/Hankyu depachika', 'Kiji okonomiyaki (Sky Bldg ~10 min)', 'Konbini everywhere'],
         watch: [
-          'Lock the Agoda free-canc rate (₹6,716/n) — Booking runs higher for the same room.',
-          'D10: you land at Osaka Stn ~09:50 — the 24h desk takes bags before check-in (rooms from ~15:00), head straight out.',
-          'Doubles here run ~140 cm — if that’s tight for you two, the twin sits in the same price band.',
+          'Lock the Klook free-canc rate (₹7,251/n); Booking’s ₹8,217 is the easier-support fallback at ₹2.9k more for the stay.',
+          'D10: you land at Osaka Stn ~09:50 — Daiwa Roynet desks store bags before check-in; drop and go straight out.',
+          'Confirm bed width at booking — pick the Double/Queen category over the smallest room class for 3 nights with luggage.',
         ],
         links: [
-          ['Check live rates — trivago', TRV + 'hearton-hotel-nishiumeda-osaka?search=100-1033428%3Bdr-20261227-20261230%3Brc-1-2'],
-          ['Agoda — free-canc rate', AGD + 'Hearton%20Hotel%20Nishiumeda', true],
+          ['Check live rates — trivago', TRV + 'del-style-osaka-shin-umeda-by-daiwa-roynet-hotel?search=100-19759854%3Bdr-20261227-20261230%3Brc-1-2'],
+          ['Booking.com — search', BKG + 'DEL+style+Osaka+Shin-Umeda', true],
         ],
       },
       {
         badge: '#2 alternate',
         name: 'APA Midosuji Honmachi Ekihigashi',
-        area: 'Honmachi — on the Midosuji line, ~5 min to both Umeda and Namba',
-        score: '8.2', reviews: '3,323',
-        price: '₹4,932/n', total: '3 nights',
+        area: 'Honmachi — east of the Midosuji line (6–8 min walk to its platforms)',
+        score: '8.2', reviews: '3,323 · skyticket 4.2/1,694',
+        price: '₹4,988/n', total: '3 nights · Booking free-canc ₹14,965',
         chips: [
-          ['yes', '✓ Cheapest Osaka option'],
+          ['yes', '✓ Cheapest Osaka option — free-canc confirmed'],
           ['no', '✗ Double is 11 m² with a 140 cm bed'],
-          ['warn', '⚠ If choosing this, book the 21 m² Deluxe Twin'],
-          ['', 'Metro ride every time — no Osaka Stn walk'],
+          ['warn', '⚠ If choosing this, book the 21 m² Deluxe Twin (2×120)'],
+          ['', 'Breakfast ¥1,500 adv — small buffet, skip it'],
+          ['warn', '⚠ Google Maps pin reportedly misplaced — navigate by address'],
         ],
         transit: [
+          ['Midosuji line platforms', 'walk · 6–8 min (it’s beside Sakaisuji-Honmachi)'],
           ['Umeda / Osaka Stn', 'Midosuji · 2 stops'],
           ['Namba / Dotonbori', 'Midosuji · 2 stops'],
-          ['USJ (D11)', 'via Honmachi → Nishikujo · ~25 min'],
-          ['Shin-Osaka (D13)', 'Midosuji direct · ~12 min'],
+          ['USJ (D11)', 'via Nishikujo · ~30 min'],
+          ['Shin-Osaka (D13)', 'Midosuji direct · ~15 min'],
         ],
         near: ['Honmachi office-lunch spots', 'Utsubo Park cafes', 'Konbini in 1 min', 'Quiet business-district evenings'],
         watch: [
-          'The price edge is real only in the 11 m² double — the Deluxe Twin lands at Hearton money, so Hearton wins.',
-          'D10 09:50 arrival means a metro hop with all the bags before drop-off.',
-          'Quiet at night — Dotonbori energy is 2 stops away, not outside the door.',
+          'The price edge is real only in the 11 m² double — the Deluxe Twin lands at DEL-style money, so DEL style wins unless every rupee counts.',
+          'D10 09:50 arrival means a subway hop with all the bags before drop-off; USJ and the station runs are all clumsier from Honmachi.',
+          'Don’t confuse it with the near-identical "APA Midosuji Hommachi EKIMAE Tower" — different, bigger property.',
         ],
         links: [
           ['Check live rates — trivago', TRV + 'apa-hotel-midosuji-honmachi-ekihigashi-osaka?search=100-8155980%3Bdr-20261227-20261230%3Brc-1-2'],
@@ -401,34 +403,34 @@ const LEGS = [
     ],
   },
   {
-    title: 'Tokyo · New Year', dates: '30 Dec–4 Jan · 5 nights · selling out NOW',
+    title: 'Tokyo · New Year', dates: '30 Dec–4 Jan · 5 nights · LAST FEW ROOMS',
     cards: [
       {
         pick: true, badge: '#1 pick',
         name: 'APA Nihombashi Bakuroyokoyama Ekimae',
-        area: 'Higashi-Nihombashi — 100 m from the Asakusa line, JR Bakurocho 5 min, 2 min from our Leg-1 hotel',
-        score: '8.5', reviews: '6,466',
-        price: '₹8,541/n', total: '5 nights · Agoda free-canc',
+        area: 'Higashi-Nihombashi — stations linked by underground passage: Bakuroyokoyama 1 min, Asakusa line 2 min, JR Bakurocho 5 min',
+        score: '8.7', reviews: 'Agoda 12,121 · Google 4.2/783',
+        price: '₹8,811/n', total: '5 nights · Agoda free-canc to 29 Dec',
         chips: [
-          ['warn', '⚠ Book TONIGHT — NY window is clearing fast'],
-          ['yes', '✓ Agoda free-canc ₹8,541/n (Booking ₹9,721)'],
-          ['yes', '✓ Asakusa line = direct to Zojoji NYE'],
-          ['warn', '⚠ Corner Cozy/View 140 cm — or Deluxe Twin 22 m²'],
-          ['', 'A/C centrally managed — rooms run warm'],
+          ['warn', '⚠ BOOK TODAY — 4 room types already sold out, doubles "last few"'],
+          ['yes', '✓ Agoda ₹8,811/n free-canc (Booking ₹9,648 incl. taxes)'],
+          ['warn', '⚠ Standard Double = 11 m², 140 cm (Deluxe Twin sold out)'],
+          ['', 'A/C centrally managed — rooms run warm (official notice)'],
+          ['', 'Breakfast ¥1,600: poke/pancake plates — confirm it opens 1–3 Jan'],
         ],
         transit: [
-          ['Zojoji NYE countdown (31 Dec)', 'Asakusa line to Daimon · ~15 min'],
+          ['Zojoji NYE (31 Dec)', 'Asakusa line to Daimon · ~13 min'],
+          ['NYE 01:00 return', 'last Daimon train ~00:20 · else JR from Hamamatsucho (all-night Yamanote) or taxi ¥3–4.5k'],
           ['Doomsday IMAX · Ikebukuro (D14)', 'JR + metro · ~30 min'],
           ['Senso-ji hatsumode (1 Jan)', 'Asakusa line direct · ~10 min'],
-          ['Meiji Shrine (1 Jan option)', 'Sobu to Yoyogi +1 · ~30 min'],
           ['Tokyo Stn', 'Sobu rapid from Bakurocho · 1 stop'],
           ['Narita (D18)', 'booked car · 10:15 pickup'],
         ],
         near: ['Same block as Leg 1 — you know it', 'Konbini ×3 in 2 min', 'Kanda kissaten morning sets', 'Nihombashi Takashimaya depachika'],
         watch: [
-          'Book TONIGHT on the Agoda free-canc rate — New-Year nights in this corridor are already clearing, 13 months out.',
-          'Pick CORNER COZY or CORNER VIEW (140 cm double) or the 22 m² DELUXE TWIN — standard APA doubles are tighter.',
-          'Most restaurants shut 1–2 Jan — plan on konbini, chains, and the Takashimaya depachika; rooms run warm (central A/C).',
+          'Book TODAY on the Agoda free-canc rate and lock NON-SMOKING explicitly — one reviewer got forced into a smoking room when non-smoking sold out. Inventory is "last few".',
+          'No all-night subway on NYE (Toei hasn’t run one since COVID; 2026-27 announced mid-Dec): leave Zojoji right after midnight for the ~00:20 last train, or walk 10 min to JR Hamamatsucho for the overnight Yamanote, or taxi (~15–20 min).',
+          'Rooms run warm (central heating, no in-room control — official) and 11 m² is tight: pack light sleepwear. 1–2 Jan most restaurants shut — konbini + Takashimaya depachika; the breakfast restaurant is a tenant, phone +81 3-3527-2031 to confirm New-Year opening.',
         ],
         links: [
           ['Check live rates — trivago', TRV + 'apa-hotel-nihombashi-bakuroyokoyama-ekimae-tokyo?search=100-22860700%3Bdr-20261230-20270104%3Brc-1-2'],
@@ -437,30 +439,31 @@ const LEGS = [
       },
       {
         badge: '#2 alternate',
-        name: 'HOTEL MYSTAYS Ochanomizu',
-        area: 'Ochanomizu — JR Chuo/Sobu, between Akihabara and Jimbocho',
-        score: '8.4', reviews: '4,710',
-        price: '₹9,665/n', total: '5 nights',
+        name: 'APA Hotel Asakusabashi Ekikita',
+        area: 'Asakusabashi — north of the JR station, Toei Asakusa line close by',
+        score: '8.2', reviews: 'Booking 2,588',
+        price: '₹9,568/n', total: '5 nights · ₹47,838 incl. taxes · free-canc',
         chips: [
-          ['yes', '✓ Solid rooms, conference-hotel calm'],
-          ['no', '✗ Off the Asakusa line — clumsy NYE Zojoji run'],
-          ['', 'Pricier than the APA pick'],
-          ['yes', '✓ Free cancellation'],
+          ['yes', '✓ AVAILABLE for all 5 NY nights (checked live)'],
+          ['yes', '✓ On the Asakusa line — same NYE logic'],
+          ['warn', '⚠ Same APA formula: 11 m², 140 cm double'],
+          ['', 'Breakfast: typical APA add-on — konbini instead'],
         ],
         transit: [
-          ['Zojoji NYE (31 Dec)', 'transfer via Daimon · ~25 min'],
-          ['Akihabara', 'JR · 1 stop'],
-          ['Tokyo Stn', 'JR · ~6 min'],
-          ['Meiji Shrine (1 Jan)', 'Chuo → Yamanote · ~25 min'],
+          ['Zojoji NYE (31 Dec)', 'Asakusa line · ~15 min'],
+          ['Senso-ji hatsumode (1 Jan)', 'Asakusa line · ~8 min'],
+          ['Akihabara', 'JR Sobu · 1 stop'],
+          ['Tokyo Stn', 'JR via Akihabara · ~12 min'],
         ],
-        near: ['Jimbocho curry & book town', 'Ochanomizu guitar street', 'Akihabara 1 stop away', 'Konbini nearby'],
+        near: ['Lawson/konbini cluster', 'Rail-arch ramen & yakitori', 'Kuramae cafes 10 min', 'Akihabara eats 1 stop away'],
         watch: [
-          'Second choice: take it only if the APA free-canc rate is gone.',
-          'NYE logistics are worse from here — the Zojoji return needs a transfer at 01:00.',
+          'Backup only if the Bakuroyokoyama APA’s last rooms vanish before you book — same chain, same room formula, ~₹750/n more.',
+          'Over-budget fallback worth knowing: Comfort Hotel Tokyo Higashi Nihombashi (our ERA’s sister, 8.4/3,502) at ₹13,570/n, right at Higashi-Nihombashi station.',
+          'MYSTAYS Asakusabashi and Sotetsu Fresa Ningyocho are already SOLD OUT for these dates — the NY corridor is clearing in real time.',
         ],
         links: [
-          ['Check live rates — trivago', TRV + 'hotel-mystays-ochanomizu-conference-center-tokyo?search=100-1277092%3Bdr-20261230-20270104%3Brc-1-2'],
-          ['Booking.com — search', BKG + 'Hotel+Mystays+Ochanomizu', true],
+          ['Booking.com — ₹9,568/n', BKG + 'APA+Hotel+Asakusabashi+Ekikita'],
+          ['Agoda — search', AGD + 'APA%20Hotel%20Asakusabashi%20Ekikita', true],
         ],
       },
     ],
@@ -472,13 +475,13 @@ export default function Hotels() {
     <div className="htl">
       <div className="htl-wrap">
         <header className="htl-head">
-          <p className="htl-kicker">JAP-26 · self-booked · audited 26 Nov 2026</p>
+          <p className="htl-kicker">JAP-26 · self-booked · re-audited 26 Nov 2026 · 6 agents + Google reviews</p>
           <h1>Hotels</h1>
           <p className="htl-sub">
-            17 nights, six legs, all audited — reviews read, geography verified, room types
-            checked down to bed width. Every leg has a decided pick plus at least one audited
-            alternate; every link opens the live search for our exact dates, 2 adults. Book the
-            free-cancellation rates now — the New-Year corridor is already selling out.
+            17 nights, six legs — every claim re-verified against official sites, live rates,
+            Google reviews and bed-width tables. Every leg has a decided pick plus a real
+            alternate, each with a breakfast verdict. Book the free-cancellation rates now —
+            the New-Year corridor is selling out in real time.
           </p>
         </header>
 
