@@ -549,7 +549,7 @@
       "costIncluded": null,
       "notes": "",
       "blurb": "Oishi Park on Lake Kawaguchi's northern shore is celebrated for its unobstructed lake-and-Fuji panorama, among the finest viewpoints in the Fuji Five Lakes region.",
-      "transit": "Taxi, booked the night before at the front desk — 15 min, ~¥2,300 total. (Buses don't make a 07:45 sunrise.)"
+      "transit": "Taxi, booked the night before at Mizno's front desk — ~10 min around the lake's north shore from Asakawa, ~¥1,500–1,800 total. (Buses don't make a 07:45 sunrise.)"
     },
     {
       "day": 6,
@@ -1229,7 +1229,7 @@
       "costIncluded": false,
       "notes": "watch buying stop; 09:30–22:00; 2nd pass possible 28 Dec 09:30",
       "blurb": "Yodobashi Umeda is one of Japan's largest electronics megastores, its watch floor stocking the full Seiko and Orient Star ranges alongside eight storeys of gadgets.",
-      "transit": "10–12-min walk through Osaka Station City to the north gate — Yodobashi’s block faces it. Walking home after with the watches: same walk, no metro needed."
+      "transit": "10–12-min walk through Osaka Station City to the north gate — Yodobashi’s block faces it. Walking home after with the watches: ~9 min — out the north-west side past Grand Front, no metro needed."
     },
     {
       "day": 11,
@@ -1254,7 +1254,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "JR Osaka Loop inner (platform 1) → Nishikujo, 5 min; cross the platform to the JR Yumesaki (Sakurajima) Line → Universal City, 5 min. ¥190 pp total. The 07:15 start is the queue-beater."
+      "transit": "Walk ~7 min to Osaka Stn, then JR Osaka Loop inner (platform 1) → Nishikujo, 5 min; cross the platform to the JR Yumesaki (Sakurajima) Line → Universal City, 5 min. ¥190 pp total. The 07:15 start is the queue-beater."
     },
     {
       "day": 11,
@@ -1286,14 +1286,14 @@
       "day": 11,
       "seq": 5,
       "time": "18:15",
-      "title": "Return to Hotel Granvia Osaka via JR Line",
+      "title": "Return to hotel (Shin-Umeda) via JR",
       "place": "DEL style Osaka Shin-Umeda by Daiwa Roynet",
       "lat": 34.70057,
       "lng": 135.48898,
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "Reverse: Yumesaki Line → Nishikujo → Loop Line to Osaka Stn, ~20 min, ¥190 pp."
+      "transit": "Reverse: Yumesaki Line → Nishikujo → Loop Line to Osaka Stn, ~20 min, ¥190 pp; then the ~7-min walk home out the north-west side."
     },
     {
       "day": 12,
@@ -1318,7 +1318,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "Osaka Metro Midosuji Line (red M) Umeda → Namba, 8 min, ¥240 pp; then a 10-min walk east along Sennichimae-dori to the market arcades."
+      "transit": "Walk ~5 min to Nishi-Umeda (Yotsubashi Line, blue Y — it's the closest subway to the hotel) → Namba, direct 8 min, ¥240 pp; then a 10-min walk east along Sennichimae-dori to the market arcades."
     },
     {
       "day": 12,
@@ -1410,7 +1410,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "Midosuji Line Dobutsuen-mae → Umeda direct, ~12 min, ¥240 pp."
+      "transit": "Midosuji Line Dobutsuen-mae → Daikokucho (1 stop), cross to the Yotsubashi Line → Nishi-Umeda, ~13 min total, ¥240 pp — 5-min walk home from there."
     },
     {
       "day": 13,
@@ -1436,7 +1436,7 @@
       "costIncluded": true,
       "notes": "reserve 30 Nov — U-turn rush",
       "blurb": "The Tokaido Shinkansen, opened in 1964, is the world's first high-speed railway, whisking passengers between Osaka and Tokyo in about two and a half hours.",
-      "transit": "JR Kyoto Line local Osaka → Shin-Osaka, 1 stop, 4 min, ¥170; allow 20 min for the Shinkansen gate + ekiben run. Nozomi (reserved + the free oversized-luggage seats) Shin-Osaka → Tokyo, 2h27m · ¥14,720 pp (≈ ₹8,700); SmartEX early-bird saves ~¥2,500 pp — books 30 Nov."
+      "transit": "Walk ~7 min to Osaka Stn, then JR Kyoto Line local → Shin-Osaka, 1 stop, 4 min, ¥170; allow 20 min for the Shinkansen gate + ekiben run. Nozomi (reserved + the free oversized-luggage seats) Shin-Osaka → Tokyo, 2h27m · ¥14,720 pp (≈ ₹8,700); SmartEX early-bird saves ~¥2,500 pp — books 30 Nov."
     },
     {
       "day": 13,
@@ -1567,7 +1567,7 @@
       "costIncluded": null,
       "notes": "1.5–2 h queue expected",
       "blurb": "Meiji Jingu is Tokyo's grandest Shinto shrine, enshrining Emperor Meiji within a 100,000-tree planted forest and drawing Japan's largest hatsumode crowds each New Year.",
-      "transit": "JR Chuo-Sobu Local (yellow) from Asakusabashi → Yoyogi, direct ~24 min, ¥230 pp — the quiet north forest approach to Meiji Jingu starts 8 min from the West exit. Join the hatsumode river from there."
+      "transit": "Walk ~7 min to JR Asakusabashi, then Chuo-Sobu Local (yellow) → Yoyogi, direct ~24 min, ¥230 pp — the quiet north forest approach to Meiji Jingu starts 8 min from the West exit. Join the hatsumode river from there."
     },
     {
       "day": 15,
@@ -1702,7 +1702,7 @@
       "type": "meal",
       "costIncluded": null,
       "notes": "pick the farewell meal in December; pack tonight — 06:15 start tomorrow",
-      "transit": "Ginza Line → Nihombashi (3 stops, ¥180 pp), 8-min walk to the hotel — pack tonight, bags close at 23:00."
+      "transit": "Ginza Line → Nihombashi (3 stops, ¥180 pp), then Asakusa Line 1 stop to Higashi-Nihombashi (¥180) or a ~12-min walk up Ningyocho-dori — pack tonight, bags close at 23:00."
     },
     {
       "day": 18,
