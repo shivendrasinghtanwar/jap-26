@@ -253,7 +253,6 @@ export default function Bookings() {
           {(q || cat !== 'all' || scope !== 'all') && (
             <button className="bk-clear" onClick={() => { setQ(''); setCat('all'); setScope('all') }}>clear</button>
           )}
-          <span className="bk-count">{rows.length} items · ≈ ₹{totalINR.toLocaleString('en-IN')}</span>
         </div>
 
         <div className="bkg-table" role="table" aria-label="Bookings">
