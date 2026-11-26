@@ -830,20 +830,6 @@
     },
     {
       "day": 7,
-      "seq": 10,
-      "time": "18:30",
-      "title": "Cathedral Christmas gathering (optional)",
-      "place": "St. Francis Xavier Cathedral, Kawaramachi",
-      "lat": 35.0096,
-      "lng": 135.767,
-      "type": "experience",
-      "costIncluded": null,
-      "notes": "400 m from the Okura — catch the opening carols, walk back for dinner",
-      "blurb": "A free pre-mass community celebration with carols and handbells at Kyoto’s cathedral, five minutes from the Okura.",
-      "transit": "4-min walk — the cathedral is 400 m from the Okura, same block of Kawaramachi."
-    },
-    {
-      "day": 7,
       "seq": 11,
       "time": "19:00",
       "title": "Christmas-Eve dinner — BOOKED",
@@ -854,7 +840,7 @@
       "costIncluded": false,
       "notes": "Menu de Noël ¥20,000–30,000 pp incl. service — book NOW + vegetarian request in writing; 17th floor, city lights below",
       "blurb": "Japan’s Christmas Eve ritual at its best: a French course dinner above the lights of Kyoto.",
-      "transit": "4-min walk back to the Okura — top-floor Pittoresque, booked for 19:00."
+      "transit": "No transit — dinner is upstairs in the same building: elevator to the 17th floor, seated by 19:00."
     },
     {
       "day": 7,
@@ -866,9 +852,9 @@
       "lng": 135.767,
       "type": "experience",
       "costIncluded": null,
-      "notes": "Japan’s ‘midnight’ mass runs ~21:00–22:15 — 5 min walk; non-Christians welcome, arrive early; confirm +81 75-231-4785. (Station lights tonight impossible — they’re slotted tomorrow 17:15.)",
+      "notes": "Japan's 'midnight' mass runs ~21:00–22:15 — arrive ~20:40 for seats; carols usually precede the service, so you miss nothing by skipping the earlier gathering. Non-Christians welcome; confirm +81 75-231-4785. (Station lights tonight impossible — they're slotted tomorrow 17:15.)",
       "blurb": "Kyoto’s main Catholic cathedral, whose candlelit Christmas Eve services draw a full house each 24 December.",
-      "transit": "4-min walk across again for the 21:00 'midnight' mass — ends ~22:15, taxi home ~¥1,300."
+      "transit": "4-min walk from the Okura — one block up Kawaramachi, cathedral on the same block. After it ends ~22:15, taxi home ~¥1,300."
     },
     {
       "day": 8,
