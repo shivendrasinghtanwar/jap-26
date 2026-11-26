@@ -1,9 +1,9 @@
 import './hotels.css'
 
 /* Hotel audit — all six legs decided (26 Nov 2026).
-   EVERY option gets a full card — picks, backups, and the disqualified
-   (with honest red badges), at least two per leg.
-   All trivago links are pre-dated searches: exact nights, 2 adults. */
+   Every leg shows exactly its bookable options as full cards — a #1 pick
+   plus at least one good alternate. Disqualified/sold-out hotels are not
+   shown. All trivago links are pre-dated searches: exact nights, 2 adults. */
 
 const TRV = 'https://www.trivago.in/en-IN/lm/'
 const BKG = 'https://www.booking.com/searchresults.html?ss='
@@ -13,11 +13,11 @@ function Chip({ kind, children }) {
   return <span className={'htl-chip' + (kind ? ' ' + kind : '')}>{children}</span>
 }
 
-function Featured({ pick, dq, badge, name, area, score, reviews, price, total, chips, transit, near, watch, links }) {
+function Featured({ pick, badge, name, area, score, reviews, price, total, chips, transit, near, watch, links }) {
   return (
-    <article className={'htl-card' + (pick ? ' is-pick' : '') + (dq ? ' is-dq' : '')}>
+    <article className={'htl-card' + (pick ? ' is-pick' : '')}>
       <div className="htl-top">
-        <span className={'htl-badge' + (pick ? '' : dq ? ' dq' : ' alt')}>{badge}</span>
+        <span className={'htl-badge' + (pick ? '' : ' alt')}>{badge}</span>
         <div className="htl-name">
           <h3>{name}</h3>
           <span className="htl-area">{area}</span>
@@ -46,7 +46,7 @@ function Featured({ pick, dq, badge, name, area, score, reviews, price, total, c
           </div>
         </div>
         <div className="htl-col">
-          <h4>{dq ? 'Why it lost' : 'Book it right'}</h4>
+          <h4>Book it right</h4>
           <ul className="htl-watch">
             {watch.map(w => <li key={w}>{w}</li>)}
           </ul>
@@ -303,33 +303,33 @@ const LEGS = [
         ],
       },
       {
-        dq: true, badge: 'disqualified',
-        name: 'HOTEL TAVINOS Kyoto',
-        area: 'Kawaramachi-Gojo — 2 km from Kyoto Stn, whatever the listings imply',
-        score: '8.4', reviews: '4,285',
-        price: '₹4,342/n', total: '3 nights · cheaper, but…',
+        badge: '#2 alternate',
+        name: 'Hotel Vischio Kyoto by GRANVIA',
+        area: 'Right by Kyoto Stn (south/Hachijo side) — ~3-min walk to the concourse',
+        score: '9.1', reviews: '9,330',
+        price: '₹8,489/n', total: '3 nights · Agoda free-canc ₹25,467',
         chips: [
-          ['no', '✗ 2 km from Kyoto Stn — bus/taxi every morning'],
-          ['no', '✗ Breaks all four station-timed mornings'],
-          ['yes', '✓ Cheapest of the Kyoto shortlist'],
-          ['', 'Manga-themed rooms'],
-          ['', 'Nearest rail: Kiyomizu-Gojo (Keihan)'],
+          ['yes', '✓ Practically ON the station — zero morning tax'],
+          ['yes', '✓ Agoda free-cancellation rate'],
+          ['yes', '✓ 4★ · 2018 build, big bath floor'],
+          ['', 'Breakfast not included on the cheap rate'],
+          ['warn', '⚠ ~₹2.9k/n more than ERA Toji'],
         ],
         transit: [
-          ['Kyoto Stn — our 4-morning base', 'bus/taxi · ~15 min'],
-          ['Gion', 'walk · ~12 min'],
-          ['Kiyomizu-dera', 'walk · ~20 min'],
-          ['Nishiki Market', 'walk · ~10 min'],
+          ['Kyoto Stn — all 4 mornings', 'walk · ~3 min'],
+          ['Fushimi Inari sunrise (D8)', 'JR Nara line · 2 stops'],
+          ['Arashiyama (D9)', 'JR Sagano line · ~16 min'],
+          ['Gion / Kiyomizu-dera', 'bus 206 from the station · ~20 min'],
         ],
-        near: ['Kawaramachi nightlife', 'Pontocho alley', 'Gion cafes', 'Konbini nearby'],
+        near: ['Kyoto Stn Ramen Koji (10F)', 'Porta underground mall', 'Kyoto Tower Sando food hall', 'Konbini in the station'],
         watch: [
-          '"Near Kyoto Station" in listings is marketing — the map says Kawaramachi-Gojo, 2 km away.',
-          'Our plan is built on early station departures (Fushimi sunrise, Arashiyama, the D10 train) — this location taxes every one of them.',
-          'Only works if the plan pivoted to Gion-centred evenings; it hasn’t.',
+          'The upgrade option: identical 9.1 score, newer 4★ hardware, and the station at the door — worth it if the ₹8.7k/3n premium over ERA feels cheap for Christmas.',
+          'Lock the Agoda free-canc rate (₹8,489/n); the non-ref rates aren’t worth the risk 13 months out.',
+          'Standard doubles here are real doubles — still confirm width at booking if you want 160 cm.',
         ],
         links: [
-          ['Check live rates — trivago', TRV + 'hotel-tavinos-kyoto?search=100-24790702%3Bdr-20261224-20261227%3Brc-1-2'],
-          ['Booking.com — search', BKG + 'Hotel+Tavinos+Kyoto', true],
+          ['Check live rates — trivago', TRV + 'hotel-vischio-kyoto-by-granvia?search=100-11217144%3Bdr-20261224-20261227%3Brc-1-2'],
+          ['Agoda — free-canc rate', AGD + 'Hotel%20Vischio%20Kyoto', true],
         ],
       },
     ],
@@ -398,34 +398,6 @@ const LEGS = [
           ['Booking.com — search', BKG + 'APA+Hotel+Midosuji+Honmachi+Ekihigashi', true],
         ],
       },
-      {
-        dq: true, badge: 'disqualified',
-        name: 'KIRIN UMEDA by SpringRest',
-        area: 'Honjohigashi — NOT Umeda: 2.3 km / ~25-min walk from Osaka Stn',
-        score: '8.4', reviews: '612',
-        price: '₹4,458/n', total: '3 nights · cheap, but…',
-        chips: [
-          ['no', '✗ Not actually in Umeda'],
-          ['no', '✗ 16:00 self check-in — kills the 09:50 bag drop'],
-          ['no', '✗ No confirmed luggage desk'],
-          ['warn', '⚠ Only 612 reviews'],
-          ['', 'Apartment-style rooms'],
-        ],
-        transit: [
-          ['Osaka Stn / Umeda', 'walk · ~25 min'],
-          ['Nearest subway', '~10-min walk, residential block'],
-          ['USJ / Namba', 'transfer-heavy from here'],
-        ],
-        near: ['Local shotengai eats', 'Konbini', 'Residential Kita-ku block'],
-        watch: [
-          'Self check-in opens 16:00 — our D10 plan needs a 09:50 bag drop. This alone disqualifies it.',
-          'Review base is thin: 612 vs Hearton’s 12,930.',
-          'The "UMEDA" in the name is branding, not geography.',
-        ],
-        links: [
-          ['Check live rates — trivago', TRV + 'serviced-apartment-kirin-umeda-by-springrest-osaka?search=100-40286712%3Bdr-20261227-20261230%3Brc-1-2'],
-        ],
-      },
     ],
   },
   {
@@ -438,7 +410,7 @@ const LEGS = [
         score: '8.5', reviews: '6,466',
         price: '₹8,541/n', total: '5 nights · Agoda free-canc',
         chips: [
-          ['warn', '⚠ Book TONIGHT — ERA next door already sold out'],
+          ['warn', '⚠ Book TONIGHT — NY window is clearing fast'],
           ['yes', '✓ Agoda free-canc ₹8,541/n (Booking ₹9,721)'],
           ['yes', '✓ Asakusa line = direct to Zojoji NYE'],
           ['warn', '⚠ Corner Cozy/View 140 cm — or Deluxe Twin 22 m²'],
@@ -454,7 +426,7 @@ const LEGS = [
         ],
         near: ['Same block as Leg 1 — you know it', 'Konbini ×3 in 2 min', 'Kanda kissaten morning sets', 'Nihombashi Takashimaya depachika'],
         watch: [
-          'Book TONIGHT on the Agoda free-canc rate — this is the proven-to-sell-out corridor (ERA already gone for these dates).',
+          'Book TONIGHT on the Agoda free-canc rate — New-Year nights in this corridor are already clearing, 13 months out.',
           'Pick CORNER COZY or CORNER VIEW (140 cm double) or the 22 m² DELUXE TWIN — standard APA doubles are tighter.',
           'Most restaurants shut 1–2 Jan — plan on konbini, chains, and the Takashimaya depachika; rooms run warm (central A/C).',
         ],
@@ -464,33 +436,7 @@ const LEGS = [
         ],
       },
       {
-        dq: true, badge: 'sold out',
-        name: 'Comfort Hotel ERA Higashi Kanda (NY window)',
-        area: 'Our Leg-1 hotel — but the 30 Dec–4 Jan window is already gone, 13 months out',
-        score: '8.9', reviews: '4,099',
-        price: '₹30,643/n', total: 'non-refundable residual only',
-        chips: [
-          ['no', '✗ SOLD OUT for 30 Dec–4 Jan'],
-          ['no', '✗ Only a ₹30,643/n non-refundable scrap left'],
-          ['', 'Proof: the NY corridor clears 13 months out'],
-          ['yes', '✓ Watch for free-canc re-releases'],
-        ],
-        transit: [
-          ['Zojoji NYE', 'Asakusa line from Higashi-Nihombashi · ~15 min'],
-          ['Senso-ji hatsumode', 'Asakusa line · ~12 min'],
-          ['Tokyo Stn', 'JR Bakurocho · 1 stop'],
-        ],
-        near: ['Same block as the APA pick', 'Konbini ×3', 'Kanda kissaten'],
-        watch: [
-          'Cancellations happen: if a free-canc Queen reappears under ~₹12k/n, grab it and cancel APA — both are free-canc, zero risk.',
-          'Do NOT take the ₹30.6k/n non-refundable rate — 3.6× the APA price for the same neighbourhood.',
-        ],
-        links: [
-          ['Check live rates — trivago', TRV + 'comfort-hotel-era-tokyo-higashi-kanda?search=100-7300202%3Bdr-20261230-20270104%3Brc-1-2'],
-        ],
-      },
-      {
-        badge: '#3 alternate',
+        badge: '#2 alternate',
         name: 'HOTEL MYSTAYS Ochanomizu',
         area: 'Ochanomizu — JR Chuo/Sobu, between Akihabara and Jimbocho',
         score: '8.4', reviews: '4,710',
@@ -509,7 +455,7 @@ const LEGS = [
         ],
         near: ['Jimbocho curry & book town', 'Ochanomizu guitar street', 'Akihabara 1 stop away', 'Konbini nearby'],
         watch: [
-          'Third choice: take it only if both APA and an ERA re-release are gone.',
+          'Second choice: take it only if the APA free-canc rate is gone.',
           'NYE logistics are worse from here — the Zojoji return needs a transfer at 01:00.',
         ],
         links: [
