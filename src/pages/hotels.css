@@ -40,6 +40,8 @@
   background: #3f7d63;
 }
 .htl-badge.alt { background: #9a8f7a; }
+.htl-badge.dq { background: #8c3a2c; }
+.htl-card.is-dq { border-color: #e3c6bd; background: #fdfaf5; }
 .htl-name { flex: 1 1 auto; min-width: 200px; }
 .htl-name h3 { margin: 0; font-size: 1.25rem; line-height: 1.25; }
 .htl-name .htl-area { font-size: 0.78rem; color: #9a8f7a; }
