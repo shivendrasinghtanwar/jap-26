@@ -137,10 +137,25 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
                 ? <span className="tl-num tl-num-via" aria-label={`boarding point ${seqToVia[s.seq].label}`}>{seqToVia[s.seq].label}</span>
                 : <span className="tl-dot tl-dot-transit" aria-hidden="true" />}
               <div className="tl-card tl-card-transit">
-                <p className="tl-transit-body">
-                  <span className="tl-transit-icn" aria-hidden="true">🚇</span>
-                  <span><b>Getting there</b> — {s.transit}</span>
-                </p>
+                {(() => {
+                  const steps = transitSteps(s.transit)
+                  return steps ? (
+                    <>
+                      <p className="tl-transit-body">
+                        <span className="tl-transit-icn" aria-hidden="true">🚇</span>
+                        <span><b>Getting there</b></span>
+                      </p>
+                      <ul className="tl-transit-steps">
+                        {steps.map((st, i) => <li key={i}>{st}</li>)}
+                      </ul>
+                    </>
+                  ) : (
+                    <p className="tl-transit-body">
+                      <span className="tl-transit-icn" aria-hidden="true">🚇</span>
+                      <span><b>Getting there</b> — {s.transit}</span>
+                    </p>
+                  )
+                })()}
                 {s.via && seqToVia[s.seq] && (
                   <p className="tl-transit-via">
                     📍 Board at <b>{s.via.name}</b> — blue <span className="tl-via-chipnum">{seqToVia[s.seq].label}</span> on the map
@@ -187,6 +202,19 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
       </ol>
     </div>
   )
+}
+
+// Long transit prose → short readable steps: split on '; ' and, for still-long
+// chunks, on sentence breaks. Short directions stay a single line.
+function transitSteps(text) {
+  if (!text || text.length < 90) return null
+  let parts = text.split(/;\s+/)
+  parts = parts.flatMap(p => p.length > 150 ? p.split(/\.\s+(?=[A-Z¥(])/) : [p])
+  parts = parts.map(p => {
+    p = p.trim().replace(/\.$/, '')
+    return p.charAt(0).toUpperCase() + p.slice(1)
+  }).filter(Boolean)
+  return parts.length > 1 ? parts : null
 }
 
 function cityName(id) {
