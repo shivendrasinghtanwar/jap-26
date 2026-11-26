@@ -30,12 +30,13 @@ export function groupStops(stops) {
   return groups
 }
 
-export default function MapView({ day, stops, cities, color, days, cityColors, focus, onMarkerClick }) {
+export default function MapView({ day, stops, vias = [], cities, color, days, cityColors, focus, onMarkerClick }) {
   const elRef = useRef(null)
   const mapRef = useRef(null)
   const layerRef = useRef(null)
   const tilesRef = useRef(null)
   const markersRef = useRef([])
+  const viaMarkersRef = useRef([])
 
   useEffect(() => {
     const map = L.map(elRef.current, { zoomControl: true, scrollWheelZoom: true })
@@ -119,15 +120,28 @@ export default function MapView({ day, stops, cities, color, days, cityColors, f
       markersRef.current[i] = m
     })
 
+    // boarding points: blue dashed numbered markers, their own series
+    viaMarkersRef.current = []
+    vias.forEach((v, i) => {
+      const html = `<div class="num-mkr num-mkr-via">${i + 1}</div>`
+      const gmaps = gmapsUrl(v.name, v.lat, v.lng)
+      const m = L.marker([v.lat, v.lng], {
+        icon: L.divIcon({ className: 'num-mkr-wrap', html, iconSize: [24, 24], iconAnchor: [12, 12] }),
+      })
+        .bindPopup(`<div class="pp"><div class="pp-row"><b>Board here</b> ${esc(v.name)}</div><a class="pp-gmaps" href="${esc(gmaps)}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>`)
+        .addTo(layer)
+      viaMarkersRef.current[i] = m
+    })
+
     if (pts.length === 1) map.flyTo(pts[0], 14, { duration: 0.6 })
     else map.flyToBounds(L.latLngBounds(pts).pad(0.18), { duration: 0.6, maxZoom: 15 })
-  }, [day, stops, cities, color, days, cityColors])
+  }, [day, stops, vias, cities, color, days, cityColors])
 
   // Focus a marker when a timeline row is clicked: fly in, pop it open, pulse it
   useEffect(() => {
     if (!focus) return
     const map = mapRef.current
-    const m = markersRef.current[focus.idx]
+    const m = focus.kind === 'via' ? viaMarkersRef.current[focus.idx] : markersRef.current[focus.idx]
     if (!map || !m) return
     map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 16), { duration: 0.5 })
     m.openPopup()

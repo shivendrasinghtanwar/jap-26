@@ -48,7 +48,7 @@ export default function MapPage() {
   const meta = day === 0 ? null : bundle.days[day - 1]
   const color = meta ? bundle.cityColors[meta.city] : '#1b1b1f'
 
-  // marker focus: {idx, t} — t makes re-clicks of the same row re-trigger the map
+  // marker focus: {kind, idx, t} — t makes re-clicks of the same row re-trigger the map
   const [focus, setFocus] = useState(null)
   const dayStops = day === 0 ? [] : stopsByDay.get(day) || []
   // same grouping as the map markers, so timeline numbers match 1:1
@@ -57,7 +57,18 @@ export default function MapPage() {
     groupStops(dayStops).forEach((g, i) => g.items.forEach(s => { m[s.seq] = i }))
     return m
   }, [dayStops])
-  const focusMarker = (idx) => setFocus({ idx, t: Date.now() })
+  // boarding stations ("via") get their own blue dashed marker series
+  const dayVias = useMemo(
+    () => dayStops.filter(s => s.via).map(s => ({ ...s.via, seq: s.seq })),
+    [dayStops],
+  )
+  const seqToVia = useMemo(() => {
+    const m = {}
+    dayVias.forEach((v, i) => { m[v.seq] = i })
+    return m
+  }, [dayVias])
+  const focusMarker = (idx) => setFocus({ kind: 'stop', idx, t: Date.now() })
+  const focusVia = (idx) => setFocus({ kind: 'via', idx, t: Date.now() })
 
   return (
     <>
@@ -93,8 +104,10 @@ export default function MapPage() {
               rating={bundle.ratings[day]}
               dayCount={bundle.dayCount}
               seqToMarker={seqToMarker}
-              focusIdx={focus?.idx ?? null}
+              seqToVia={seqToVia}
+              focusIdx={focus?.kind === 'stop' ? focus.idx : null}
               onFocusStop={focusMarker}
+              onFocusVia={focusVia}
               onPrev={() => setDay(d => Math.max(1, d - 1))}
               onNext={() => setDay(d => Math.min(bundle.dayCount, d + 1))}
             />
@@ -103,6 +116,7 @@ export default function MapPage() {
         <section className="pane-map">
           <MapView
             day={day}
+            vias={dayVias}
             stops={day === 0 ? bundle.locations.stops : stopsByDay.get(day) || []}
             cities={bundle.locations.cities}
             color={color}

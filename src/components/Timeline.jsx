@@ -86,7 +86,7 @@ function DayMeters({ rating }) {
   )
 }
 
-export default function Timeline({ meta, stops, flags, color, rating, dayCount, seqToMarker = {}, focusIdx = null, onFocusStop, onPrev, onNext }) {
+export default function Timeline({ meta, stops, flags, color, rating, dayCount, seqToMarker = {}, seqToVia = {}, focusIdx = null, onFocusStop, onFocusVia, onPrev, onNext }) {
   const listRef = React.useRef(null)
 
   // when a map marker is clicked, bring its first timeline row into view
@@ -126,14 +126,26 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
           return (
           <React.Fragment key={s.seq}>
           {s.transit && (
-            <li className="tl-row tl-row-transit" aria-label="Getting there">
+            <li
+              className="tl-row tl-row-transit"
+              aria-label="Getting there"
+              onClick={() => seqToVia[s.seq] != null && onFocusVia && onFocusVia(seqToVia[s.seq])}
+              title={seqToVia[s.seq] != null ? 'Show the boarding point on the map' : undefined}
+            >
               <span className="tl-time" aria-hidden="true" />
-              <span className="tl-dot tl-dot-transit" aria-hidden="true" />
+              {seqToVia[s.seq] != null
+                ? <span className="tl-num tl-num-via" aria-label={`boarding point ${seqToVia[s.seq] + 1}`}>{seqToVia[s.seq] + 1}</span>
+                : <span className="tl-dot tl-dot-transit" aria-hidden="true" />}
               <div className="tl-card tl-card-transit">
                 <p className="tl-transit-body">
                   <span className="tl-transit-icn" aria-hidden="true">🚇</span>
                   <span><b>Getting there</b> — {s.transit}</span>
                 </p>
+                {s.via && (
+                  <p className="tl-transit-via">
+                    📍 Board at <b>{s.via.name}</b> — blue <span className="tl-via-chipnum">{seqToVia[s.seq] + 1}</span> on the map
+                  </p>
+                )}
               </div>
             </li>
           )}

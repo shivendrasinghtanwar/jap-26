@@ -240,6 +240,13 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   border: 2.5px solid #fffdf8; box-shadow: 0 2px 7px rgba(34, 31, 26, 0.4);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+.num-mkr-via {
+  width: 24px; height: 24px;
+  background: #eaf2fa; color: #2b6cb0;
+  border: 2px dashed #2b6cb0;
+  box-shadow: 0 1px 5px rgba(34, 31, 26, 0.3);
+  font-size: 0.7rem;
+}
 .mkr-focus { z-index: 1000 !important; }
 .mkr-focus .num-mkr {
   transform: scale(1.55);
@@ -405,6 +412,22 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 
 /* ——— transit connector cards ("getting there") between stops ——— */
 .tl-row-transit { cursor: default; }
+.tl-row-transit:has(.tl-num-via) { cursor: pointer; }
+.tl-num-via {
+  background: #eaf2fa; color: #2b6cb0;
+  border: 2px dashed #2b6cb0;
+  box-shadow: 0 0 0 2.5px var(--paper);
+  width: 22px; height: 22px;
+}
+.tl-transit-via {
+  margin: 7px 0 0; font-size: 0.74rem; color: #2b6cb0;
+}
+.tl-via-chipnum {
+  display: inline-grid; place-items: center;
+  width: 17px; height: 17px; border-radius: 50%;
+  background: #eaf2fa; border: 1.5px dashed #2b6cb0;
+  font: 700 0.62rem var(--sans); vertical-align: -3px;
+}
 .tl-card-transit {
   background: #eef2ef !important;
   border: 1.5px dashed #9dbfae !important;
