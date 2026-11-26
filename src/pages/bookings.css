@@ -174,3 +174,4 @@
   .bkt-total .bk-main { flex: 1 1 auto; order: 0; }
   .bkt-total .bk-price { margin-left: auto; }
 }
+.bk-badge.oth { background: #f6ecd4; color: #8a5a00; border: 1px solid #ecdcb4; }
