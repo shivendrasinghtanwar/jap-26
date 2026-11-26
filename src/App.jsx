@@ -5,6 +5,7 @@ import Costs from './pages/Costs.jsx'
 import Watches from './pages/Watches.jsx'
 import Flights from './pages/Flights.jsx'
 import Hotels from './pages/Hotels.jsx'
+import Bookings from './pages/Bookings.jsx'
 
 // The Pair stays a local-only surprise: on the deployed site the tab disappears
 // and '#/watches' falls back to home (route matching below only knows TABS).
@@ -15,6 +16,7 @@ const TABS = [
   { hash: '#/map', label: 'Itinerary & Map' },
   { hash: '#/flights', label: 'Flights' },
   { hash: '#/hotels', label: 'Hotels' },
+  { hash: '#/bookings', label: 'Bookings' },
   { hash: '#/watches', label: 'The Pair' },
   { hash: '#/costs', label: 'Costs' },
 ].filter(t => IS_LOCAL || t.hash !== '#/watches')
@@ -56,7 +58,7 @@ export default function App() {
   }
 
   return (
-    <div className={'shell' + (route === '#/map' || route === '#/watches' || route === '#/flights' || route === '#/hotels' ? ' shell-map' : '')}>
+    <div className={'shell' + (route === '#/map' || route === '#/watches' || route === '#/flights' || route === '#/hotels' || route === '#/bookings' ? ' shell-map' : '')}>
       <header className="hdr">
         <div className="hdr-row">
           <span className="hdr-title">
@@ -109,6 +111,7 @@ export default function App() {
       {route === '#/map' && <MapPage />}
       {route === '#/flights' && <Flights />}
       {route === '#/hotels' && <Hotels />}
+      {route === '#/bookings' && <Bookings />}
       {route === '#/watches' && <Watches />}
       {route === '#/costs' && <Costs />}
     </div>
