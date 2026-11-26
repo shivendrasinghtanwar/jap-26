@@ -63,7 +63,7 @@ export default function Home() {
         <div className="home-kit-grid">
           <div className="home-kit-card">
             <h3>Suica on the iPhone</h3>
-            <p>Add Suica to Apple Wallet <b>before flying</b> (Wallet → + → Transit Card → Suica), top up with Apple Pay. One tap rides every metro, JR local and bus in all five cities — and pays at konbini and vending machines. Android from India can&rsquo;t run Mobile Suica: get a physical <b>Welcome Suica</b> at Narita T2 arrivals instead.</p>
+            <p><b>Her iPhone 17 Pro:</b> add Suica to Apple Wallet <b>before flying</b> (Wallet → + → Transit Card → Suica), top up with Apple Pay. <b>His S23 (Indian model) can&rsquo;t run Mobile Suica</b> — no FeliCa chip: get a physical <b>Welcome Suica</b> from the machine at Narita T2 arrivals (no deposit, 28-day card). One tap rides every metro, JR local and bus in all five cities — and pays at konbini and vending machines.</p>
           </div>
           <div className="home-kit-card">
             <h3>Taxi apps</h3>

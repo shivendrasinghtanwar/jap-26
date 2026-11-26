@@ -121,8 +121,10 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
       ))}
 
       <ol className="tl-list" style={{ '--c': color }} ref={listRef}>
-        {stops.map(s => {
+        {stops.map((s, si) => {
           const mkr = seqToMarker[s.seq]
+          const prev = stops[si - 1]
+          const leg = s.transit ? legMode(s.transit) : null
           return (
           <React.Fragment key={s.seq}>
           {s.transit && (
@@ -156,10 +158,16 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
                     </p>
                   )
                 })()}
-                {s.via && seqToVia[s.seq] && (
-                  <p className="tl-transit-via">
-                    📍 Board at <b>{s.via.name}</b> — blue <span className="tl-via-chipnum">{seqToVia[s.seq].label}</span> on the map
-                  </p>
+                {prev && (
+                  <a
+                    className="tl-transit-route"
+                    href={`https://www.google.com/maps/dir/?api=1&origin=${prev.lat},${prev.lng}&destination=${s.lat},${s.lng}&travelmode=${leg.gmode}`}
+                    target="_blank"
+                    rel="noopener"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {leg.icon} {leg.label} · open route in Google Maps ↗
+                  </a>
                 )}
               </div>
             </li>
@@ -202,6 +210,21 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
       </ol>
     </div>
   )
+}
+
+// One transit card = one leg; detect its mode for the Google Maps deep link.
+// Order matters: taxi/bus words win, then a card that STARTS as a walk is a walk
+// (station names like "JR Asakusabashi" inside walk text must not read as train).
+function legMode(text) {
+  if (/taxi|cab|private car|pickup|hail|shuttle/i.test(text)) return { icon: '🚕', label: 'Taxi/car', gmode: 'driving' }
+  if (/\bbus\b/i.test(text)) return { icon: '🚌', label: 'Bus', gmode: 'transit' }
+  if (/^\s*(walk|\d{1,2}[-–]?\s?min|back |escalators|out of|loop back|the \w+ stop|ginza stn is|no transit|zero transit|in-station|elevator)/i.test(text)) {
+    return { icon: '🚶', label: 'Walk', gmode: 'walking' }
+  }
+  if (/line|rapid|shinkansen|monorail|tram|excursion|yamanote|keihan|kintetsu|fujikyu|metro|subway|JR /i.test(text)) {
+    return { icon: '🚃', label: 'Train', gmode: 'transit' }
+  }
+  return { icon: '🚶', label: 'Walk', gmode: 'walking' }
 }
 
 // Long transit prose → short readable steps: split on '; ' and, for still-long
