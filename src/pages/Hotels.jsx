@@ -76,7 +76,7 @@ const LEGS = [
         price: '₹48,370 · Queen', total: '4 nights, room-only · free-canc',
         chips: [
           ['stn', '🚉 JR Bakurocho — 4-min walk · Asakusa line 8 min'],
-          ['bf', '🍳 Breakfast ¥1,800 add-on · buffet 06:30–09:30'],
+          ['bf', '🍳 Breakfast NOT included — pay ¥1,800/person · buffet 06:30–09:30'],
           ['warn', '⚠ Email hotel: confirm Queen bed width (160 vs 140 cm)'],
           ['yes', '✓ Free cancellation to 16 Dec · pay 14 Dec'],
           ['yes', '✓ Refreshed Feb 2025 — new Serta mattresses'],
@@ -109,7 +109,7 @@ const LEGS = [
         price: '₹8,970/n', total: '₹35,878 · 4 nights · Agoda free-canc',
         chips: [
           ['stn', '🚉 JR Asakusabashi — 30-sec walk · Toei Asakusa 4 min'],
-          ['bf', '🍳 No breakfast — 24h Lawson in the building (1F)'],
+          ['bf', '🍳 NO breakfast at this hotel — 24h Lawson in the building (1F)'],
           ['warn', '⚠ NO bed wider than 140 cm — only the 6 Twin rooms work'],
           ['yes', '✓ Free cancellation'],
           ['warn', '⚠ Oct 2026 data-breach notice — book via OTA, not direct'],
@@ -146,7 +146,7 @@ const LEGS = [
         price: '₹25,422', total: 'room-only free-canc · anniversary plan ~₹40k',
         chips: [
           ['stn', '🚉 Kawaguchiko Stn — NOT walkable · pickup/taxi 5–10 min'],
-          ['bf', '🍳 Breakfast plan — Western egg+fruit, Fuji-view terrace, 07:00'],
+          ['bf', '🍳 Breakfast NOT in room-only rate — pick the breakfast plan (Western egg+fruit, Fuji-view terrace, 07:00)'],
           ['yes', '✓ Every room has the Fuji-over-lake view (official)'],
           ['yes', '✓ PRIVATE rooftop onsen for two — reserved slot'],
           ['yes', '✓ Anniversary plan: dinner course + drinks ¥70,200/2'],
@@ -177,7 +177,7 @@ const LEGS = [
         price: '₹34,404', total: 'room-only free-canc · anniv cake plan ~₹62k',
         chips: [
           ['stn', '🚉 Kawaguchiko Stn — NOT walkable · reserve-only shuttle / taxi 10 min'],
-          ['bf', '🍳 Breakfast via plan — 60+ dish buffet (take the 2-meal plan)'],
+          ['bf', '🍳 Breakfast NOT in room-only rate — included only in 2-meal plans (60+ dish buffet)'],
           ['yes', '✓ 4 FREE private baths — first-come, no booking'],
           ['yes', '✓ Rooms with private Fuji-view tub exist'],
           ['yes', '✓ Weatherproof — indoor private baths'],
@@ -213,7 +213,7 @@ const LEGS = [
         price: 'from ₹3,557/n', total: '1 night · Comfort/Refresh Double ~₹4–5k',
         chips: [
           ['stn', '🚉 Kanazawa Stn — 10-min walk · Omicho Market 3 min'],
-          ['bf', '🍳 Breakfast ¥2,300 add-on — skip it, Omicho opens 07:00'],
+          ['bf', '🍳 Breakfast NOT included — ¥2,300 extra; skip it, Omicho opens 07:00'],
           ['warn', '⚠ Book COMFORT or REFRESH Double (150 cm)'],
           ['no', '✗ "Forza Double" 140 cm · "Business Double" only 130 cm'],
           ['yes', '✓ Free cancellation'],
@@ -245,7 +245,7 @@ const LEGS = [
         price: '₹6,234/n', total: '1 night · Booking free-canc',
         chips: [
           ['stn', '🚉 Kanazawa Stn — 2–3-min walk'],
-          ['bf', '🍳 Breakfast ¥2,500 — seafood-centric buffet (weak for veg)'],
+          ['bf', '🍳 Breakfast NOT included — ¥2,500 extra; seafood-centric (weak for veg)'],
           ['yes', '✓ Rooftop natural onsen (gender-separated, 15:00–10:00)'],
           ['warn', '⚠ Free 21:30 ramen is PORK broth — not veg'],
           ['warn', '⚠ Opened ~2007 — reviews say dated, onsen crowds at night'],
@@ -280,7 +280,7 @@ const LEGS = [
         price: '₹5,543/n', total: '3 nights · Booking free-canc ₹16,628',
         chips: [
           ['stn', '🚉 Kintetsu Toji — 1-min walk · Kyoto Stn 14-min flat walk'],
-          ['bf', '🍳 Breakfast ¥1,800 add-on · veg-friendly buffet 06:30'],
+          ['bf', '🍳 Breakfast NOT included — pay ¥1,800/person · veg-friendly buffet 06:30'],
           ['yes', '✓ 160 cm "QUEEN ECONOMY" room — book this'],
           ['no', '✗ Standard Double is only 140 cm'],
           ['warn', '⚠ Queen Economy may have a frosted no-view window'],
@@ -312,7 +312,7 @@ const LEGS = [
         price: '₹8,489/n', total: '3 nights · Agoda free-canc ₹25,467',
         chips: [
           ['stn', '🚉 Kyoto Stn (Hachijo exit) — 2-min walk'],
-          ['bf', '🍳 Breakfast ¥4,500 — famous 100+ dish obanzai buffet'],
+          ['bf', '🍳 Breakfast NOT included — ¥4,500/person extra (famous 100+ dish buffet)'],
           ['yes', '✓ Moderate Double = 180 cm KING, 21.5 m²'],
           ['yes', '✓ Guest-only big bath + sauna (not onsen)'],
           ['yes', '✓ Agoda free-cancellation rate'],
@@ -348,7 +348,7 @@ const LEGS = [
         price: '₹7,251/n', total: '3 nights · Klook free-canc ₹21,752',
         chips: [
           ['stn', '🚉 Osaka Stn — ~7-min walk · Yodobashi 9 min'],
-          ['bf', '🍳 Breakfast ¥2,200 fixed set — skip it, Umeda feeds you better'],
+          ['bf', '🍳 Breakfast NOT included — ¥2,200 extra (fixed set); skip it, Umeda feeds you better'],
           ['yes', '✓ Free-canc ₹7,251/n (Klook) · ₹8,217 Booking'],
           ['yes', '✓ 2019 build — the newest option in Umeda'],
           ['yes', '✓ Daiwa Roynet standard: 24h desk + bag storage'],
@@ -379,7 +379,7 @@ const LEGS = [
         price: '₹4,988/n', total: '3 nights · Booking free-canc ₹14,965',
         chips: [
           ['stn', '🚉 Sakaisuji-Honmachi — beside it · Midosuji platforms 6–8-min walk'],
-          ['bf', '🍳 Breakfast ¥1,500 adv — small buffet, skip it'],
+          ['bf', '🍳 Breakfast NOT included — ¥1,500 extra (small buffet); skip it'],
           ['yes', '✓ Cheapest Osaka option — free-canc confirmed'],
           ['no', '✗ Double is 11 m² with a 140 cm bed'],
           ['warn', '⚠ If choosing this, book the 21 m² Deluxe Twin (2×120)'],
@@ -416,7 +416,7 @@ const LEGS = [
         price: '₹8,811/n', total: '5 nights · Agoda free-canc to 29 Dec',
         chips: [
           ['stn', '🚉 Bakuroyokoyama — 1-min walk · Asakusa line 2 min · JR Bakurocho 5 min'],
-          ['bf', '🍳 Breakfast ¥1,600 plates (poke/pancake) — confirm 1–3 Jan opening'],
+          ['bf', '🍳 Breakfast NOT included — ¥1,600 extra (poke/pancake plates); confirm 1–3 Jan opening'],
           ['warn', '⚠ BOOK TODAY — 4 room types already sold out, doubles "last few"'],
           ['yes', '✓ Agoda ₹8,811/n free-canc (Booking ₹9,648 incl. taxes)'],
           ['warn', '⚠ Standard Double = 11 m², 140 cm (Deluxe Twin sold out)'],
@@ -449,7 +449,7 @@ const LEGS = [
         price: '₹9,568/n', total: '5 nights · ₹47,838 incl. taxes · free-canc',
         chips: [
           ['stn', '🚉 JR Asakusabashi — ~4-min walk · Toei Asakusa line close by'],
-          ['bf', '🍳 Breakfast — typical APA add-on; konbini instead'],
+          ['bf', '🍳 Breakfast NOT included — paid APA add-on; konbini instead'],
           ['yes', '✓ AVAILABLE for all 5 NY nights (checked live)'],
           ['warn', '⚠ Same APA formula: 11 m², 140 cm double'],
         ],
