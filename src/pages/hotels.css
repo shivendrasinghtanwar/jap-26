@@ -63,6 +63,8 @@
 .htl-chip.yes { background: #e7f0eb; color: #2d5c48; border-color: #cfe0d6; }
 .htl-chip.no { background: #f6e9e6; color: #8c3a2c; border-color: #ecd6d0; }
 .htl-chip.warn { background: #f6ecd4; color: #8a5a00; border-color: #ecdcb4; }
+.htl-chip.stn { background: #e8eef5; color: #2c4a6e; border-color: #d5e0ec; }
+.htl-chip.bf { background: #f9efdd; color: #6e4f1e; border-color: #eeddbd; }
 
 /* 3-column body */
 .htl-body {
