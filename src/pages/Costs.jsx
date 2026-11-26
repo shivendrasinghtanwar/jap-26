@@ -37,9 +37,9 @@ const BUDGET = [
   },
   {
     label: 'Theme parks',
-    basis: 'DisneySea dated tickets + USJ gate + Express Pass 4 (peak-date pricing)',
-    low: 55000,
-    high: 70000,
+    basis: 'DisneySea ¥21.8k + DPA ~¥15k; USJ ¥23.8k + Express 7 ~¥56–66k; teamLab, Shibuya Sky, Skytree, IMAX (audited 26 Nov, peak tiers)',
+    low: 80000,
+    high: 95000,
   },
   {
     label: 'Experiences & entries',
@@ -111,7 +111,7 @@ const LINE_ITEMS = [
 const WATCH_OUTS = [
   {
     title: 'Book-now queue',
-    body: 'DisneySea 21 Dec tickets + Okura 24 Dec dinner: NOW. Nozomi via SmartEX: 30 Nov. Shibuya Sky: ~6 Dec 00:00 JST. USJ Express Pass 4: by mid-Dec. Doomsday IMAX: ~28 Dec 00:00 JST. Tokyo NY hotel: this week — it sells out first.',
+    body: 'DisneySea 21 Dec tickets + Okura 24 Dec dinner: NOW. Nozomi via SmartEX: 30 Nov. Shibuya Sky: ~6 Dec 00:00 JST. USJ Studio Pass + EXPRESS 7 (not 4 — no Mario Kart on 4): by 3 Dec, demand-priced. Doomsday IMAX: ~28 Dec 00:00 JST. Tokyo NY hotel: this week — it sells out first.',
   },
   {
     title: 'Dynamic park pricing',

@@ -1527,7 +1527,7 @@
     {
       "day": 11,
       "seq": 1,
-      "time": "06:30",
+      "time": "06:00",
       "title": "Breakfast",
       "place": "DEL style Osaka Shin-Umeda by Daiwa Roynet",
       "lat": 34.70057,
@@ -1539,7 +1539,7 @@
     {
       "day": 11,
       "seq": 2,
-      "time": "07:15",
+      "time": "06:35",
       "title": "Osaka Station, Loop line (platform 1)",
       "place": "Osaka Station, Loop line (platform 1)",
       "lat": 34.7025,
@@ -1552,7 +1552,7 @@
     {
       "day": 11,
       "seq": 3,
-      "time": "07:15",
+      "time": "07:00",
       "title": "Universal City Station",
       "place": "Universal City Station",
       "lat": 34.667,
@@ -1565,16 +1565,16 @@
     {
       "day": 11,
       "seq": 4,
-      "time": "07:55",
+      "time": "07:00",
       "title": "Universal Studios Japan full-day experience",
       "place": "Universal Studios Japan",
       "lat": 34.6654,
       "lng": 135.4323,
       "type": "attraction",
       "costIncluded": true,
-      "notes": "",
+      "notes": "Express 7 'Mine Cart & Selection' slots run the day; at open ride Hollywood Dream then Flying Dinosaur standby. Studio Pass + Express bought by ~3 Dec.",
       "blurb": "Universal Studios Japan is Osaka's blockbuster theme park, home to Super Nintendo World and the Wizarding World of Harry Potter.",
-      "transit": "5-min walk down Universal CityWalk from the station — gates at 07:45ish on peak days."
+      "transit": "5-min walk down Universal CityWalk from the station — be AT the gates by 07:00: USJ opens 15–45 min before the posted time on peak days."
     },
     {
       "day": 11,
