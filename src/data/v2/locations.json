@@ -77,7 +77,7 @@
       "day": 1,
       "seq": 2,
       "time": "21:15",
-      "title": "Private car transfer to hotel",
+      "title": "Private car to the hotel — check-in & sleep",
       "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
       "lat": 35.6945,
       "lng": 139.7797,
@@ -85,18 +85,6 @@
       "costIncluded": true,
       "notes": "private car, ~90 min to central Tokyo — booked for ~21:15, after immigration and bags",
       "transit": "Pre-booked private car, driver meets you at T2 arrivals with a name board ~21:15 — ~75–80 min door to door to Higashi-Kanda. Fallback if the car falls through: JR Narita Express to Tokyo Stn (~55 min) + 10-min taxi, last N'EX ~21:44."
-    },
-    {
-      "day": 1,
-      "seq": 3,
-      "time": "23:00",
-      "title": "Hotel check-in and sleep",
-      "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
-      "lat": 35.6945,
-      "lng": 139.7797,
-      "type": "hotel",
-      "costIncluded": null,
-      "notes": "booked base — Higashi-Kanda, JR Bakurocho 350 m"
     },
     {
       "day": 2,
@@ -556,20 +544,8 @@
       "lng": 138.7756,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "Mizno Hotel — every room faces Fuji over the lake; private rooftop onsen for two; the anniversary night",
+      "notes": "Mizno Hotel — check in, then the evening is yours: book the rooftop private-bath slot at the desk FIRST thing, dinner at SEIKOUKI from 18:30",
       "transit": "Call the hotel from the pier for pickup (5–10 min) or a ~¥1,500 taxi — Mizno sits up a steep hill above Asakawa on the north-east shore."
-    },
-    {
-      "day": 5,
-      "seq": 8,
-      "time": "16:00",
-      "title": "Free time & hotel relaxation",
-      "place": "Mizno Hotel (Kawaguchiko)",
-      "lat": 35.5117,
-      "lng": 138.7756,
-      "type": "hotel",
-      "costIncluded": null,
-      "notes": "Mizno Hotel — every room faces Fuji over the lake; private rooftop onsen for two; the anniversary night"
     },
     {
       "day": 6,
@@ -1653,25 +1629,13 @@
       "day": 14,
       "seq": 1,
       "time": "09:30",
-      "title": "Slow breakfast",
+      "title": "Slow morning — breakfast, lazy lunch, rest for tonight",
       "place": "APA Nihombashi Bakuroyokoyama Ekimae",
       "lat": 35.6925,
       "lng": 139.7832,
       "type": "food",
       "costIncluded": null,
-      "notes": "booked base — Bakuroyokoyama / Higashi-Nihombashi interchange"
-    },
-    {
-      "day": 14,
-      "seq": 2,
-      "time": "12:30",
-      "title": "Lazy lunch + afternoon rest",
-      "place": "APA Nihombashi Bakuroyokoyama Ekimae",
-      "lat": 35.6925,
-      "lng": 139.7832,
-      "type": "hotel",
-      "costIncluded": null,
-      "notes": "Nothing scheduled all day on purpose — tonight runs past midnight. Tokyo Tower comes free as the lit backdrop at Zojoji."
+      "notes": "NYE is a late one — recover till ~15:00; konbini + Takashimaya depachika runs"
     },
     {
       "day": 14,
