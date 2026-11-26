@@ -1,6 +1,6 @@
 /* ——— Bookings: the parent pre-boarding checklist ——— */
 .bkg { padding: 36px clamp(16px, 4vw, 48px) 64px; overflow-y: auto; }
-.bkg-wrap { max-width: 980px; margin: 0 auto; }
+.bkg-wrap { max-width: 1180px; margin: 0 auto; }
 
 .bkg-head { margin-bottom: 8px; }
 .bkg-kicker {
@@ -13,30 +13,135 @@
 .bkg-group { margin-top: 26px; }
 .bkg-group h2 { font-size: 1.08rem; margin: 0 0 10px; }
 
-.bkg-rows { display: flex; flex-direction: column; gap: 8px; }
-.bkg-row {
+/* toolbar */
+.bkg-toolbar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  margin: 20px 0 14px;
+}
+.bk-search {
+  flex: 1 1 220px; min-width: 180px;
+  font: 500 0.84rem/1 var(--sans, sans-serif);
+  padding: 9px 12px; border-radius: 9px;
+  border: 1px solid #d8d0c0; background: #fffdf8; color: #1b1b1f;
+}
+.bk-select {
+  font: 600 0.8rem/1 var(--sans, sans-serif);
+  padding: 9px 10px; border-radius: 9px;
+  border: 1px solid #d8d0c0; background: #fffdf8; color: #4a4540;
+}
+.bk-clear {
+  font: 700 0.74rem/1 var(--sans, sans-serif);
+  border: none; background: none; color: #c93a2b; cursor: pointer; padding: 6px;
+}
+.bk-count { margin-left: auto; font: 650 0.76rem/1 var(--sans, sans-serif); color: #6b6257; }
+
+/* table — 8 columns:
+   date&time · from→to · item · type · book-via · jay-quote · price · book-by */
+.bkg-table { display: flex; flex-direction: column; gap: 6px; }
+.bkt-head, .bkt-row {
   display: grid;
-  grid-template-columns: 96px 1fr auto minmax(92px, auto);
-  align-items: center; gap: 8px 14px;
+  grid-template-columns:
+    minmax(66px, 0.8fr)   /* date & time  */
+    minmax(92px, 1.15fr)  /* from → to    */
+    minmax(130px, 2.6fr)  /* item         */
+    minmax(74px, 0.85fr)  /* type chip    */
+    minmax(80px, 0.9fr)   /* book via     */
+    minmax(86px, 0.9fr)   /* jay quote    */
+    minmax(82px, 0.9fr)   /* price        */
+    minmax(70px, 0.8fr);  /* book by      */
+  gap: 9px; align-items: center;
+}
+.bkt-head { padding: 4px 14px; }
+.bkt-head button, .bkt-head span {
+  font: 800 0.6rem/1.2 var(--sans, sans-serif);
+  letter-spacing: 0.09em; text-transform: uppercase;
+  color: #9a8f7a; text-align: left;
+  border: none; background: none; padding: 0; cursor: pointer;
+}
+.bkt-head span { cursor: default; }
+.bkt-head button:hover { color: #c93a2b; }
+.bkt-head .num { text-align: right; }
+
+.bkt-row {
   background: #fffdf8; border: 1px solid #e0d9cb; border-radius: 11px;
   padding: 10px 14px; font-size: 0.82rem;
 }
+
+/* col 1 — date & time */
+.bk-when { font: 700 0.78rem/1.25 var(--sans, sans-serif); color: #1b1b1f; }
+.bk-when small {
+  display: block; font: 650 0.68rem/1.3 var(--sans, sans-serif); color: #6b6257;
+}
+
+/* col 2 — from → to / place */
+.bk-route { font: 600 0.74rem/1.35 var(--sans, sans-serif); color: #4a4540; min-width: 0; }
+.bk-route i { font-style: normal; color: #c93a2b; font-weight: 800; }
+.bk-route em { font-style: normal; color: #6b6257; }
+
+/* col 3 — item */
+.bk-main { min-width: 0; }
+.bk-main b { font-size: 0.85rem; display: block; line-height: 1.3; }
+.bk-sub {
+  display: block; font: 650 0.68rem/1.35 var(--sans, sans-serif); color: #6b6257; margin-top: 1px;
+}
+.bk-note { display: block; font-size: 0.68rem; line-height: 1.4; color: #9a8f7a; margin-top: 2px; }
+
+/* col 4 — type-of-vehicle / kind chip */
+.bk-kind {
+  justify-self: start;
+  font: 700 0.62rem/1.2 var(--sans, sans-serif);
+  padding: 4px 8px; border-radius: 999px; white-space: nowrap;
+  background: #f0ece1; color: #4a4540; border: 1px solid #e3ddd2;
+}
+.bk-k-train  { background: #eaf2fa; color: #2c4a6e; border-color: #d5e0ec; }
+.bk-k-car    { background: #f6ecd4; color: #8a5a00; border-color: #ecdcb4; }
+.bk-k-hotel  { background: #f1eaf4; color: #5c3d66; border-color: #e2d6e7; }
+.bk-k-ticket { background: #f9e8e4; color: #a03326; border-color: #eed3cc; }
+.bk-k-dining { background: #e7f0eb; color: #2d5c48; border-color: #cfe0d6; }
+.bk-k-exp    { background: #e4f0f0; color: #275c57; border-color: #cfe2e1; }
+.bk-k-card   { background: #f0ece1; color: #4a4540; border-color: #e3ddd2; }
+
+/* col 5 — way to book: the platform chip IS the link */
+.bk-plat {
+  justify-self: start;
+  font: 700 0.64rem/1.2 var(--sans, sans-serif);
+  padding: 5px 9px; border-radius: 999px; white-space: nowrap;
+  background: #2c2a26; color: #f5efe2; text-decoration: none;
+  transition: background 0.15s ease;
+}
+.bk-plat:hover { background: #c93a2b; }
+
+/* col 6 — Jay-quote badge */
 .bk-badge {
-  font: 800 0.56rem/1.2 var(--sans, sans-serif);
-  letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 4px 7px; border-radius: 999px; text-align: center; white-space: nowrap;
+  font: 800 0.54rem/1.3 var(--sans, sans-serif);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 4px 7px; border-radius: 9px; text-align: center;
 }
 .bk-badge.jay  { background: #efe7d6; color: #7a5c17; border: 1px solid #e2d4b4; }
 .bk-badge.ours { background: #e7f0eb; color: #2d5c48; border: 1px solid #cfe0d6; }
-.bk-main { min-width: 0; }
-.bk-main b { font-size: 0.86rem; display: block; }
-.bk-note { display: block; font-size: 0.72rem; color: #9a8f7a; margin-top: 2px; }
+
+/* col 7 — price */
 .bk-price { font-weight: 700; white-space: nowrap; }
+.bk-price.num { text-align: right; }
+.bk-price small { display: block; font-weight: 500; color: #9a8f7a; font-size: 0.66rem; }
+
+/* col 8 — book by */
 .bk-by {
-  font: 650 0.7rem/1.3 var(--sans, sans-serif);
-  color: #6b6257; white-space: nowrap; justify-self: end; text-align: right;
+  font: 650 0.68rem/1.3 var(--sans, sans-serif);
+  color: #6b6257; justify-self: end; text-align: right;
 }
 .bk-by.hot { color: #c93a2b; }
+
+/* total footer row — sums the rows currently displayed */
+.bkt-total {
+  background: #f4eedd; border-color: #d8d0c0;
+  border-top: 2px solid #c9bda2;
+  font-size: 0.86rem;
+}
+.bkt-total .bk-main b { font-size: 0.86rem; }
+.bkt-total .bk-price { font-weight: 800; font-size: 0.9rem; color: #1b1b1f; }
+
+.bk-empty { font-size: 0.84rem; color: #9a8f7a; font-style: italic; padding: 14px; }
 
 .bkg-free {
   margin: 0; padding: 12px 16px; list-style: none;
@@ -48,8 +153,24 @@
 
 .bkg-foot { margin-top: 26px; font-size: 0.78rem; color: #9a8f7a; font-style: italic; }
 
-@media (max-width: 720px) {
-  .bkg-row { grid-template-columns: 1fr auto; }
-  .bk-badge { justify-self: start; grid-row: 1; }
-  .bk-by { grid-row: 1; }
+/* ≤860px: hide the header row, stack each row into a card */
+@media (max-width: 860px) {
+  .bkt-head { display: none; }
+  .bkt-row {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 7px 10px; padding: 12px 14px;
+  }
+  .bk-main { flex: 1 1 100%; order: -3; }
+  .bk-when { order: -2; }
+  .bk-when small { display: inline; margin-left: 5px; }
+  .bk-when small::before { content: '· '; color: #9a8f7a; }
+  .bk-route { order: -1; flex: 1 1 auto; }
+  .bk-price { white-space: normal; }
+  .bk-price small { display: inline; margin-left: 5px; }
+  .bk-by { margin-left: auto; }
+  .bkt-total .bk-when, .bkt-total .bk-route,
+  .bkt-total .bk-kind-cell, .bkt-total .bk-plat-cell,
+  .bkt-total .bk-badge-cell, .bkt-total .bk-by { display: none; }
+  .bkt-total .bk-main { flex: 1 1 auto; order: 0; }
+  .bkt-total .bk-price { margin-left: auto; }
 }
