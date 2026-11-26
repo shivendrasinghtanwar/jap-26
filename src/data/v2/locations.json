@@ -730,7 +730,7 @@
       "costIncluded": true,
       "notes": "~1h45–2h; grab bags en route to the platform",
       "blurb": "The Hokuriku extension plus the Thunderbird limited express — Kanazawa to Kyoto in under two hours.",
-      "transit": "12-min walk from Omicho down Hyakumangoku-odori to Kanazawa Stn. Hokuriku Shinkansen (Tsurugi) → Tsuruga ~45 min, cross-platform to the Thunderbird → Kyoto ~55 min; through-fare ~¥7,800 pp, one booking.",
+      "transit": "12-min walk from Omicho down Hyakumangoku-odori to Kanazawa Stn; Hokuriku Shinkansen (Tsurugi) Kanazawa → Tsuruga, ~45 min; at Tsuruga just cross the platform to the Thunderbird → it terminates run at KYOTO STATION, ~55 min (through-fare ~¥7,800 pp, one booking); you step off onto the main JR concourse — follow the 八条口 Hachijo (south) exit signs, ~6-min walk through the station.",
       "via": {
         "name": "Kanazawa Station",
         "lat": 36.578,
@@ -748,7 +748,12 @@
       "type": "hotel",
       "costIncluded": null,
       "notes": "Comfort ERA Kyoto Toji — 13-min flat walk to Kyoto Stn, 1 min to Kintetsu Toji",
-      "transit": "Comfort ERA Kyoto Toji is a 13-min flat walk from Kyoto Stn (Hachijo East exit) — or Kintetsu one stop to Toji, 1-min walk. Bags held at the desk; the takkyubin suitcases from Tokyo should already be waiting (email ahead to confirm)."
+      "transit": "Out of the Hachijo (south) exit, head WEST along Hachijo-dori with the Shinkansen tracks on your right, then left down toward Toji — 13-min flat walk to the hotel door; lazier option: Kintetsu line from inside Kyoto Stn, 1 stop to Toji (~2 min, ¥160), hotel 1-min from the exit; bags to the 24h desk — the takkyubin suitcases from Tokyo should already be waiting (email ahead to confirm).",
+      "via": {
+        "name": "Kyoto Station — Hachijo (south) exit",
+        "lat": 34.9843,
+        "lng": 135.7608
+      }
     },
     {
       "day": 7,
