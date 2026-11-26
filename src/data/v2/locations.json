@@ -526,11 +526,11 @@
       "type": "transit",
       "costIncluded": null,
       "notes": "",
-      "transit": "Fujikyu local line Shimoyoshida → Kawaguchiko, 15 min, ¥310 pp; the boat pier is a 15-min lakeside walk or 5-min taxi (~¥1,000) from the station.",
+      "transit": "Walk back down from the pagoda — 398 steps + 12-min downhill to Shimoyoshida Stn — then the Fujikyu local line Shimoyoshida → Kawaguchiko, 15 min, ¥310 pp; the boat pier is a 15-min lakeside walk or 5-min taxi (~¥1,000) from the station.",
       "via": {
         "name": "Shimoyoshida Station (Fujikyu)",
-        "lat": 35.4886,
-        "lng": 138.7946
+        "lat": 35.4925,
+        "lng": 138.7989
       }
     },
     {
@@ -944,7 +944,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "JR Nara Line back 1 stop to Tofukuji → Keihan Line (toward Demachiyanagi) 2 stops to Shichijo, then 7-min walk east; ~20 min, ¥310 pp total. One taxi, 10 min, ~¥1,300, if legs are done.",
+      "transit": "Walk back down through the torii to JR Inari Stn (3 min), then JR Nara Line back 1 stop to Tofukuji → Keihan Line (toward Demachiyanagi) 2 stops to Shichijo, then 7-min walk east; ~20 min, ¥310 pp total. One taxi, ~¥1,300, if legs object.",
       "via": {
         "name": "JR Inari Station",
         "lat": 34.96711,
@@ -975,7 +975,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "Keihan Line from Shichijo → Gion-Shijo, 2 stops, 3 min, ¥170 pp.",
+      "transit": "7-min walk back west to Keihan Shichijo Stn, then Keihan Line (toward Demachiyanagi) → Gion-Shijo, 2 stops, 3 min, ¥170 pp.",
       "via": {
         "name": "Keihan Shichijo Station",
         "lat": 34.9909,
@@ -1007,7 +1007,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "City Bus 206 from the Gion stop → Kyoto Stn, ~20 min, ¥230 pp — Christmas-night buses pack out; taxi ~¥1,500 total is the sane upgrade.",
+      "transit": "4-min walk east to the Gion bus stop on Higashioji-dori, then City Bus 206 → Kyoto Stn, ~20 min, ¥230 pp — Christmas-night buses pack out; taxi ~¥1,500 total is the sane upgrade.",
       "via": {
         "name": "Gion bus stop (Higashioji-dori)",
         "lat": 35.0037,
@@ -1294,7 +1294,7 @@
       "costIncluded": null,
       "notes": "",
       "blurb": "Grand Front Osaka is the flagship shopping and dining complex of the redeveloped Umeda district, packed with showrooms, boutiques and restaurants beside Osaka Station.",
-      "transit": "Loop Line back to Osaka Stn (~10 min, ¥170); Grand Front is across the north plaza.",
+      "transit": "10-min walk back down through the park to Osakajokoen Stn, then Loop Line back to Osaka Stn (~10 min, ¥170); Grand Front is across the north plaza.",
       "via": {
         "name": "Osakajokoen Station (Loop line)",
         "lat": 34.6916,
@@ -1410,7 +1410,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "Reverse: Yumesaki Line → Nishikujo → Loop Line to Osaka Stn, ~20 min, ¥190 pp; then the ~7-min walk home out the north-west side.",
+      "transit": "5-min walk back down Universal CityWalk to Universal City Stn, then reverse: Yumesaki Line → Nishikujo → Loop Line to Osaka Stn, ~20 min, ¥190 pp; then the ~7-min walk home out the north-west side.",
       "via": {
         "name": "Universal City Station",
         "lat": 34.667,
@@ -1497,7 +1497,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "Midosuji Line Namba → Dobutsuen-mae, 2 stops, 5 min, ¥190 pp — exit 1, then 5 min up the Jan-Jan Yokocho arcade into Shinsekai.",
+      "transit": "5-min walk back over Ebisubashi to Namba Stn, then Midosuji Line Namba → Dobutsuen-mae, 2 stops, 5 min, ¥190 pp — exit 1, then 5 min up the Jan-Jan Yokocho arcade into Shinsekai.",
       "via": {
         "name": "Namba Station (Midosuji line)",
         "lat": 34.6639,
@@ -1542,7 +1542,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "Midosuji Line Dobutsuen-mae → Daikokucho (1 stop), cross to the Yotsubashi Line → Nishi-Umeda, ~13 min total, ¥240 pp — 5-min walk home from there.",
+      "transit": "5-min walk back down Jan-Jan Yokocho to Dobutsuen-mae Stn, then Midosuji Line → Daikokucho (1 stop), cross to the Yotsubashi Line → Nishi-Umeda, ~13 min total, ¥240 pp — 5-min walk home from there.",
       "via": {
         "name": "Dobutsuen-mae Station",
         "lat": 34.6504,
@@ -1605,7 +1605,7 @@
       "costIncluded": null,
       "notes": "",
       "blurb": "Marunouchi Naka-dori is Tokyo's elegant tree-lined boulevard beside the station, whose champagne-gold winter illumination of over a million LEDs adjoins the Hibiya district's displays.",
-      "transit": "JR back one stop to Tokyo Stn, Marunouchi side — Naka-dori's champagne-gold lights run 1.2 km to Hibiya; walk it as the light fades.",
+      "transit": "5-min walk back to JR Bakurocho, then one stop to Tokyo Stn, Marunouchi side — Naka-dori's champagne-gold lights run 1.2 km to Hibiya; walk it as the light fades.",
       "via": {
         "name": "JR Bakurocho Station",
         "lat": 35.69323,
@@ -1642,7 +1642,7 @@
       "type": "food",
       "costIncluded": false,
       "notes": "",
-      "transit": "JR Chuo Rapid back toward Tokyo/Kanda, ~20 min — dinner near the hotel; big day tomorrow night.",
+      "transit": "5-min walk back down the Sun Mall arcade to JR Nakano Stn, then Chuo Rapid back toward Tokyo/Kanda, ~20 min — dinner near the hotel; big day tomorrow night.",
       "via": {
         "name": "JR Nakano Station",
         "lat": 35.70566,
@@ -1748,7 +1748,7 @@
       "costIncluded": false,
       "notes": "¥3,100 advance; open to 22:00. The ascent we saved — Day 2 was base-only, tonight is the first view from the deck.",
       "blurb": "Tokyo Skytree is Japan's tallest structure at 634 metres, a broadcasting tower with twin observation decks offering panoramic views across the Kanto plain to Mt. Fuji.",
-      "transit": "Metro from Meiji-jingumae: Chiyoda Line 1 stop to Omotesando, cross-platform to the Hanzomon Line — it through-runs all the way to Oshiage, Skytree's basement. ~30 min, ¥260 pp, one easy change.",
+      "transit": "8-min walk back out of the shrine forest to Meiji-jingumae Stn, then Chiyoda Line 1 stop to Omotesando, cross-platform to the Hanzomon Line — it through-runs all the way to Oshiage, Skytree's basement. ~35 min, ¥260 pp.",
       "via": {
         "name": "Meiji-jingumae Station (Chiyoda line)",
         "lat": 35.6686,
