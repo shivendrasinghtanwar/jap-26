@@ -474,13 +474,13 @@
       "day": 5,
       "seq": 3,
       "time": "09:00",
-      "title": "Fuji Excursion — Shinjuku → Shimoyoshida",
+      "title": "Fuji Excursion — Shinjuku Stn → Shimoyoshida Stn",
       "place": "Shinjuku Station",
       "lat": 35.5012,
       "lng": 138.8014,
       "type": "transit",
       "costIncluded": null,
-      "notes": "",
+      "notes": "board at Shinjuku Stn (JR limited-express platforms) → alight at Shimoyoshida Stn, Fujiyoshida",
       "blurb": "Arakurayama Sengen Park is a hillside shrine park in Fujiyoshida whose pagoda-and-Mt.-Fuji panorama is one of Japan's most famous postcard views.",
       "transit": "Walk 10 min to JR Asakusabashi (blue 1a) → Chuo-Sobu Local direct to Shinjuku, ~25 min, ¥230 pp; inside Shinjuku follow the limited-express signs (~8 min) to the Fuji Excursion (reserved, ~¥4,130 pp) — direct to Shimoyoshida, no other change. Big suitcases DON'T come: ERA's desk ships them by takkyubin to the Kyoto hotel this morning (~¥2,500/bag, arrives before you do on 24 Dec); carry one overnight bag each for the Fuji + Kanazawa nights.",
       "via": {
@@ -501,7 +501,7 @@
       "costIncluded": null,
       "notes": "approximate — pagoda sits ~400 steps uphill within Arakurayama Sengen Park",
       "blurb": "The Chureito Pagoda is a five-storey vermilion pagoda whose terrace frames Mt. Fuji in Japan's classic postcard composition, reached by a climb of about 400 steps.",
-      "transit": "15-min uphill walk from Shimoyoshida Stn, then the 398 steps to the pagoda deck — Fuji behind you the whole climb."
+      "transit": "Off the Fuji Excursion at Shimoyoshida — one small exit, follow the Chureito Pagoda signs (everyone's headed the same way): 15-min gentle uphill through town, then the 398 steps to the pagoda deck — Fuji behind you the whole climb."
     },
     {
       "day": 5,
@@ -545,7 +545,7 @@
       "type": "hotel",
       "costIncluded": null,
       "notes": "Mizno Hotel — check in, then the evening is yours: book the rooftop private-bath slot at the desk FIRST thing, dinner at SEIKOUKI from 18:30",
-      "transit": "Call the hotel from the pier for pickup (5–10 min) or a ~¥1,500 taxi — Mizno sits up a steep hill above Asakawa on the north-east shore."
+      "transit": "From the pier, call Mizno for pickup (0555-72-1234, 5–10 min) or take a ~¥1,500 taxi — the hotel sits up a steep hill above Asakawa on the north-east shore; don't try to walk it with bags."
     },
     {
       "day": 6,
@@ -603,29 +603,29 @@
       "day": 6,
       "seq": 5,
       "time": "09:30",
-      "title": "Bus/Fuji Excursion toward Tokyo",
+      "title": "Kawaguchiko Stn → Tokyo Stn (Fuji Excursion + Chuo Rapid)",
       "place": "Kawaguchiko Station (departure)",
       "lat": 35.4983,
       "lng": 138.7648,
       "type": "transit",
       "costIncluded": true,
-      "notes": "en-route leg",
+      "notes": "board at Kawaguchiko Stn → change inside Shinjuku Stn → alight at Tokyo Stn",
       "blurb": "Kawaguchiko Station is the gateway terminus of the Fuji Five Lakes region, linked to Tokyo by the direct Fuji Excursion limited express and highway buses.",
-      "transit": "Fuji Excursion (reserved) Kawaguchiko → Shinjuku, ~1h55m, ¥4,130 pp; then JR Chuo Rapid Shinjuku → Tokyo Stn, 14 min, ¥210 — lands you on the ~12:20 Kagayaki with margin."
+      "transit": "Fuji Excursion (reserved) Kawaguchiko → Shinjuku, ~1h55m, ¥4,130 pp; at Shinjuku stay inside the JR gates and cross to the Chuo Rapid platform (~5 min) → Tokyo Stn, 14 min, ¥210 — lands you on the ~12:20 Kagayaki with margin."
     },
     {
       "day": 6,
       "seq": 6,
       "time": "12:00",
-      "title": "Hokuriku Shinkansen Tokyo → Kanazawa",
+      "title": "Tokyo Stn → Kanazawa Stn (Kagayaki Shinkansen)",
       "place": "Tokyo Station",
       "lat": 35.6812,
       "lng": 139.7671,
       "type": "transit",
       "costIncluded": true,
-      "notes": "",
+      "notes": "board at Tokyo Stn, Hokuriku Shinkansen gates → alight at Kanazawa Stn, East exit",
       "blurb": "The Hokuriku Shinkansen is the bullet-train line linking Tokyo with the Japan Sea coast, reaching Kanazawa in about two and a half hours at up to 260 km/h.",
-      "transit": "Hokuriku Shinkansen (Kagayaki, all reserved) Tokyo → Kanazawa, 2h28m · ¥14,380 pp (≈ ₹8,500). Eki-net Tokudane early-bird cuts up to 30%. Luggage racks at car ends — no oversized rule on this line."
+      "transit": "Inside Tokyo Stn follow the blue Hokuriku Shinkansen signs (~10 min walk to the gates). Kagayaki (all reserved) Tokyo → Kanazawa, 2h28m · ¥14,380 pp (≈ ₹8,500); Eki-net Tokudane early-bird cuts up to 30%. Luggage racks at car ends — no oversized rule on this line."
     },
     {
       "day": 6,
@@ -722,13 +722,13 @@
       "day": 7,
       "seq": 3,
       "time": "09:30",
-      "title": "Train to Kyoto (Tsuruga Shinkansen + Thunderbird)",
+      "title": "Kanazawa Stn → Kyoto Stn (Tsurugi + Thunderbird)",
       "place": "Kanazawa Station",
       "lat": 36.578,
       "lng": 136.6478,
       "type": "transit",
       "costIncluded": true,
-      "notes": "~1h45–2h; grab bags en route to the platform",
+      "notes": "board at Kanazawa Stn (pin here) → platform change at Tsuruga → alight at KYOTO STN, head for the Hachijo south exit",
       "blurb": "The Hokuriku extension plus the Thunderbird limited express — Kanazawa to Kyoto in under two hours.",
       "transit": "12-min walk from Omicho down Hyakumangoku-odori to Kanazawa Stn; Hokuriku Shinkansen (Tsurugi) Kanazawa → Tsuruga, ~45 min; at Tsuruga just cross the platform to the Thunderbird → it terminates run at KYOTO STATION, ~55 min (through-fare ~¥7,800 pp, one booking); you step off onto the main JR concourse — follow the 八条口 Hachijo (south) exit signs, ~6-min walk through the station.",
       "via": {
@@ -767,7 +767,7 @@
       "costIncluded": true,
       "notes": "WEAR YOUR DINNER OUTFIT HERE — shops locker your clothes while you’re in kimono; no hotel detour needed later",
       "blurb": "Dressing in a rental kimono for an afternoon in the old lanes is one of Kyoto’s signature experiences.",
-      "transit": "Kyoto City Bus 206 from Kyoto Stn stand D2 → Gojozaka, ~15 min, ¥230 pp, Suica OK — rental shops cluster up the Gojozaka slope. Christmas-Eve queues at D2 are real; a taxi is ~¥1,500 total and saves 20 min.",
+      "transit": "Walk back to Kyoto Stn (13 min — or Kintetsu Toji → Kyoto, 1 stop); bus stand D2 is outside the north (Karasuma/Tower) side. City Bus 206 → Gojozaka, ~15 min, ¥230 pp, Suica OK — rental shops cluster up the Gojozaka slope. Christmas-Eve queues at D2 are real; a taxi is ~¥1,500 total and saves 20 min.",
       "via": {
         "name": "Kyoto Station bus terminal, stand D2",
         "lat": 34.9857,
@@ -886,15 +886,15 @@
       "day": 8,
       "seq": 2,
       "time": "08:46",
-      "title": "JR Nara Line to Inari Station",
+      "title": "Kyoto Stn → Inari Stn (JR Nara Line)",
       "place": "Inari Station",
       "lat": 34.968,
       "lng": 135.7721,
       "type": "transit",
       "costIncluded": true,
-      "notes": "",
+      "notes": "board at Kyoto Stn platforms 8–10 → alight at Inari Stn, shrine opposite the exit",
       "blurb": "Inari Station on the JR Nara Line sits directly opposite the first torii gate of Fushimi Inari Taisha, just two stops from Kyoto Station.",
-      "transit": "JR Nara Line local from Kyoto Stn platforms 8–10 → Inari, 2 stops, 5 min, ¥150 pp — the shrine's first torii is directly opposite the station exit.",
+      "transit": "13-min walk to Kyoto Stn (or Kintetsu Toji → Kyoto, 1 stop), then JR Nara Line local from platforms 8–10 (south-east corner of the concourse) → Inari, 2 stops, 5 min, ¥150 pp — the shrine's first torii is directly opposite the tiny station exit.",
       "via": {
         "name": "Kyoto Station, JR Nara line (platforms 8–10)",
         "lat": 34.98585,
@@ -949,13 +949,13 @@
       "day": 8,
       "seq": 6,
       "time": "14:15",
-      "title": "Public transit to Gion-Shijo",
+      "title": "Keihan line: Shichijo Stn → Gion-Shijo Stn",
       "place": "Gion-Shijo Station",
       "lat": 35.0037,
       "lng": 135.7722,
       "type": "transit",
       "costIncluded": true,
-      "notes": "",
+      "notes": "board at Keihan Shichijo → alight at Gion-Shijo, exit 6",
       "transit": "7-min walk back west to Keihan Shichijo Stn, then Keihan Line (toward Demachiyanagi) → Gion-Shijo, 2 stops, 3 min, ¥170 pp.",
       "via": {
         "name": "Keihan Shichijo Station",
@@ -1033,7 +1033,7 @@
       "type": "hotel",
       "costIncluded": null,
       "notes": "Comfort ERA Kyoto Toji — 13-min flat walk to Kyoto Stn, 1 min to Kintetsu Toji",
-      "transit": "13-min flat walk home down the Miyakomichi arcade — early night on purpose: 07:30 start tomorrow."
+      "transit": "Out the Hachijo (south) side, down the Miyakomichi arcade and west along Hachijo-dori — 13-min flat walk home; early night on purpose: 07:30 start tomorrow."
     },
     {
       "day": 9,
@@ -1149,13 +1149,13 @@
       "day": 9,
       "seq": 9,
       "time": "15:45",
-      "title": "JR Sagano Line to Kyoto Station",
+      "title": "Saga-Arashiyama Stn → Kyoto Stn (JR Sagano Line)",
       "place": "Kyoto Station",
       "lat": 34.9858,
       "lng": 135.7585,
       "type": "transit",
       "costIncluded": false,
-      "notes": "",
+      "notes": "board at JR Saga-Arashiyama → alight at Kyoto Stn",
       "transit": "10-min walk to JR Saga-Arashiyama Stn → JR Sagano/San'in Line → Kyoto Stn, 12 min, ¥240 pp.",
       "via": {
         "name": "JR Saga-Arashiyama Station",
@@ -1174,7 +1174,7 @@
       "type": "hotel",
       "costIncluded": null,
       "notes": "Comfort ERA Kyoto Toji — 13-min flat walk to Kyoto Stn, 1 min to Kintetsu Toji",
-      "transit": "13-min walk from the station — feet up; tomorrow is a city switch."
+      "transit": "Out the Hachijo (south) exit, west along Hachijo-dori — 13-min walk home; feet up, tomorrow is a city switch."
     },
     {
       "day": 10,
@@ -1204,15 +1204,15 @@
       "day": 10,
       "seq": 3,
       "time": "09:15",
-      "title": "JR Special Rapid Service, Kyoto Station → Osaka Station",
+      "title": "Kyoto Stn → Osaka Stn (JR Special Rapid)",
       "place": "Osaka Station",
       "lat": 34.7025,
       "lng": 135.4959,
       "type": "transit",
       "costIncluded": true,
-      "notes": "departs Kyoto Station (34.9858, 135.7585)",
+      "notes": "board at Kyoto Stn platforms 4/5 → alight at Osaka Stn, north-west side for the hotel",
       "blurb": "The JR Special Rapid Service is the fast conventional train of the Kyoto-Osaka corridor, covering the distance in about 29 minutes with no reservation needed.",
-      "transit": "JR Kyoto Line Special Rapid from Kyoto platforms 4/5 (toward Himeji/Banshu-Ako) → Osaka Stn, 29 min, ¥580 pp — unreserved, tap Suica, grab window right side for the Yodo river.",
+      "transit": "13-min walk back to Kyoto Stn (or Kintetsu Toji → Kyoto, 1 stop) with all the bags — then JR Kyoto Line Special Rapid from platforms 4/5 (toward Himeji/Banshu-Ako) → Osaka Stn, 29 min, ¥580 pp — unreserved, tap Suica, window right side for the Yodo river.",
       "via": {
         "name": "Kyoto Station, JR Kyoto line (platforms 4/5)",
         "lat": 34.98585,
@@ -1243,7 +1243,7 @@
       "type": "transit",
       "costIncluded": true,
       "notes": "",
-      "transit": "JR Osaka Loop Line inner loop (platform 1) → Osakajokoen, ~10 min, ¥170 pp; 10-min walk through the park to the keep — last open day before the NY closure.",
+      "transit": "Walk the 7 min back to Osaka Stn, then JR Osaka Loop Line inner loop (platform 1) → Osakajokoen, ~10 min, ¥170 pp; 10-min walk through the park to the keep — last open day before the NY closure.",
       "via": {
         "name": "Osaka Station, Loop line (platform 1)",
         "lat": 34.7025,
@@ -1340,13 +1340,13 @@
       "day": 11,
       "seq": 2,
       "time": "07:15",
-      "title": "JR Yumesaki Line to Universal-City Station",
+      "title": "Osaka Stn → Universal City Stn (JR Loop + Yumesaki)",
       "place": "Universal-City Station",
       "lat": 34.6672,
       "lng": 135.4387,
       "type": "transit",
       "costIncluded": true,
-      "notes": "",
+      "notes": "board at Osaka Stn Loop platform 1 → cross-platform at Nishikujo → alight at Universal City Stn",
       "transit": "Walk ~7 min to Osaka Stn, then JR Osaka Loop inner (platform 1) → Nishikujo, 5 min; cross the platform to the JR Yumesaki (Sakurajima) Line → Universal City, 5 min. ¥190 pp total. The 07:15 start is the queue-beater.",
       "via": {
         "name": "Osaka Station, Loop line (platform 1)",
@@ -1471,13 +1471,13 @@
       "day": 12,
       "seq": 6,
       "time": "14:15",
-      "title": "Transit to Shinsekai",
+      "title": "Subway to Shinsekai — Namba Stn → Dobutsuen-mae Stn",
       "place": "Shinsekai",
       "lat": 34.652,
       "lng": 135.5063,
       "type": "transit",
       "costIncluded": true,
-      "notes": "",
+      "notes": "board Midosuji at Namba → alight Dobutsuen-mae, exit 1",
       "transit": "5-min walk back over Ebisubashi to Namba Stn, then Midosuji Line Namba → Dobutsuen-mae, 2 stops, 5 min, ¥190 pp — exit 1, then 5 min up the Jan-Jan Yokocho arcade into Shinsekai.",
       "via": {
         "name": "Namba Station (Midosuji line)",
@@ -1546,13 +1546,13 @@
       "day": 13,
       "seq": 2,
       "time": "09:15",
-      "title": "Tokaido Shinkansen Shin-Osaka → Tokyo",
+      "title": "Shin-Osaka Stn → Tokyo Stn (Nozomi Shinkansen)",
       "place": "Shin-Osaka Station (departure)",
       "lat": 34.7335,
       "lng": 135.5002,
       "type": "transit",
       "costIncluded": true,
-      "notes": "reserve 30 Nov — U-turn rush",
+      "notes": "board at Shin-Osaka Shinkansen gates → alight at Tokyo Stn, follow Sobu Rapid signs down",
       "blurb": "The Tokaido Shinkansen, opened in 1964, is the world's first high-speed railway, whisking passengers between Osaka and Tokyo in about two and a half hours.",
       "transit": "Walk ~7 min to Osaka Stn, then JR Kyoto Line local → Shin-Osaka, 1 stop, 4 min, ¥170; allow 20 min for the Shinkansen gate + ekiben run. Nozomi (reserved + the free oversized-luggage seats) Shin-Osaka → Tokyo, 2h27m · ¥14,720 pp (≈ ₹8,700); SmartEX early-bird saves ~¥2,500 pp — books 30 Nov.",
       "via": {
@@ -1572,7 +1572,7 @@
       "type": "hotel",
       "costIncluded": null,
       "notes": "extension night — Jay to quote; placeholder near Tokyo Station",
-      "transit": "JR Sobu Rapid Tokyo → Bakurocho, 1 stop, 3 min, ¥150 pp — APA Bakuroyokoyama is 3 min from the exit; bags to the desk."
+      "transit": "Off the Nozomi at Tokyo Stn, follow the Sobu Rapid (Yokosuka/Sobu line) signs DOWN — the platforms are deep, ~10 min inside the station — then 1 stop to Bakurocho, 3 min, ¥150 pp; APA Bakuroyokoyama is 3 min from the exit; bags to the desk."
     },
     {
       "day": 13,
@@ -1665,14 +1665,14 @@
       "day": 14,
       "seq": 4,
       "time": "00:30",
-      "title": "JR back to hotel — all-night Yamanote",
+      "title": "Hamamatsucho Stn → Akihabara Stn (all-night Yamanote)",
       "place": "Hamamatsucho Station",
       "lat": 35.6554,
       "lng": 139.757,
       "type": "transit",
       "costIncluded": false,
-      "notes": "",
-      "transit": "JR Yamanote from Hamamatsucho — it runs ALL NIGHT tonight — ~10 min toward Kanda/Akihabara, ¥170 pp; get off at Akihabara, then a 15-min walk or ¥1,000 cab home. The Toei subway does NOT run overnight (last Asakusa-line train from Daimon ~00:20) — so it's this JR route, or a ¥3,000–4,500 taxi."
+      "notes": "board at JR Hamamatsucho → alight at Akihabara, 15-min walk home",
+      "transit": "10-min walk back down from Zojoji to JR Hamamatsucho (Tokyo Tower behind you), then JR Yamanote — it runs ALL NIGHT tonight — ~10 min toward Kanda/Akihabara, ¥170 pp; get off at Akihabara, then a 15-min walk or ¥1,000 cab home. The Toei subway does NOT run overnight (last Asakusa-line train from Daimon ~00:20) — so it's this JR route, or a ¥3,000–4,500 taxi."
     },
     {
       "day": 15,
@@ -1749,7 +1749,7 @@
       "costIncluded": null,
       "notes": "2027 notice due late Dec",
       "blurb": "Ippan Sanga is one of only two days a year the Imperial Palace's inner grounds open, as the Emperor and family greet the public from the Chowa-den balcony.",
-      "transit": "JR Sobu Rapid Bakurocho → Tokyo Stn (3 min, ¥150), then a 10-min walk across Marunouchi to the Nijubashi plaza — in the security line by 08:15 with IDs; no big bags.",
+      "transit": "5-min walk to JR Bakurocho, Sobu Rapid 1 stop to Tokyo Stn (3 min, ¥150), then a 10-min walk across Marunouchi to the Nijubashi plaza — in the security line by 08:15 with IDs; no big bags.",
       "via": {
         "name": "JR Bakurocho Station",
         "lat": 35.69323,
@@ -1807,7 +1807,7 @@
       "costIncluded": null,
       "notes": "Japan-licensee flagship — Made-in-Japan + Addict lines not sold outside Japan; NY sales still on; confirm 3 Jan hours (~11:00–20:00)",
       "blurb": "Converse Japan is a separate licensee from Nike's Converse, and this Cat Street flagship (opened 2024) carries the Made-in-Japan and Addict lines you cannot buy outside the country.",
-      "transit": "Toei Shinjuku Line Bakuroyokoyama → Shinjuku-sanchome (~12 min, ¥280), change to Metro Fukutoshin, 1 stop → Meiji-jingumae (¥180); exit 7, Cat Street is 6 min down. Total ~30 min.",
+      "transit": "Bakuroyokoyama Stn is 1 min from the hotel door: Toei Shinjuku Line → Shinjuku-sanchome (~12 min, ¥280), change to Metro Fukutoshin, 1 stop → Meiji-jingumae (¥180); exit 7, Cat Street is 6 min down. Total ~30 min.",
       "via": {
         "name": "Bakuroyokoyama Station (Shinjuku line)",
         "lat": 35.692,
