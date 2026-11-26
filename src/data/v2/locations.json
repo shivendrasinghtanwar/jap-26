@@ -83,7 +83,8 @@
       "lng": 139.7797,
       "type": "transit",
       "costIncluded": true,
-      "notes": "private car, ~90 min to central Tokyo — booked for ~21:15, after immigration and bags"
+      "notes": "private car, ~90 min to central Tokyo — booked for ~21:15, after immigration and bags",
+      "transit": "Pre-booked private car, driver meets you at T2 arrivals with a name board ~21:15 — ~75–80 min door to door to Higashi-Kanda. Fallback if the car falls through: JR Narita Express to Tokyo Stn (~55 min) + 10-min taxi, last N'EX ~21:44."
     },
     {
       "day": 1,
@@ -412,7 +413,7 @@
       "day": 4,
       "seq": 2,
       "time": "07:15",
-      "title": "Transfer to Tokyo DisneySea",
+      "title": "Train to Tokyo DisneySea (Bakurocho → Maihama)",
       "place": "Tokyo DisneySea",
       "lat": 35.6267,
       "lng": 139.8851,
@@ -443,7 +444,7 @@
       "day": 4,
       "seq": 4,
       "time": "17:30",
-      "title": "Transfer from Tokyo DisneySea to hotel",
+      "title": "Train back from DisneySea to the hotel",
       "place": "Comfort Hotel ERA Tokyo Higashi Kanda",
       "lat": 35.6945,
       "lng": 139.7797,
@@ -549,7 +550,7 @@
       "day": 5,
       "seq": 7,
       "time": "15:00",
-      "title": "Transfer to hotel and check-in",
+      "title": "Hotel pickup → Mizno check-in",
       "place": "Mizno Hotel (Kawaguchiko)",
       "lat": 35.5117,
       "lng": 138.7756,
@@ -606,7 +607,8 @@
       "lng": 138.7756,
       "type": "hotel",
       "costIncluded": null,
-      "notes": "Mizno Hotel — every room faces Fuji over the lake; private rooftop onsen for two; the anniversary night"
+      "notes": "Mizno Hotel — every room faces Fuji over the lake; private rooftop onsen for two; the anniversary night",
+      "transit": "Same taxi back from Oishi Park — ask the driver to wait (10 min each way, ~¥3,500 round trip) or have Mizno's desk book the return the night before."
     },
     {
       "day": 6,
@@ -1094,7 +1096,7 @@
       "day": 9,
       "seq": 4,
       "time": "10:50",
-      "title": "Transfer to Ryoan-ji Temple",
+      "title": "Walk the Kinukake path to Ryoan-ji",
       "place": "Ryoan-ji",
       "lat": 35.0345,
       "lng": 135.7183,
@@ -1120,7 +1122,7 @@
       "day": 9,
       "seq": 6,
       "time": "12:15",
-      "title": "Transfer to Arashiyama",
+      "title": "Randen tram to Arashiyama",
       "place": "Arashiyama",
       "lat": 35.0126,
       "lng": 135.6778,
@@ -1240,7 +1242,7 @@
       "day": 10,
       "seq": 4,
       "time": "09:50",
-      "title": "Transfer to hotel & luggage drop-off",
+      "title": "Walk to hotel — luggage drop",
       "place": "DEL style Osaka Shin-Umeda by Daiwa Roynet",
       "lat": 34.70057,
       "lng": 135.48898,
@@ -1431,7 +1433,7 @@
       "day": 12,
       "seq": 2,
       "time": "09:30",
-      "title": "Transfer to Kuromon Ichiba Market",
+      "title": "Subway to Kuromon Market (Nishi-Umeda → Namba)",
       "place": "Kuromon Ichiba Market",
       "lat": 34.6654,
       "lng": 135.5063,
@@ -1916,7 +1918,8 @@
       "lng": 140.3929,
       "type": "transit",
       "costIncluded": true,
-      "notes": "private car, 75–90 min against no morning rush"
+      "notes": "private car, 75–90 min against no morning rush",
+      "transit": "Pre-booked private car, 10:15 pickup at the hotel entrance — ~75 min to Narita T2 departures. Fallback: Keisei Access Express direct from Higashi-Nihombashi to NRT (~60 min, ¥1,310 pp), doable but clumsy with all the bags."
     },
     {
       "day": 18,
