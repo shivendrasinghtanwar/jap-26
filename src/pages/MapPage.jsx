@@ -57,14 +57,24 @@ export default function MapPage() {
     groupStops(dayStops).forEach((g, i) => g.items.forEach(s => { m[s.seq] = i }))
     return m
   }, [dayStops])
-  // boarding stations ("via") get their own blue dashed marker series
-  const dayVias = useMemo(
-    () => dayStops.filter(s => s.via).map(s => ({ ...s.via, seq: s.seq })),
-    [dayStops],
-  )
+  // boarding stations ("via") get sub-numbered blue markers: leaving stop 1
+  // you board at "1a", then arrive at stop 2
+  const dayVias = useMemo(() => {
+    const list = []
+    const used = {}
+    dayStops.forEach((s, i) => {
+      if (!s.via) return
+      const prev = dayStops[i - 1]
+      const base = (prev ? seqToMarker[prev.seq] : seqToMarker[s.seq]) ?? 0
+      used[base] = (used[base] || 0) + 1
+      const label = (base + 1) + String.fromCharCode(96 + used[base]) // 1a, 1b…
+      list.push({ ...s.via, seq: s.seq, label })
+    })
+    return list
+  }, [dayStops, seqToMarker])
   const seqToVia = useMemo(() => {
     const m = {}
-    dayVias.forEach((v, i) => { m[v.seq] = i })
+    dayVias.forEach((v, i) => { m[v.seq] = { idx: i, label: v.label } })
     return m
   }, [dayVias])
   const focusMarker = (idx) => setFocus({ kind: 'stop', idx, t: Date.now() })

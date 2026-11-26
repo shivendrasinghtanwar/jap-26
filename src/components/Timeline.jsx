@@ -129,21 +129,21 @@ export default function Timeline({ meta, stops, flags, color, rating, dayCount, 
             <li
               className="tl-row tl-row-transit"
               aria-label="Getting there"
-              onClick={() => seqToVia[s.seq] != null && onFocusVia && onFocusVia(seqToVia[s.seq])}
-              title={seqToVia[s.seq] != null ? 'Show the boarding point on the map' : undefined}
+              onClick={() => seqToVia[s.seq] && onFocusVia && onFocusVia(seqToVia[s.seq].idx)}
+              title={seqToVia[s.seq] ? 'Show the boarding point on the map' : undefined}
             >
               <span className="tl-time" aria-hidden="true" />
-              {seqToVia[s.seq] != null
-                ? <span className="tl-num tl-num-via" aria-label={`boarding point ${seqToVia[s.seq] + 1}`}>{seqToVia[s.seq] + 1}</span>
+              {seqToVia[s.seq]
+                ? <span className="tl-num tl-num-via" aria-label={`boarding point ${seqToVia[s.seq].label}`}>{seqToVia[s.seq].label}</span>
                 : <span className="tl-dot tl-dot-transit" aria-hidden="true" />}
               <div className="tl-card tl-card-transit">
                 <p className="tl-transit-body">
                   <span className="tl-transit-icn" aria-hidden="true">🚇</span>
                   <span><b>Getting there</b> — {s.transit}</span>
                 </p>
-                {s.via && (
+                {s.via && seqToVia[s.seq] && (
                   <p className="tl-transit-via">
-                    📍 Board at <b>{s.via.name}</b> — blue <span className="tl-via-chipnum">{seqToVia[s.seq] + 1}</span> on the map
+                    📍 Board at <b>{s.via.name}</b> — blue <span className="tl-via-chipnum">{seqToVia[s.seq].label}</span> on the map
                   </p>
                 )}
               </div>

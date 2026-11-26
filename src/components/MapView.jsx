@@ -99,8 +99,22 @@ export default function MapView({ day, stops, vias = [], cities, color, days, ci
     const groups = groupStops(stops)
 
     const pts = groups.map(g => [g.lat, g.lng])
-    if (pts.length > 1) {
-      L.polyline(pts, { color, weight: 3, opacity: 0.75 }).addTo(layer)
+    // Route threads THROUGH the boarding stations: stop → via → next stop.
+    // Legs touching a via are drawn blue-dashed so nothing looks skipped.
+    const viaBySeq = Object.fromEntries(vias.map(v => [v.seq, v]))
+    const nodes = []
+    groups.forEach(g => {
+      for (const item of g.items) {
+        const v = viaBySeq[item.seq]
+        if (v) nodes.push({ via: true, ll: [v.lat, v.lng] })
+      }
+      nodes.push({ via: false, ll: [g.lat, g.lng] })
+    })
+    for (let i = 1; i < nodes.length; i++) {
+      const a = nodes[i - 1], b = nodes[i]
+      L.polyline([a.ll, b.ll], (a.via || b.via)
+        ? { color: '#2b6cb0', weight: 2.5, dashArray: '5 7', opacity: 0.8 }
+        : { color, weight: 3, opacity: 0.75 }).addTo(layer)
     }
     markersRef.current = []
     groups.forEach((g, i) => {
@@ -123,7 +137,7 @@ export default function MapView({ day, stops, vias = [], cities, color, days, ci
     // boarding points: blue dashed numbered markers, their own series
     viaMarkersRef.current = []
     vias.forEach((v, i) => {
-      const html = `<div class="num-mkr num-mkr-via">${i + 1}</div>`
+      const html = `<div class="num-mkr num-mkr-via">${v.label || i + 1}</div>`
       const gmaps = gmapsUrl(v.name, v.lat, v.lng)
       const m = L.marker([v.lat, v.lng], {
         icon: L.divIcon({ className: 'num-mkr-wrap', html, iconSize: [24, 24], iconAnchor: [12, 12] }),
@@ -133,8 +147,9 @@ export default function MapView({ day, stops, vias = [], cities, color, days, ci
       viaMarkersRef.current[i] = m
     })
 
-    if (pts.length === 1) map.flyTo(pts[0], 14, { duration: 0.6 })
-    else map.flyToBounds(L.latLngBounds(pts).pad(0.18), { duration: 0.6, maxZoom: 15 })
+    const allPts = [...pts, ...vias.map(v => [v.lat, v.lng])]
+    if (allPts.length === 1) map.flyTo(allPts[0], 14, { duration: 0.6 })
+    else map.flyToBounds(L.latLngBounds(allPts).pad(0.18), { duration: 0.6, maxZoom: 15 })
   }, [day, stops, vias, cities, color, days, cityColors])
 
   // Focus a marker when a timeline row is clicked: fly in, pop it open, pulse it
