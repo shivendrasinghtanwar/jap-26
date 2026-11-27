@@ -132,14 +132,39 @@ export default function Home() {
           </div>
 
           <div className="jp-card">
-            <h3>📲 Install before the flight</h3>
+            <h3>📲 The everyday stack — install before the flight</h3>
             <ul>
               <li><b>Google Maps</b> — platform numbers, train car positions, exact fares. Gospel</li>
               <li><b>Google Translate</b> + offline Japanese pack</li>
+              <li><b>Japan Travel by NAVITIME</b> — where Google Maps is thin: which car to board, and the <b>Kawaguchiko / Fuji-area buses</b>. Free tier is enough</li>
               <li><b>GO</b> — Japan&rsquo;s taxi app (English UI, foreign cards)</li>
-              <li><b>Tabelog</b> — restaurant ratings. Japanese rate brutally: <b>3.5+ = queue-worthy, 3.2 = good</b></li>
-              <li><b>Payke</b> — scan any product barcode → full English description. Magic at drugstores</li>
-              <li><b>Flush</b> (toilet finder, offline) + <b>Kuli Kuli</b> (menu/sign translator) — the two cards above</li>
+              <li><b>Flush</b> — nearest toilet, 200k+ mapped, works offline</li>
+              <li><b>Kuli Kuli</b> — menu / handwritten-sign / label translator with context Google misses</li>
+              <li><b>Tabelog</b> — ratings (3.5+ = queue-worthy) · <b>Payke</b> — barcode → English at drugstores</li>
+            </ul>
+          </div>
+
+          <div className="jp-card">
+            <h3>🎢 Mandatory for days we hold tickets</h3>
+            <ul>
+              <li><b>Tokyo Disney Resort app</b> — DPA (Premier Access) is sold <b>only in this app, only inside the park</b>. Make the MyDisney account + load BOTH cards before flying (foreign cards work but sometimes fail — have the backup loaded)</li>
+              <li><b>USJ official app</b> — Super Nintendo World timed-entry is <b>app-only since Jan 2026</b> (paper machines removed). Register the Studio Pass in the app on the morning of 28 Dec; don&rsquo;t uninstall mid-day or the ticket voids</li>
+              <li><b>teamLab app</b> — not needed for entry (QR e-ticket is), but issues in-museum numbered queue tickets for the popular rooms. Download before NYE-week crowds</li>
+              <li><b>smartEX</b> — Tokaido Shinkansen seats; <b>test a booking from home first</b> (foreign Visa/MC flaky, Amex best; Klook is the fallback). Links to her Wallet Suica = tap through gates</li>
+              <li><b>Eki-net</b> = use the English <b>website</b>, not the app (app is Japan-store-only) — Kanazawa leg</li>
+              <li><b>Visit Japan Web</b> (website) — immigration + customs QR, both of us, before landing</li>
+            </ul>
+          </div>
+
+          <div className="jp-card">
+            <h3>🧰 Worth the space</h3>
+            <ul>
+              <li><b>Safety Tips</b> — Japan&rsquo;s official tourist disaster-alert app (quake/tsunami push, English). Both phones</li>
+              <li><b>NERV</b> — fastest earthquake early-warning in English; one phone is enough</li>
+              <li><b>ecbo cloak</b> — book luggage storage in cafés + ~380 7-Elevens (~¥500–800/bag/day); perfect for hotel-change days</li>
+              <li><b>TableCheck</b> — English restaurant reservations that actually complete · <b>AutoReserve</b> — its AI phone-calls phone-only restaurants in Japanese for you</li>
+              <li><b>Uber Eats</b> — home account + Indian cards just work; the jet-lag-night and NYE dinner safety net</li>
+              <li><b>WeatherJapan</b> — JWA data in English; pair with Windy&rsquo;s cloud layer for &ldquo;will we see Fuji tomorrow&rdquo;</li>
             </ul>
           </div>
 
