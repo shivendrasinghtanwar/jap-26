@@ -139,3 +139,27 @@
 }
 .home-kit-card h3 { margin: 0 0 6px; font-size: 0.92rem; color: #b23222; }
 .home-kit-card p { margin: 0; font-size: 0.8rem; line-height: 1.55; color: #4a4540; }
+
+/* ——— real-world Japan decoder ——— */
+.home-jp { padding: 34px clamp(16px, 4vw, 48px) 8px; }
+.home-jp-sub { margin: -8px 0 14px; font-size: 0.84rem; color: #6b6257; }
+.home-jp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 12px;
+}
+.jp-card {
+  background: #fffdf8;
+  border: 1px solid #e3ddd2;
+  border-left: 3px solid #b23222;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.jp-card h3 { margin: 0 0 8px; font-size: 0.94rem; color: #1b1b1f; }
+.jp-card ul { margin: 0; padding: 0 0 0 1.1em; }
+.jp-card li {
+  font-size: 0.8rem; line-height: 1.55; color: #4a4540;
+  margin: 0 0 6px;
+}
+.jp-card li:last-child { margin-bottom: 0; }
+.jp-card li b { color: #1b1b1f; }

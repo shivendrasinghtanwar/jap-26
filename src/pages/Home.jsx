@@ -88,6 +88,94 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-jp" aria-label="Real-world Japan survival decoder">
+        <h2 className="home-kit-title">Real-world Japan — the decoder</h2>
+        <p className="home-jp-sub">The stuff nobody tells you until you&rsquo;re standing in front of it. Screenshot this.</p>
+        <div className="home-jp-grid">
+
+          <div className="jp-card">
+            <h3>🚽 The toilet panel, decoded</h3>
+            <ul>
+              <li><b>流す</b> = FLUSH — often a <b>separate wall button or sensor</b>, not on the bidet panel</li>
+              <li><b>大</b> = big flush · <b>小</b> = small flush</li>
+              <li><b>止</b> = STOP — the button you&rsquo;ll need after pressing anything else</li>
+              <li><b>おしり</b> = rear wash · <b>ビデ</b> = front wash · <b>乾燥</b> = dryer</li>
+              <li><b>音 / 音姫</b> = fake flushing SOUND for privacy — it does NOT flush</li>
+              <li><b>呼出 (red button)</b> = staff EMERGENCY call — never the flush. If no button anywhere: wave your hand at the black wall sensor, or look behind the tank</li>
+            </ul>
+          </div>
+
+          <div className="jp-card">
+            <h3>🗣️ Seven phrases that run the country</h3>
+            <ul>
+              <li><b>Sumimasen</b> — excuse me / sorry / calls the waiter. The one word that does everything</li>
+              <li><b>Arigatou gozaimasu</b> — thank you (polite)</li>
+              <li><b>Kore kudasai</b> — &ldquo;this one, please&rdquo; + point. Orders anything</li>
+              <li><b>Daijoubu desu</b> — &ldquo;I&rsquo;m fine / no thanks&rdquo; — refuses the bag, the upsell, the chopsticks</li>
+              <li><b>Toire wa doko desu ka?</b> — where&rsquo;s the toilet?</li>
+              <li><b>Oishii!</b> — delicious (say it, chefs light up)</li>
+              <li><b>Moshi moshi</b> — hello on the PHONE only, never in person</li>
+            </ul>
+          </div>
+
+          <div className="jp-card">
+            <h3>📱 Translation that actually works</h3>
+            <ul>
+              <li><b>Google Translate → download the Japanese OFFLINE pack before flying</b> — works in basements and trains with no signal</li>
+              <li><b>Camera mode</b> — point at any menu, sign or washing-machine panel, it overlays English live. This is the single most-used feature of the trip</li>
+              <li><b>Conversation mode</b> — two-way mic for hotel desks and pharmacies; hand them the phone</li>
+              <li><b>Google Lens</b> on product labels at Don Quijote / konbini</li>
+              <li>Most staff understand simple written English better than spoken — <b>type it, show the screen</b></li>
+            </ul>
+          </div>
+
+          <div className="jp-card">
+            <h3>📲 Install before the flight</h3>
+            <ul>
+              <li><b>Google Maps</b> — platform numbers, train car positions, exact fares. Gospel</li>
+              <li><b>Google Translate</b> + offline Japanese pack</li>
+              <li><b>GO</b> — Japan&rsquo;s taxi app (English UI, foreign cards)</li>
+              <li><b>Tabelog</b> — restaurant ratings. Japanese rate brutally: <b>3.5+ = queue-worthy, 3.2 = good</b></li>
+              <li><b>Payke</b> — scan any product barcode → full English description. Magic at drugstores</li>
+            </ul>
+          </div>
+
+          <div className="jp-card">
+            <h3>🍜 Restaurant survival</h3>
+            <ul>
+              <li><b>Ticket-machine shops</b> (ramen etc.): buy the ticket FIRST at the machine by the door, then hand it over. Cash in, button with picture, done</li>
+              <li><b>Plastic food in the window?</b> Take the staff outside and point. Fully normal</li>
+              <li><b>&ldquo;Osusume&rdquo;</b> = chef&rsquo;s recommendation — ask it, get the best thing</li>
+              <li><b>No tipping. Ever.</b> They will chase you down the street to return it</li>
+              <li>Pay at the front counter, not the table — put money <b>on the little tray</b>, never in hands</li>
+            </ul>
+          </div>
+
+          <div className="jp-card">
+            <h3>🚶 Street rules that trip every tourist</h3>
+            <ul>
+              <li><b>There are no trash bins.</b> Carry a konbini bag in your daypack; bins exist only inside konbini and at vending machines</li>
+              <li><b>Escalators: stand LEFT in Tokyo, stand RIGHT in Osaka</b> — yes, it flips</li>
+              <li><b>Don&rsquo;t eat while walking</b> — stand to the side of the stall, finish, then move</li>
+              <li><b>Trains are silent</b> — phone on manner mode, no calls, talk in whispers</li>
+              <li>Queue inside the painted lines on platforms — the train door stops exactly there</li>
+            </ul>
+          </div>
+
+          <div className="jp-card">
+            <h3>💴 Paying &amp; tax-free</h3>
+            <ul>
+              <li><b>Tax-free = 10% off</b>: passport + ¥5,500 minimum in one store, same day. Look for the red &ldquo;Tax-Free&rdquo; sign (Uniqlo, Bic, Don Quijote, drugstores)</li>
+              <li>Passport stays <b>ON you</b> at all times — it&rsquo;s the law AND the discount</li>
+              <li><b>Suica tap</b> pays at konbini, vending machines, lockers, most chains</li>
+              <li>Cash lives at <b>7-Eleven ATMs</b> (Indian Visa/MC, 24/7)</li>
+              <li>Konbini = breakfast + ATM + clean toilet + coffee + bill of last resort. 7-Eleven, Lawson, FamilyMart — all open 24/7</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
       <section className="home-mapband" aria-label="Route map">
         <div className="home-mapband-head">
           <h2 className="home-map-title">The Route, on the map</h2>
