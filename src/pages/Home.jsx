@@ -102,6 +102,7 @@ export default function Home() {
               <li><b>おしり</b> = rear wash · <b>ビデ</b> = front wash · <b>乾燥</b> = dryer</li>
               <li><b>音 / 音姫</b> = fake flushing SOUND for privacy — it does NOT flush</li>
               <li><b>呼出 (red button)</b> = staff EMERGENCY call — never the flush. If no button anywhere: wave your hand at the black wall sensor, or look behind the tank</li>
+              <li><b>📍 Flush — Toilet Finder &amp; Map app</b> (Android + iOS): 200k+ toilets, works offline, shows paid / key-needed / accessible. Install before flying</li>
             </ul>
           </div>
 
@@ -124,6 +125,7 @@ export default function Home() {
               <li><b>Google Translate → download the Japanese OFFLINE pack before flying</b> — works in basements and trains with no signal</li>
               <li><b>Camera mode</b> — point at any menu, sign or washing-machine panel, it overlays English live. This is the single most-used feature of the trip</li>
               <li><b>Conversation mode</b> — two-way mic for hotel desks and pharmacies; hand them the phone</li>
+              <li><b>Kuli Kuli</b> — travel translator built for menus, handwritten signs, product labels and even omikuji fortune slips; adds context Google misses (needs data, free + paid tiers)</li>
               <li><b>Google Lens</b> on product labels at Don Quijote / konbini</li>
               <li>Most staff understand simple written English better than spoken — <b>type it, show the screen</b></li>
             </ul>
@@ -137,6 +139,7 @@ export default function Home() {
               <li><b>GO</b> — Japan&rsquo;s taxi app (English UI, foreign cards)</li>
               <li><b>Tabelog</b> — restaurant ratings. Japanese rate brutally: <b>3.5+ = queue-worthy, 3.2 = good</b></li>
               <li><b>Payke</b> — scan any product barcode → full English description. Magic at drugstores</li>
+              <li><b>Flush</b> (toilet finder, offline) + <b>Kuli Kuli</b> (menu/sign translator) — the two cards above</li>
             </ul>
           </div>
 
