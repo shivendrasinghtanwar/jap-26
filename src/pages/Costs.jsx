@@ -15,15 +15,16 @@ const BUDGET = [
     basis: 'All-Cathay via HKG, Narita both ways · PNR ECPN6Z · Goibibo 24 Nov',
     low: 134635,
     high: 134635,
+    actual: 134635,
     done: true,
   },
   {
     label: 'Hotels · 17 nights · 6 legs',
-    basis: '₹2,04,202 locked 28 Nov (ERA Tokyo 53.1k · Mizno 28.4k · Forza 4.0k · ERA Kyoto 21.7k · DEL style 25.4k · ERA NY 71.6k) · all pay-later, ₹0 charged yet · high end = city taxes at desks + Agoda forex',
-    low: 204202,
-    high: 210000,
+    basis: 'ERA Tokyo · Mizno Kawaguchiko · Forza Kanazawa · ERA Kyoto · DEL style Osaka · ERA Tokyo NY — all free-canc pay-later, ₹0 charged yet · city taxes at desks',
+    low: 150000,
+    high: 185000,
+    actual: 204202,
     done: true,
-    doneTag: 'booked ✓',
   },
   {
     label: 'Airport cars · D1 + D18',
@@ -136,10 +137,14 @@ const WATCH_OUTS = [
 export default function Costs() {
   const budgetLow = BUDGET.reduce((s, b) => s + b.low, 0)
   const budgetHigh = BUDGET.reduce((s, b) => s + b.high, 0)
+  const actualSoFar = BUDGET.reduce((s, b) => s + (b.actual || 0), 0)
+  // live range: actual where locked, predicted range for the rest
+  const effLow = BUDGET.reduce((s, b) => s + (b.actual ?? b.low), 0)
+  const effHigh = BUDGET.reduce((s, b) => s + (b.actual ?? b.high), 0)
   const totalLow = LINE_ITEMS.reduce((sum, item) => sum + item.low, 0)
   const totalHigh = LINE_ITEMS.reduce((sum, item) => sum + item.high, 0)
-  const grandLow = budgetLow + Math.round(totalLow * JPY_TO_INR)
-  const grandHigh = budgetHigh + Math.round(totalHigh * JPY_TO_INR)
+  const grandLow = effLow + Math.round(totalLow * JPY_TO_INR)
+  const grandHigh = effHigh + Math.round(totalHigh * JPY_TO_INR)
 
   return (
     <main className="page costs-page">
@@ -172,6 +177,7 @@ export default function Costs() {
               <th scope="col">Item</th>
               <th scope="col" className="num">Low</th>
               <th scope="col" className="num">High</th>
+              <th scope="col" className="num">Actual</th>
             </tr>
           </thead>
           <tbody>
@@ -180,12 +186,17 @@ export default function Costs() {
                 <td>
                   <span className="item-label">
                     {item.label}
-                    {item.done && <span className="tag">{item.doneTag || 'paid'}</span>}
+                    {item.done && <span className="tag tag-done" aria-label="done">✓</span>}
                   </span>
                   <span className="item-basis">{item.basis}</span>
                 </td>
                 <td className="num">{inr(item.low)}</td>
                 <td className="num">{inr(item.high)}</td>
+                <td className="num">
+                  {item.actual != null
+                    ? <strong className="actual">{inr(item.actual)}</strong>
+                    : <span className="pending">—</span>}
+                </td>
               </tr>
             ))}
           </tbody>
@@ -197,6 +208,10 @@ export default function Costs() {
               </td>
               <td className="num">{inr(budgetLow)}</td>
               <td className="num">{inr(budgetHigh)}</td>
+              <td className="num">
+                <strong className="actual">{inr(actualSoFar)}</strong>
+                <span className="inr">booked so far</span>
+              </td>
             </tr>
           </tfoot>
         </table>
