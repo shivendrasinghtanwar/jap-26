@@ -3,9 +3,6 @@ import React from 'react'
 import { V2 } from '../data/bundles.js'
 import MapView from '../components/MapView.jsx'
 
-// The Pair is a local-only secret — its TOC entry never renders on the deployed site.
-const IS_LOCAL = /^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(window.location.hostname)
-
 const ROUTE = [
   { name: 'Tokyo', days: '1–3', city: 'tokyo' },
   { name: 'Fuji · Kawaguchiko', days: '4–5', city: 'kawaguchiko' },
@@ -31,7 +28,7 @@ export default function Home() {
             <a href="#/map"><i>I.</i><span>Itinerary &amp; Map</span><em aria-hidden="true" /><b>day by day</b></a>
             <a href="#/flights"><i>II.</i><span>Flights</span><em aria-hidden="true" /><b>ticketed</b></a>
             <a href="#/costs"><i>III.</i><span>Cost Analysis</span><em aria-hidden="true" /><b>the numbers</b></a>
-            {IS_LOCAL && <a href="#/watches"><i>IV.</i><span>The Pair</span><em aria-hidden="true" /><b>two open hearts</b></a>}
+            <a href="#/watches"><i>IV.</i><span>The Pair</span><em aria-hidden="true" /><b>two open hearts</b></a>
           </nav>
         </div>
       </section>
