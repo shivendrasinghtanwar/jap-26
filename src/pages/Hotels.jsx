@@ -240,12 +240,13 @@ const LEGS = [
     title: 'Kanazawa', dates: '23–24 Dec · 1 night',
     cards: [
       {
-        pick: true, badge: '#1 pick',
+        pick: true, badge: 'BOOKED ✓',
         name: 'Hotel Forza Kanazawa',
         area: 'Yasue-cho — beside Omicho Market (3 min), 9–10 min walk to Kanazawa Stn',
         score: '9.0', reviews: 'Booking 6,760 · Google 4.5/1,352',
-        price: 'from ₹3,486/n', total: 'Comfort ¥8,767 · Refresh ¥9,742 free-canc (re-audited 28 Nov)',
+        price: '₹4,027 all-in', total: 'BOOKED 28 Nov · Agoda #2071512374 · Comfort Double',
         chips: [
+          ['yes', '✅ BOOKED — Agoda · ₹4,027 · 2 adults · free canc to 11 Dec · charged 9 Dec'],
           ['stn', '🚉 Kanazawa Stn — 9–10-min walk · Omicho Market 3 min'],
           ['bf', '🍳 Breakfast NOT included — ¥2,300 extra; skip it, Omicho opens 07:00'],
           ['warn', '⚠ Book COMFORT or REFRESH Double (150 cm) — flexible Booking rate, NOT the prepaid “Partner Offer”'],
