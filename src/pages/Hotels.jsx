@@ -614,15 +614,24 @@ export default function Hotels() {
           <h1>Hotels</h1>
         </header>
 
-        {LEGS.map(leg => (
-          <section key={leg.title}>
-            <div className="htl-leg">
-              <h2>{leg.title}</h2>
-              <span className="htl-leg-dates">{leg.dates}</span>
-            </div>
-            {leg.cards.map(c => <Featured key={c.name} {...c} />)}
-          </section>
-        ))}
+        {LEGS.map(leg => {
+          const pick = leg.cards.find(c => c.pick) || leg.cards[0]
+          const booked = /BOOKED/.test(pick.badge)
+          return (
+            <section key={leg.title}>
+              <div className="htl-leg">
+                <h2>{leg.title}</h2>
+                <span className="htl-leg-dates">{leg.dates}</span>
+                <span className="htl-leg-pick">
+                  <i className={booked ? 'bk' : ''}>{booked ? 'BOOKED ✓' : '#1 PICK'}</i>
+                  <b>{pick.name}</b>
+                  <em>{pick.price}</em>
+                </span>
+              </div>
+              {leg.cards.map(c => <Featured key={c.name} {...c} />)}
+            </section>
+          )
+        })}
       </div>
     </div>
   )
