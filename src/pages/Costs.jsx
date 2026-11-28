@@ -11,7 +11,7 @@ const inr = (n) => `₹${n.toLocaleString('en-IN')}`
 /* ——— The self-booked budget (Jay retired 26 Nov 2026). All INR, 2 adults. ——— */
 const BUDGET = [
   {
-    label: 'Flights — PAID',
+    label: 'Flights',
     basis: 'All-Cathay via HKG, Narita both ways · PNR ECPN6Z · Goibibo 24 Nov',
     low: 134635,
     high: 134635,
