@@ -556,6 +556,32 @@ const LEGS = [
     title: 'Tokyo · New Year', dates: '30 Dec–4 Jan · 5 nights · decided priority: ROOM SIZE first',
     cards: [
       {
+        pick: true, badge: 'BOOKED ✓',
+        name: 'Comfort Hotel ERA Tokyo Higashi Kanda — round 2',
+        area: 'Higashi-Kanda — the leg-1 hotel · widest bed on the board, known room',
+        score: '8.8', reviews: '6,164',
+        price: '₹71,647', total: '¥122,945 / 5n · QUEEN 160 cm · booked 28 Nov',
+        chips: [
+          ['yes', '✅ BOOKED — Booking.com #6503665430 · free canc to 28 Dec · pay at property'],
+          ['yes', '✓ 160 cm QUEEN — nothing wider exists these dates'],
+          ['yes', '✓ Zero unknowns — same room as nights 1–4 · FIELD TEST 18–22 Dec, rebook by 28 Dec if small'],
+          ['stn', '🚉 JR Bakurocho 4 min · Tokyo Stn 1 Sobu-rapid stop'],
+          ['warn', '⚠ Phone +81-3-3865-2611: does breakfast run 1–3 Jan?'],
+        ],
+        transit: [
+          ['Tokyo Stn', 'Sobu rapid · 1 stop'],
+          ['Zojoji NYE', 'Yamanote → Akihabara + 13-min walk, or Sobu local → Asakusabashi + 7 min'],
+        ],
+        near: ['Your week-1 neighborhood', 'Bakurocho izakayas'],
+        watch: [
+          'Bed-maximalist play: 160 cm beats Edmont’s 150, but 3 m² less room and nothing bundled at the same money.',
+        ],
+        links: [
+          ['Booking — ₹71,647 Queen free-canc', 'https://www.booking.com/hotel/jp/comfort-era-tokyo-higashi-kanda.html', true],
+          ['Agoda — ₹67,892 (verify Queen!)', 'https://www.agoda.com/comfort-hotel-era-tokyo-higashi-kanda/hotel/tokyo-jp.html', true],
+        ],
+      },
+      {
         name: 'Hotel Metropolitan Edmont Tokyo',
         area: 'Iidabashi — 4★ JR-East hotel · the only option with big room AND ≥150 cm bed',
         score: '8.9', reviews: '15,556 · 4-star',
@@ -609,32 +635,6 @@ const LEGS = [
         links: [
           ['Agoda — ₹46,070 free-canc', 'https://www.agoda.com/hotel-mystays-ochanomizu/hotel/tokyo-jp.html', true],
           ['Check live rates — trivago', TRV + 'hotel-mystays-ochanomizu-conference-center'],
-        ],
-      },
-      {
-        pick: true, badge: 'BOOKED ✓',
-        name: 'Comfort Hotel ERA Tokyo Higashi Kanda — round 2',
-        area: 'Higashi-Kanda — the leg-1 hotel · widest bed on the board, known room',
-        score: '8.8', reviews: '6,164',
-        price: '₹71,647', total: '¥122,945 / 5n · QUEEN 160 cm · booked 28 Nov',
-        chips: [
-          ['yes', '✅ BOOKED — Booking.com #6503665430 · free canc to 28 Dec · pay at property'],
-          ['yes', '✓ 160 cm QUEEN — nothing wider exists these dates'],
-          ['yes', '✓ Zero unknowns — same room as nights 1–4 · FIELD TEST 18–22 Dec, rebook by 28 Dec if small'],
-          ['stn', '🚉 JR Bakurocho 4 min · Tokyo Stn 1 Sobu-rapid stop'],
-          ['warn', '⚠ Phone +81-3-3865-2611: does breakfast run 1–3 Jan?'],
-        ],
-        transit: [
-          ['Tokyo Stn', 'Sobu rapid · 1 stop'],
-          ['Zojoji NYE', 'Yamanote → Akihabara + 13-min walk, or Sobu local → Asakusabashi + 7 min'],
-        ],
-        near: ['Your week-1 neighborhood', 'Bakurocho izakayas'],
-        watch: [
-          'Bed-maximalist play: 160 cm beats Edmont’s 150, but 3 m² less room and nothing bundled at the same money.',
-        ],
-        links: [
-          ['Booking — ₹71,647 Queen free-canc', 'https://www.booking.com/hotel/jp/comfort-era-tokyo-higashi-kanda.html', true],
-          ['Agoda — ₹67,892 (verify Queen!)', 'https://www.agoda.com/comfort-hotel-era-tokyo-higashi-kanda/hotel/tokyo-jp.html', true],
         ],
       },
       {

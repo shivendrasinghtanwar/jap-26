@@ -18,11 +18,12 @@ const BUDGET = [
     done: true,
   },
   {
-    label: 'Hotels · 17 nights',
-    basis: 'ALL 6 LEGS BOOKED = ₹2,04,202 (ERA Tokyo 53.1k · Mizno 28.4k · Forza 4.0k · ERA Kyoto 21.7k · DEL style 25.4k · ERA NY 71.6k) · all pay-later, ₹0 charged yet · + city taxes at desks',
+    label: 'Hotels · 17 nights — ALL 6 LEGS BOOKED',
+    basis: '₹2,04,202 locked 28 Nov (ERA Tokyo 53.1k · Mizno 28.4k · Forza 4.0k · ERA Kyoto 21.7k · DEL style 25.4k · ERA NY 71.6k) · all pay-later, ₹0 charged yet · high end = city taxes at desks + Agoda forex',
     low: 204202,
     high: 210000,
     done: true,
+    doneTag: 'booked ✓',
   },
   {
     label: 'Airport cars · D1 + D18',
@@ -73,10 +74,10 @@ const LINE_ITEMS = [
     tag: null,
   },
   {
-    label: 'Christmas-Eve dinner · Okura',
-    basis: 'Pittoresque menu ¥20–30k pp, 24 Dec — book now',
+    label: 'Christmas-Eve dinner · Okura Tokiwa',
+    basis: 'Teppanyaki 17F, 24 Dec — TableCheck, courses ~¥20–35k pp (Pittoresque Eve sold out)',
     low: 40000,
-    high: 60000,
+    high: 70000,
     tag: 'book',
   },
   {
@@ -94,8 +95,8 @@ const LINE_ITEMS = [
     tag: null,
   },
   {
-    label: 'Doomsday IMAX GT · 31 Dec',
-    basis: '2 tickets, Grand Cinema Sunshine Ikebukuro — book ~28 Dec 00:00 JST',
+    label: 'Doomsday IMAX GT · 30 Dec',
+    basis: '2 tickets, Grand Cinema Sunshine Ikebukuro — booking opens 27–28 Dec',
     low: 6000,
     high: 7000,
     tag: 'book',
@@ -112,7 +113,7 @@ const LINE_ITEMS = [
 const WATCH_OUTS = [
   {
     title: 'Book-now queue',
-    body: 'DisneySea 21 Dec tickets + Okura 24 Dec dinner: NOW. Nozomi via SmartEX: 30 Nov. Shibuya Sky: ~6 Dec 00:00 JST. USJ Studio Pass + EXPRESS 7 (not 4 — no Mario Kart on 4): by 3 Dec, demand-priced. Doomsday IMAX: ~28 Dec 00:00 JST. Tokyo NY hotel: this week — it sells out first.',
+    body: 'Tokiwa 24 Dec dinner + teamLab Planets 31 Dec 09:00: NOW. Nozomi via SmartEX: 30 Nov. USJ Studio Pass + EXPRESS 7 (not 4 — no Mario Kart on 4): by 3 Dec, demand-priced. Shibuya Sky: ~6 Dec 00:00 JST. DisneySea via Klook: by ~7 Dec. Doomsday IMAX (30 Dec show): opens 27–28 Dec. Hotels: DONE — all 6 legs booked.',
   },
   {
     title: 'Dynamic park pricing',
@@ -153,10 +154,11 @@ export default function Costs() {
       <section className="notice" aria-label="Budget status">
         <span className="notice-mark" aria-hidden="true">&yen;</span>
         <div>
-          <p className="notice-title">Flights are paid; everything else books this fortnight</p>
+          <p className="notice-title">Flights paid &middot; all 17 hotel nights booked (28 Nov) &mdash; rail, parks &amp; tables remain</p>
           <p>
             We dropped the agency package (quoted ~&#8377;11L) and self-book at
-            market rates. Same itinerary, same hotels tier we chose, roughly{' '}
+            market rates. Flights + hotels are now locked at{' '}
+            <strong>&#8377;3.39L</strong> &mdash; same itinerary, roughly{' '}
             <strong>half the price</strong>.
           </p>
         </div>
@@ -178,7 +180,7 @@ export default function Costs() {
                 <td>
                   <span className="item-label">
                     {item.label}
-                    {item.done && <span className="tag">paid</span>}
+                    {item.done && <span className="tag">{item.doneTag || 'paid'}</span>}
                   </span>
                   <span className="item-basis">{item.basis}</span>
                 </td>
