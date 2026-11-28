@@ -94,7 +94,7 @@ const LEGS = [
         near: ['Konbini ×3 in 2 min', 'Kanda coffee kissaten', 'Akihabara food streets 8 min', 'Indian: GANGA/Bole Baba at Asakusabashi ~10 min', 'Pure-veg: Vege Herb Saga, 5-min JR hop', 'Chain gyudon/soba 24h'],
         watch: [
           'One email before booking final: confirm the Queen bed is 160 cm and that they accept a pre-arrival takkyubin parcel — if the bed is 140 cm, book their TWIN (20–28 m², 2×120 cm) instead.',
-          'Book the QUEEN room-only free-canc rate (live ₹48,370/4n Booking); the with-breakfast rate adds ~₹15.7k — add breakfast à la carte (¥1,800) only on the days you want it.',
+          'BOOKED at ₹53,101/4n (Queen, room-only, free-canc to 16 Dec). Add breakfast à la carte (¥1,800) only on days you want it. Still to do: email the hotel — bed width + takkyubin sending on 22 Dec.',
           'Rebranded ERA in Feb 2025 with a real refresh (Serta 7-zone mattresses, nano-bubble showers) — pre-2025 reviews describe the old hotel.',
         ],
         links: [
@@ -194,12 +194,12 @@ const LEGS = [
         ],
         near: ['SEIKOUKI French dinner — in-house, Paris-trained chef', 'Library bar "Authors" 16:00–23:00', 'Nothing walkable — dine in-house', 'Konbini: 5-min taxi to town'],
         watch: [
-          'Book the ANNIVERSARY PLAN on Jalan — Terrace Twin "NAGOMI" + French course + drinks, ¥70,200 for two (~₹40k). Or the Booking ₹25,422 room-only + a SEIKOUKI dinner reservation at minimum: dinner is reservation-only and nothing else is walkable.',
+          'BOOKED room-only at ₹28,380 (free-canc). NOW REQUIRED: reserve dinner — SEIKOUKI course at the hotel (reservation-only, nothing else walkable) — and email info@mzn.co.jp for the anniversary cake + rooftop-bath slot.',
           'At check-in, immediately book the rooftop private bath’s post-sunset slot (~¥1,100/person/30 min) — and email ahead (info@mzn.co.jp) for a cake.',
           'Check in by ~17:30 if dining; when booking, confirm the rooftop’s winter hours and that the Jun-2026 closure notice is history (OTAs are selling the night).',
         ],
         links: [
-          ['Booking.com — ₹25,422 free-canc', 'https://www.booking.com/hotel/jp/mizuno.html'],
+          ['Booking.com — our reservation', 'https://secure.booking.com/mytrips'],
           ['Jalan — anniversary plan ¥70,200', 'https://www.jalan.net/yad317230/plan/', true],
         ],
       },

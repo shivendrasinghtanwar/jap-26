@@ -19,9 +19,9 @@ const BUDGET = [
   },
   {
     label: 'Hotels · 17 nights',
-    basis: '3★ picks (8.0+ rated, near stations) + La Vista Fuji onsen night kept',
-    low: 150000,
-    high: 185000,
+    basis: '5 of 6 legs BOOKED = ₹1,32,555 (ERA Tokyo 53.1k · Mizno 28.4k · Forza 4.0k · ERA Kyoto 21.7k · DEL style 25.4k) + APA Kanda NY ~₹51k pending',
+    low: 180000,
+    high: 190000,
   },
   {
     label: 'Airport cars · D1 + D18',
