@@ -17,7 +17,7 @@ function Featured({ pick, badge, name, area, score, reviews, price, total, chips
   return (
     <article className={'htl-card' + (pick ? ' is-pick' : '')}>
       <div className="htl-top">
-        <span className={'htl-badge' + (pick ? '' : ' alt')}>{badge}</span>
+        {badge && <span className={'htl-badge' + (pick ? '' : ' alt')}>{badge}</span>}
         <div className="htl-name">
           <h3>{name}</h3>
           <span className="htl-area">{area}</span>
@@ -103,7 +103,6 @@ const LEGS = [
         ],
       },
       {
-        badge: '#2 backup',
         name: 'HOTEL MYSTAYS Asakusabashi',
         area: 'Asakusabashi — JR Sobu 30 seconds, Toei Asakusa line 4 min',
         score: '8.4', reviews: '6,888 · Google 4.1/1,368',
@@ -135,7 +134,6 @@ const LEGS = [
         ],
       },
       {
-        badge: '#3 · her theory',
         name: 'APA Hotel Kanda Ekimae',
         area: 'Kanda — 1 JR stop from Tokyo Stn: the Kyobashi/Nihombashi-side option',
         score: '8.0', reviews: '4,140',
@@ -204,7 +202,6 @@ const LEGS = [
         ],
       },
       {
-        badge: '#2 alternate',
         name: 'La Vista Fuji-Kawaguchiko',
         area: 'Kawaguchiko hillside — Fuji-view onsen baths (2nd floor) + 4 free private baths',
         score: '8.9', reviews: '5,126 · Google 4.4/1,932',
@@ -273,7 +270,6 @@ const LEGS = [
         ],
       },
       {
-        badge: '#2 · logistics king',
         name: 'HOTEL TORIFITO KANAZAWA',
         area: 'Honmachi 2-12-1 — 3–4-min walk from the Kenrokuen (East) exit · opened 2021',
         score: '8.9', reviews: 'trivago 5,540 · Google 4.4/906 · Trip 9.2/647',
@@ -304,7 +300,6 @@ const LEGS = [
         ],
       },
       {
-        badge: '#3 · onsen on a budget',
         name: 'Super Hotel Premier Kanazawa-Eki Higashiguchi',
         area: 'Honmachi 2-5-15 — 7-min walk from the East exit · natural onsen 鼓門の湯 in-house',
         score: '8.9', reviews: 'Booking 8.9 · Google 4.3/736 · trivago 8.7/1,479',
@@ -335,7 +330,6 @@ const LEGS = [
         ],
       },
       {
-        badge: '#4 · rooftop rotenburo',
         name: 'Dormy Inn Kanazawa',
         area: 'Horikawashinmachi — 2-min walk from the East exit · natural hot spring on 14F',
         score: '8.5', reviews: 'Booking 2,856 · Google 4.2/2,769 · Trip 9.3/335',
@@ -404,7 +398,6 @@ const LEGS = [
         ],
       },
       {
-        badge: '#2 alternate',
         name: 'Hotel Vischio Kyoto by GRANVIA',
         area: 'Kyoto Stn, south/Hachijo exit — 2-min walk; perfect side for the D10 Osaka departure',
         score: '9.1', reviews: '9,330 · Google 4.5/1,601',
@@ -473,7 +466,6 @@ const LEGS = [
         ],
       },
       {
-        badge: '#2 · bath + scores',
         name: 'hotel androoms Shin-Osaka',
         area: 'Shin-Osaka — 5-min walk to the Shinkansen station · quiet business district',
         score: '9.2', reviews: 'Booking · Jalan 4.5/315 · trivago 8.8/4,553',
@@ -504,7 +496,6 @@ const LEGS = [
         ],
       },
       {
-        badge: '#3 · the room upgrade',
         name: 'Daiwa Roynet Osaka Sakaisuji-Honmachi PREMIER',
         area: 'Sakaisuji-Honmachi — exit 12 is 1 min · Honmachi (Midosuji) 8-min walk · 2019 PREMIER tier',
         score: '8.8', reviews: 'trivago 1,271 · Jalan 4.5/586 · Rakuten 4.47/850',
@@ -533,7 +524,6 @@ const LEGS = [
         ],
       },
       {
-        badge: '#4 · budget + breakfast',
         name: 'Comfort Hotel Shin-Osaka',
         area: 'Shin-Osaka — 5-min walk to the station · same Choice chain as our two ERAs',
         score: '8.6', reviews: 'trivago 3,646 · Jalan 4.4/414',
@@ -563,68 +553,91 @@ const LEGS = [
     ],
   },
   {
-    title: 'Tokyo · New Year', dates: '30 Dec–4 Jan · 5 nights · LAST FEW ROOMS',
+    title: 'Tokyo · New Year', dates: '30 Dec–4 Jan · 5 nights · NY week selling out',
     cards: [
       {
-        badge: '#2 alternate',
-        name: 'APA Nihombashi Bakuroyokoyama Ekimae',
-        area: 'Higashi-Nihombashi — stations linked by underground passage: Bakuroyokoyama 1 min, Asakusa line 2 min, JR Bakurocho 5 min',
-        score: '8.7', reviews: 'Agoda 12,121 · Google 4.2/783',
-        price: '₹8,811/n', total: '5 nights · Agoda free-canc to 29 Dec',
+        pick: true, name: 'APA Hotel Kanda-Ekimae',
+        area: 'Kanda — 3-min walk JR Kanda · 1 stop Tokyo Stn · Ginza line direct · re-audited 28 Nov',
+        score: '8.0', reviews: 'Agoda 4,140 · Jalan 4.2/287 · Rakuten 4.30/516',
+        price: '₹10,204/n', total: '₹51,018 / 5n Agoda free-canc — was ₹9,882, creeping up: LOCK IT',
         chips: [
-          ['stn', '🚉 Bakuroyokoyama — 1-min walk · Asakusa line 2 min · JR Bakurocho 5 min'],
-          ['bf', '🍳 Breakfast NOT included — ¥1,600 extra (poke/pancake plates); confirm 1–3 Jan opening'],
-          ['', 'Was our pick — the Asakusa-line-side option'],
-          ['yes', '✓ Agoda ₹8,811/n free-canc (Booking ₹9,648 incl. taxes)'],
-          ['warn', '⚠ Standard Double = 11 m², 140 cm (Deluxe Twin sold out)'],
-          ['', 'A/C centrally managed — rooms run warm (official notice)'],
+          ['stn', '🚉 JR Kanda — 3-min walk · Akihabara 1 stop · Tokyo Stn 1 stop'],
+          ['bf', '🍳 Breakfast NOT included — APA add-on ~¥1,500 · PHONE hotel: is it open 1–3 Jan?'],
+          ['yes', '✓ NYE superpower: all-night Yamanote home from Zojoji — door at ~00:50'],
+          ['warn', '⚠ Bed ceiling = 140 cm (11 m²) — NO bigger double exists; lone 21 m² Deluxe Twin (2×122) is the only upgrade'],
+          ['warn', '⚠ TRACK NOISE is real (tracks ~3 m from some windows) — request HIGH FLOOR, 線路と反対側 (away from tracks) at booking AND check-in'],
+          ['yes', '✓ 24h front desk · free cancellation'],
         ],
         transit: [
-          ['Zojoji NYE (31 Dec)', 'Asakusa line to Daimon · ~13 min'],
-          ['NYE 01:00 return', 'last Daimon train ~00:20 · else JR from Hamamatsucho (all-night Yamanote) or taxi ¥3–4.5k'],
-          ['Doomsday IMAX · Ikebukuro (D14)', 'JR + metro · ~30 min'],
-          ['Senso-ji hatsumode (1 Jan)', 'Asakusa line direct · ~10 min'],
-          ['Tokyo Stn', 'Sobu rapid from Bakurocho · 1 stop'],
-          ['Narita (D18)', 'booked car · 10:15 pickup'],
+          ['Zojoji NYE (D14 midnight)', 'all-night Yamanote · ~12 min · no transfer'],
+          ['Tokyo Stn (Nozomi arr / Narita car)', 'JR · 1 stop · 2 min'],
+          ['Akihabara (D16)', 'JR · 1 stop · 2 min'],
+          ['teamLab via Yurakucho (D14)', 'Yamanote 4 stops + Yurakucho line'],
+          ['Harajuku (D13)', 'Chuo Rapid → Shinjuku + Yamanote · ~25 min'],
         ],
-        near: ['Same block as Leg 1 — you know it', 'Konbini ×3 in 2 min', 'Kanda kissaten morning sets', 'Nihombashi Takashimaya depachika'],
+        near: ['Kanda izakaya alleys under the tracks', 'Konbini ×many', 'Coffee kissaten', 'Akihabara 1 stop'],
         watch: [
-          'Alternate now: pick it over Kanda only if the Asakusa-line side matters more (Senso-ji one-seat ride, Narita Access Express backup) — knowing the NYE return is the ~00:20 last train or a taxi.',
-          'If booking: Agoda free-canc rate, NON-SMOKING locked explicitly — inventory is "last few".',
-          'Rooms run warm (central heating, no in-room control — official) and 11 m² is tight.',
+          '28 Nov re-audit: every logistical claim verified TRUE; corridor sweep found ZERO challengers passing all rules — the wife’s pick survives on facts.',
+          'The two honest asterisks: 140 cm bed is the building’s ceiling, and track-side rooms draw 1-star noise reviews — the room request is mandatory.',
+          'JR confirms the NYE all-night Yamanote mid-Dec (it has run every year since 2022) — re-check then.',
         ],
         links: [
-          ['Check live rates — trivago', TRV + 'apa-hotel-nihombashi-bakuroyokoyama-ekimae-tokyo?search=100-22860700%3Bdr-20261230-20270104%3Brc-1-2'],
-          ['Agoda — free-canc rate', AGD + 'APA%20Hotel%20Nihombashi%20Bakuroyokoyama', true],
+          ['Agoda — ₹51,018 free-canc', 'https://www.agoda.com/apa-hotel-kanda-ekimae/hotel/tokyo-jp.html', true],
+          ['Check live rates — trivago', TRV + 'apa-hotel-kanda-ekimae'],
         ],
       },
       {
-        badge: '#3 alternate',
-        name: 'APA Hotel Asakusabashi Ekikita',
-        area: 'Asakusabashi — north of the JR station, Toei Asakusa line close by',
-        score: '8.2', reviews: 'Booking 2,588',
-        price: '₹9,568/n', total: '5 nights · ₹47,838 incl. taxes · free-canc',
+        name: 'APA Hotel Akihabara Ekihigashi',
+        area: 'Akihabara — 3-min walk JR Akihabara (Showa-dori exit) · 2021 build',
+        score: '8.6', reviews: 'trivago 3,219 · Jalan 4.3/30',
+        price: '₹11,078/n', total: '₹55,389 / 5n Agoda free-canc · same 140 cm / 11 m² room class',
         chips: [
-          ['stn', '🚉 JR Asakusabashi — ~4-min walk · Toei Asakusa line close by'],
-          ['bf', '🍳 Breakfast NOT included — paid APA add-on; konbini instead'],
-          ['yes', '✓ AVAILABLE for all 5 NY nights (checked live)'],
-          ['warn', '⚠ Same APA formula: 11 m², 140 cm double'],
+          ['stn', '🚉 JR Akihabara — 3-min walk · Kanda 1 stop · Electric Town at the door'],
+          ['bf', '🍳 Breakfast NOT included — APA add-on'],
+          ['yes', '✓ NYE all-night Yamanote direct — step-free walk home'],
+          ['yes', '✓ 2021 building · +0.6 score over the pick'],
+          ['warn', '⚠ Identical 140 cm / 11 m² product for +₹1,200/night (+₹6k over the stay)'],
         ],
         transit: [
-          ['Zojoji NYE (31 Dec)', 'Asakusa line · ~15 min'],
-          ['Senso-ji hatsumode (1 Jan)', 'Asakusa line · ~8 min'],
-          ['Akihabara', 'JR Sobu · 1 stop'],
-          ['Tokyo Stn', 'JR via Akihabara · ~12 min'],
+          ['Zojoji NYE', 'all-night Yamanote · ~14 min'],
+          ['Tokyo Stn', 'JR · 2 stops · 4 min'],
+          ['Kanda izakayas', 'JR 1 stop or 12-min walk'],
         ],
-        near: ['Lawson/konbini cluster', 'Rail-arch ramen & yakitori', 'Kuramae cafes 10 min', 'Akihabara eats 1 stop away'],
+        near: ['Electric Town', 'Yodobashi Akiba', 'Konbini ×many'],
         watch: [
-          'Backup only if the Bakuroyokoyama APA’s last rooms vanish before you book — same chain, same room formula, ~₹750/n more.',
-          'Over-budget fallback worth knowing: Comfort Hotel Tokyo Higashi Nihombashi (our ERA’s sister, 8.4/3,502) at ₹13,570/n, right at Higashi-Nihombashi station.',
-          'MYSTAYS Asakusabashi and Sotetsu Fresa Ningyocho are already SOLD OUT for these dates — the NY corridor is clearing in real time.',
+          'Pay the +₹6k only if newness and the 8.6 matter more than 3 minutes to Kanda’s izakaya dinner routine.',
         ],
         links: [
-          ['Booking.com — ₹9,568/n', BKG + 'APA+Hotel+Asakusabashi+Ekikita'],
-          ['Agoda — search', AGD + 'APA%20Hotel%20Asakusabashi%20Ekikita', true],
+          ['Agoda — free-canc rate', 'https://www.agoda.com/apa-hotel-akihabara-ekihigashi/hotel/tokyo-jp.html', true],
+          ['Check live rates — trivago', TRV + 'apa-hotel-akihabara-ekihigashi'],
+        ],
+      },
+      {
+        name: 'HOTEL MYSTAYS Ochanomizu Conference Center',
+        area: 'Ochanomizu/Akihabara border — 6-min walk JR Akihabara Electric Town · renovated Oct 2024',
+        score: '8.4', reviews: 'trivago 4,712 · Jalan 4.2/2,372 · Rakuten 4.25/2,493',
+        price: '₹9,214/n', total: '₹46,070 / 5n Agoda free-canc — ₹5k UNDER the pick',
+        chips: [
+          ['stn', '🚉 JR Akihabara — 6-min walk · JR Ochanomizu (Chuo-Sobu) 5 min'],
+          ['bf', '🍳 Breakfast paid — café downstairs; konbini next door'],
+          ['yes', '✓ 14.8–17.3 m² rooms — 35–57% bigger than the APAs · fully renovated Oct 2024'],
+          ['yes', '✓ Cheapest survivor AND the biggest rooms · all non-smoking'],
+          ['warn', '⚠ Same 140 cm bed (Standard/Superior Double) — the corridor has nothing wider this week'],
+          ['warn', '⚠ NYE walk home = 6 min from Akihabara off the all-night Yamanote — fine, just darker'],
+        ],
+        transit: [
+          ['Zojoji NYE', 'all-night Yamanote → Akihabara + 6-min walk'],
+          ['Tokyo Stn', 'JR from Akihabara · 2 stops'],
+          ['teamLab / Harajuku days', 'same JR patterns, +3 min walking'],
+        ],
+        near: ['Akihabara Electric Town 6 min', 'Ochanomizu guitar street', 'Kanda river walk', 'Konbini next door'],
+        watch: [
+          'The sleeper: cheaper than the pick with half-again the floor space — if 3 extra walking minutes don’t bother anyone, this is the comfort-per-rupee winner.',
+          'Jalan 4.2 on 2,372 reviews = deep, credible domestic data.',
+        ],
+        links: [
+          ['Agoda — ₹46,070 free-canc', 'https://www.agoda.com/hotel-mystays-ochanomizu/hotel/tokyo-jp.html', true],
+          ['Check live rates — trivago', TRV + 'hotel-mystays-ochanomizu-conference-center'],
         ],
       },
     ],
@@ -632,38 +645,7 @@ const LEGS = [
 ]
 
 // Her call, now the pick: APA Kanda Ekimae leads the NY leg (spliced to the front).
-LEGS[5].cards.unshift({
-  pick: true, badge: '#1 pick · her call',
-  name: 'APA Hotel Kanda Ekimae',
-  area: 'Kanda — 1 JR stop from Tokyo Stn; Ginza line + Yamanote + Chuo at the door',
-  score: '8.0', reviews: '4,140',
-  price: '₹9,882/n', total: '₹49,408 · 5 nights · Agoda free-canc',
-  chips: [
-    ['stn', '🚉 JR Kanda — ~3-min walk · Tokyo Stn 1 stop · Ginza line direct'],
-    ['bf', '🍳 Breakfast NOT included — APA add-on ~¥1,500; most places shut 1–2 Jan'],
-    ['yes', '✓ NYE: all-night Yamanote home — no transfer, no taxi'],
-    ['yes', '✓ Free cancellation (Agoda) — book now, NY is clearing'],
-    ['warn', '⚠ APA formula: ~11 m², 140 cm double — ask high floor off the tracks'],
-  ],
-  transit: [
-    ['Zojoji NYE (31 Dec)', 'JR Yamanote to Hamamatsucho · ~12 min'],
-    ['NYE 00:30 return', 'ALL-NIGHT Yamanote straight back to Kanda'],
-    ['Senso-ji hatsumode (1 Jan)', 'Ginza line direct · ~15 min'],
-    ['Meiji Shrine (1 Jan option)', 'Chuo to Shinjuku + Yamanote · ~25 min'],
-    ['Doomsday IMAX · Ikebukuro', 'JR · ~20 min'],
-    ['Narita (D18)', 'booked car · 10:15 pickup'],
-  ],
-  near: ['Kanda izakaya alleys under the tracks', 'Akihabara 1 stop', 'Konbini ×many', 'Takashimaya Nihombashi ~12 min'],
-  watch: [
-    'Why it won: the only option where NYE works both ways on one line — Yamanote to Zojoji, all-night Yamanote home at 00:30 — plus Ginza line direct for hatsumode and 1 stop to Tokyo Stn for the Nozomi arrival.',
-    'Book the Agoda free-canc rate now, NON-SMOKING locked, high floor away from the JR tracks; the twin gives more sleeping width than the 140 cm double.',
-    'Luggage: same Yamato takkyubin as every hotel — no APA-only network; the D13 bags come 1 JR stop from Tokyo Stn.',
-  ],
-  links: [
-    ['Check live rates — trivago', TRV + 'apa-hotel-kanda-ekimae-tokyo?search=100-8486208%3Bdr-20261230-20270104%3Brc-1-2'],
-    ['Agoda — free-canc rate', AGD + 'APA%20Hotel%20Kanda%20Ekimae', true],
-  ],
-})
+LEGS[5].cards.unshift()
 
 export default function Hotels() {
   return (
