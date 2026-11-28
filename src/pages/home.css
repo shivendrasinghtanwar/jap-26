@@ -124,13 +124,16 @@
 }
 
 /* ——— make-life-easy kit ——— */
-.home-kit { padding: 34px clamp(16px, 4vw, 48px) 8px; }
-.home-kit-title { font-size: 1.15rem; margin: 0 0 14px; letter-spacing: 0.01em; }
-.home-kit-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 12px;
+.home-kit {
+  padding: 44px clamp(16px, 4vw, 48px) 8px;
+  max-width: 1240px; margin: 0 auto;
 }
+.home-kit-title { font-size: 1.3rem; margin: 0 0 16px; letter-spacing: 0.01em; }
+.home-kit-grid {
+  columns: 3 300px;
+  column-gap: 14px;
+}
+.home-kit-card { break-inside: avoid; margin-bottom: 14px; }
 .home-kit-card {
   background: #f3efe6;
   border: 1px solid #e3ddd2;
@@ -141,12 +144,15 @@
 .home-kit-card p { margin: 0; font-size: 0.8rem; line-height: 1.55; color: #4a4540; }
 
 /* ——— real-world Japan decoder ——— */
-.home-jp { padding: 34px clamp(16px, 4vw, 48px) 8px; }
-.home-jp-sub { margin: -8px 0 14px; font-size: 0.84rem; color: #6b6257; }
+.home-jp {
+  padding: 44px clamp(16px, 4vw, 48px) 8px;
+  max-width: 1240px; margin: 0 auto;
+}
+.home-jp .home-kit-title { font-size: 1.3rem; }
+.home-jp-sub { margin: -10px 0 16px; font-size: 0.84rem; color: #6b6257; }
 .home-jp-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 12px;
+  columns: 3 320px;
+  column-gap: 14px;
 }
 .jp-card {
   background: #fffdf8;
@@ -154,6 +160,8 @@
   border-left: 3px solid #b23222;
   border-radius: 10px;
   padding: 14px 16px;
+  break-inside: avoid;
+  margin-bottom: 14px;
 }
 .jp-card h3 { margin: 0 0 8px; font-size: 0.94rem; color: #1b1b1f; }
 .jp-card ul { margin: 0; padding: 0 0 0 1.1em; }
