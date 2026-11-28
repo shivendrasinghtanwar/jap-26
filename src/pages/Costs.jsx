@@ -18,7 +18,7 @@ const BUDGET = [
     done: true,
   },
   {
-    label: 'Hotels · 17 nights — ALL 6 LEGS BOOKED',
+    label: 'Hotels · 17 nights · 6 legs',
     basis: '₹2,04,202 locked 28 Nov (ERA Tokyo 53.1k · Mizno 28.4k · Forza 4.0k · ERA Kyoto 21.7k · DEL style 25.4k · ERA NY 71.6k) · all pay-later, ₹0 charged yet · high end = city taxes at desks + Agoda forex',
     low: 204202,
     high: 210000,
