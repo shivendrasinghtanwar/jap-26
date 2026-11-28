@@ -371,14 +371,15 @@ const LEGS = [
     title: 'Kyoto (Christmas)', dates: '24–27 Dec · 3 nights · check-in ~12:45 (bag drop)',
     cards: [
       {
-        pick: true, badge: '#1 pick',
+        pick: true, badge: 'BOOKED ✓',
         name: 'Comfort Hotel ERA Kyoto Toji',
         area: 'Minami-ku — Kintetsu Toji 1 min, Kyoto Stn a flat 14-min walk (or 1 train stop)',
         score: '9.1', reviews: '5,950 · Google 4.5/735',
-        price: '₹5,543/n', total: '3 nights · Booking free-canc ₹16,628',
+        price: '₹21,697 all-in', total: 'BOOKED 28 Nov · Booking #6164128105 · Queen + breakfast · 3n',
         chips: [
+          ['yes', '✅ BOOKED — Booking.com · ¥37,231 · Queen + breakfast ×2 · free canc to 22 Dec'],
           ['stn', '🚉 Kintetsu Toji — 1-min walk · Kyoto Stn 14-min flat walk'],
-          ['bf', '🍳 Breakfast NOT included — pay ¥1,800/person · veg-friendly buffet 06:30'],
+          ['bf', '🍳 Breakfast INCLUDED in booked rate — veg-friendly buffet 06:30 (bundled ≈¥1,090 pp vs ¥1,800 walk-in)'],
           ['yes', '✓ 160 cm "QUEEN ECONOMY" room — book this'],
           ['no', '✗ Standard Double is only 140 cm'],
           ['warn', '⚠ Queen Economy may have a frosted no-view window'],
