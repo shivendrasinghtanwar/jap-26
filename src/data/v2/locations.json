@@ -716,6 +716,20 @@
     {
       "day": 6,
       "seq": 6,
+      "time": "14:50",
+      "title": "Kanazawa Station — arrival",
+      "place": "Kanazawa Station",
+      "lat": 36.578,
+      "lng": 136.6478,
+      "type": "transit",
+      "costIncluded": true,
+      "notes": "take the EAST (Kenrokuen) exit — under the wooden Tsuzumi-mon drum gate",
+      "blurb": "Kanazawa Station's Tsuzumi-mon gate, shaped like two hand-drums, is routinely ranked among the world's most beautiful station entrances.",
+      "transit": "Kagayaki Shinkansen (all reserved) Tokyo → Kanazawa, 2h28m · ¥14,380 pp (Eki-net Tokudane early-bird cuts up to 30%; luggage racks at car ends, no oversized rule); arrive ~14:50 at Kanazawa Station."
+    },
+    {
+      "day": 6,
+      "seq": 7,
       "time": "14:30",
       "title": "Hotel Forza check-in",
       "place": "Hotel Forza Kanazawa (Yasue-cho, beside Omicho)",
@@ -724,11 +738,11 @@
       "type": "hotel",
       "costIncluded": null,
       "notes": "book the Comfort or Refresh Double (18 m², 150 cm bed) — the base “Forza Double” bed is 140 cm",
-      "transit": "Kagayaki Shinkansen (all reserved) Tokyo → Kanazawa, 2h28m · ¥14,380 pp (Eki-net Tokudane early-bird cuts up to 30%; luggage racks at car ends, no oversized rule); off at Kanazawa — EAST exit, 10-min walk down Hyakumangoku-odori; the hotel stands beside Omicho Market."
+      "transit": "Out of the EAST (Kenrokuen) exit, straight down Hyakumangoku-odori — 10-min flat walk; Hotel Forza stands beside Omicho Market. (Taxi rank at the exit if bags feel heavy, ~¥600.)"
     },
     {
       "day": 6,
-      "seq": 7,
+      "seq": 8,
       "time": "15:15",
       "title": "Musashigatsuji · Omicho bus stop",
       "place": "Musashigatsuji · Omicho bus stop",
@@ -741,7 +755,7 @@
     },
     {
       "day": 6,
-      "seq": 8,
+      "seq": 9,
       "time": "15:15",
       "title": "Kenrokuen — yukitsuri snow-ropes",
       "place": "Kenrokuen",
@@ -755,7 +769,7 @@
     },
     {
       "day": 6,
-      "seq": 9,
+      "seq": 10,
       "time": "17:00",
       "title": "Higashi Chaya district stroll",
       "place": "Higashi Chaya District",
@@ -769,7 +783,7 @@
     },
     {
       "day": 6,
-      "seq": 10,
+      "seq": 11,
       "time": "18:30",
       "title": "Hashiba-cho bus stop",
       "place": "Hashiba-cho bus stop",
@@ -782,7 +796,7 @@
     },
     {
       "day": 6,
-      "seq": 11,
+      "seq": 12,
       "time": "18:30",
       "title": "Dinner + Christmas illuminations, Katamachi",
       "place": "Katamachi",
@@ -796,7 +810,7 @@
     },
     {
       "day": 6,
-      "seq": 12,
+      "seq": 13,
       "time": "20:30",
       "title": "Katamachi bus stop",
       "place": "Katamachi bus stop",
@@ -809,7 +823,7 @@
     },
     {
       "day": 6,
-      "seq": 13,
+      "seq": 14,
       "time": "20:30",
       "title": "Back at Forza — night in",
       "place": "Hotel Forza Kanazawa",
