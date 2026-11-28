@@ -547,12 +547,6 @@ export default function Hotels() {
         <header className="htl-head">
           <p className="htl-kicker">JAP-26 · self-booked · re-audited 26 Nov 2026 · 6 agents + Google reviews</p>
           <h1>Hotels</h1>
-          <p className="htl-sub">
-            17 nights, six legs — every claim re-verified against official sites, live rates,
-            Google reviews and bed-width tables. Every leg has a decided pick plus a real
-            alternate, each with a breakfast verdict. Book the free-cancellation rates now —
-            the New-Year corridor is selling out in real time.
-          </p>
         </header>
 
         {LEGS.map(leg => (
