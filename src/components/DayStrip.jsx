@@ -20,7 +20,7 @@ export default function DayStrip({ days, selected, onSelect, flags, cityColors }
             onClick={() => onSelect(d.day)}
             title={`${d.date} — ${d.title}`}
           >
-            {d.day}
+            {d.date.split(' ').slice(1).join(' ')}
             {hasAlert && <i className="chip-dot" aria-label="has warning" />}
           </button>
         )
