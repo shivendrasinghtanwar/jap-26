@@ -556,7 +556,6 @@ const LEGS = [
     title: 'Tokyo · New Year', dates: '30 Dec–4 Jan · 5 nights · decided priority: ROOM SIZE first',
     cards: [
       {
-        pick: true,
         name: 'Hotel Metropolitan Edmont Tokyo',
         area: 'Iidabashi — 4★ JR-East hotel · the only option with big room AND ≥150 cm bed',
         score: '8.9', reviews: '15,556 · 4-star',
@@ -613,16 +612,17 @@ const LEGS = [
         ],
       },
       {
+        pick: true, badge: 'BOOKED ✓',
         name: 'Comfort Hotel ERA Tokyo Higashi Kanda — round 2',
         area: 'Higashi-Kanda — the leg-1 hotel · widest bed on the board, known room',
         score: '8.8', reviews: '6,164',
-        price: '₹67,892/n⁵', total: '₹71,647 Booking free-canc · QUEEN 160 cm · 15 m² · “1 room left”',
+        price: '₹71,647', total: '¥122,945 / 5n · QUEEN 160 cm · booked 28 Nov',
         chips: [
+          ['yes', '✅ BOOKED — Booking.com #6503665430 · free canc to 28 Dec · pay at property'],
           ['yes', '✓ 160 cm QUEEN — nothing wider exists these dates'],
-          ['yes', '✓ Zero unknowns — same room as nights 1–4'],
+          ['yes', '✓ Zero unknowns — same room as nights 1–4 · FIELD TEST 18–22 Dec, rebook by 28 Dec if small'],
           ['stn', '🚉 JR Bakurocho 4 min · Tokyo Stn 1 Sobu-rapid stop'],
-          ['warn', '⚠ 15 m² — middle of the size pack · no breakfast/bath bundled'],
-          ['warn', '⚠ One flexible Queen left — this option can vanish any hour'],
+          ['warn', '⚠ Phone +81-3-3865-2611: does breakfast run 1–3 Jan?'],
         ],
         transit: [
           ['Tokyo Stn', 'Sobu rapid · 1 stop'],

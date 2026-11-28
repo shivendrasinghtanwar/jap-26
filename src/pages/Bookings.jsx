@@ -49,10 +49,10 @@ const ITEMS = [
     platform: 'Agoda', price: '₹25,350', inr: 25350, by: 'BOOKED ✓', rank: 0, done: true,
     link: 'https://www.agoda.com/en-in/account/bookings.html', _old: 'https://www.trivago.in/en-IN/lm/del-style-osaka-shin-umeda-by-daiwa-roynet-hotel?search=100-19759854%3Bdr-20261227-20261230%3Brc-1-2' },
   { cat: 'Hotels', jay: 'no', kind: 'hotel', d: 30.6, date: '30 Dec', time: 'check-in',
-    place: 'Kanda, Tokyo', name: 'APA Kanda Ekimae', sub: 'New Year · 5n',
-    detail: 'Agoda free-canc · non-smoking, high floor off the tracks',
-    platform: 'trivago', price: '₹49,408', inr: 49408, by: 'NOW', rank: 0,
-    link: 'https://www.trivago.in/en-IN/lm/apa-hotel-kanda-ekimae-tokyo?search=100-8486208%3Bdr-20261230-20270104%3Brc-1-2' },
+    place: 'Higashi-Kanda, Tokyo', name: 'Comfort ERA Tokyo Higashi Kanda — NY', sub: 'Queen 160cm · 5n · 2 adults',
+    detail: 'CONFIRMED 28 Nov · Booking #6503665430 · ¥122,945 (~₹71,647) · free canc to 28 Dec · FIELD TEST during leg 1: room feels small → cancel by 28 Dec, rebook cheaper · phone re breakfast 1–3 Jan',
+    platform: 'Booking.com', price: '₹71,647', inr: 71647, by: 'BOOKED ✓', rank: 0, done: true,
+    link: 'https://secure.booking.com/mytrips' },
 
   // ——— Rail & transfers ———
   { cat: 'Rail & transfers', jay: 'yes', kind: 'train', d: 22.4, date: '22 Dec', time: '~09:30',

@@ -19,9 +19,10 @@ const BUDGET = [
   },
   {
     label: 'Hotels · 17 nights',
-    basis: '5 of 6 legs BOOKED = ₹1,32,555 (ERA Tokyo 53.1k · Mizno 28.4k · Forza 4.0k · ERA Kyoto 21.7k · DEL style 25.4k) + APA Kanda NY ~₹51k pending',
-    low: 180000,
-    high: 190000,
+    basis: 'ALL 6 LEGS BOOKED = ₹2,04,202 (ERA Tokyo 53.1k · Mizno 28.4k · Forza 4.0k · ERA Kyoto 21.7k · DEL style 25.4k · ERA NY 71.6k) · all pay-later, ₹0 charged yet · + city taxes at desks',
+    low: 204202,
+    high: 210000,
+    done: true,
   },
   {
     label: 'Airport cars · D1 + D18',
