@@ -440,12 +440,13 @@ const LEGS = [
     title: 'Osaka', dates: '27–30 Dec · 3 nights · check-in ~afternoon via Special Rapid',
     cards: [
       {
-        pick: true, badge: '#1 pick',
+        pick: true, badge: 'BOOKED ✓',
         name: 'DEL style Osaka Shin-Umeda by Daiwa Roynet',
         area: 'Fukushima-ku — 10-min walk WEST of Osaka Stn · JR Fukushima (Loop line) 7 min',
         score: '8.4', reviews: 'Booking 4,947 · Rakuten 4.32/2,426 (re-audited 28 Nov)',
-        price: '₹7,512/n Klook', total: '₹8,436 Booking · both free-canc · room-only',
+        price: '₹25,350 all-in', total: 'BOOKED 28 Nov · Agoda #2071526610 · Standard Double Non-Smoking',
         chips: [
+          ['yes', '✅ BOOKED — Agoda · $283.86 · queen 160 cm · free canc to 24 Dec · charged 22 Dec'],
           ['stn', '🚉 Osaka Stn 10-min walk · JR Fukushima 7 min — the USJ-morning station'],
           ['bf', '🍳 Breakfast NOT included — ~¥2,500 buffet 06:30 (too late for USJ day; in-building 7-Eleven covers 06:00)'],
           ['warn', '⚠ Book “STANDARD DOUBLE” (160 cm, 18.4 m²) BY NAME — cheap rates map to ANNEX rooms (100 cm, separate building!) or twin traps'],
