@@ -210,7 +210,6 @@ export default function Costs() {
               <td className="num">{inr(budgetHigh)}</td>
               <td className="num">
                 <strong className="actual">{inr(actualSoFar)}</strong>
-                <span className="inr">booked so far</span>
               </td>
             </tr>
           </tfoot>
