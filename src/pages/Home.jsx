@@ -29,6 +29,7 @@ export default function Home() {
             <a href="#/flights"><i>II.</i><span>Flights</span><em aria-hidden="true" /><b>ticketed</b></a>
             <a href="#/costs"><i>III.</i><span>Cost Analysis</span><em aria-hidden="true" /><b>the numbers</b></a>
             <a href="#/watches"><i>IV.</i><span>The Pair</span><em aria-hidden="true" /><b>two open hearts</b></a>
+            <a href="#/survival"><i>V.</i><span>Survival</span><em aria-hidden="true" /><b>the decoder</b></a>
           </nav>
         </div>
       </section>
@@ -53,152 +54,6 @@ export default function Home() {
             {i < ROUTE.length - 1 && <span className="routearrow" aria-hidden="true">→</span>}
           </React.Fragment>
         ))}
-      </section>
-
-      <section className="home-kit" aria-label="Japan essentials">
-        <h2 className="home-kit-title">The make-life-easy kit</h2>
-        <div className="home-kit-grid">
-          <div className="home-kit-card">
-            <h3>Suica on the iPhone</h3>
-            <p><b>Her iPhone 17 Pro:</b> add Suica to Apple Wallet <b>before flying</b> (Wallet → + → Transit Card → Suica), top up with Apple Pay. <b>His S23 (Indian model) can&rsquo;t run Mobile Suica</b> — no FeliCa chip: get a physical <b>Welcome Suica</b> from the machine at Narita T2 arrivals (no deposit, 28-day card). One tap rides every metro, JR local and bus in all five cities — and pays at konbini and vending machines.</p>
-          </div>
-          <div className="home-kit-card">
-            <h3>Taxi apps</h3>
-            <p><b>GO</b> is Japan&rsquo;s main taxi app — English UI, foreign cards accepted. Uber works in Tokyo/Kyoto/Osaka too (it dispatches regular taxis at meter rates). Base fare ¥500–730, no tipping, doors open themselves. Use for: kimono day hops, Kawaguchiko, late-night Gion.</p>
-          </div>
-          <div className="home-kit-card">
-            <h3>Money</h3>
-            <p>Carry <b>¥25–30k cash</b> — shrines, omamori, market stalls and small ramen-ya are cash-only. Refill at any <b>7-Eleven ATM</b> (takes Indian Visa/MC, 24/7, fair rate). Cards + Apple Pay cover hotels, trains, Uniqlo, Yodobashi, konbini and chain restaurants.</p>
-          </div>
-          <div className="home-kit-card">
-            <h3>The day-pass rule</h3>
-            <p>Taking <b>4 or fewer</b> metro rides in a day (most of our days): just tap Suica — it also works on JR, which passes don&rsquo;t. Taking <b>5+</b> subway-only rides: the Tokyo Subway 24-hour ticket, ¥1,000/adult, pays for itself (Metro + Toei lines only, not JR).</p>
-          </div>
-          <div className="home-kit-card">
-            <h3>Data &amp; navigation</h3>
-            <p>Buy an <b>eSIM before flying</b> (Ubigi/Airalo, ~₹800–1,200 for 10 GB). Google Maps transit directions are gospel in Japan — platform numbers, car positions, exact fares. Each stop below also carries its own &ldquo;getting there&rdquo; line on the map page.</p>
-          </div>
-          <div className="home-kit-card">
-            <h3>Comfort tricks</h3>
-            <p><b>Takkyubin</b>: any hotel desk ships a suitcase to any other hotel overnight, ~¥2,500/bag — we use it Tokyo → Kyoto on Day 5. Coin lockers at every station (¥400–700). Konbini solve breakfast, ATM and midnight snacks. Passport stays ON you — it&rsquo;s the law, and it&rsquo;s the tax-free discount.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="home-jp" aria-label="Real-world Japan survival decoder">
-        <h2 className="home-kit-title">Real-world Japan — the decoder</h2>
-        <p className="home-jp-sub">The stuff nobody tells you until you&rsquo;re standing in front of it. Screenshot this.</p>
-        <div className="home-jp-grid">
-
-          <div className="jp-card">
-            <h3>🚽 The toilet panel, decoded</h3>
-            <ul>
-              <li><b>流す</b> = FLUSH — often a <b>separate wall button or sensor</b>, not on the bidet panel</li>
-              <li><b>大</b> = big flush · <b>小</b> = small flush</li>
-              <li><b>止</b> = STOP — the button you&rsquo;ll need after pressing anything else</li>
-              <li><b>おしり</b> = rear wash · <b>ビデ</b> = front wash · <b>乾燥</b> = dryer</li>
-              <li><b>音 / 音姫</b> = fake flushing SOUND for privacy — it does NOT flush</li>
-              <li><b>呼出 (red button)</b> = staff EMERGENCY call — never the flush. If no button anywhere: wave your hand at the black wall sensor, or look behind the tank</li>
-              <li><b>📍 Flush — Toilet Finder &amp; Map app</b> (Android + iOS): 200k+ toilets, works offline, shows paid / key-needed / accessible. Install before flying</li>
-            </ul>
-          </div>
-
-          <div className="jp-card">
-            <h3>🗣️ Seven phrases that run the country</h3>
-            <ul>
-              <li><b>Sumimasen</b> — excuse me / sorry / calls the waiter. The one word that does everything</li>
-              <li><b>Arigatou gozaimasu</b> — thank you (polite)</li>
-              <li><b>Kore kudasai</b> — &ldquo;this one, please&rdquo; + point. Orders anything</li>
-              <li><b>Daijoubu desu</b> — &ldquo;I&rsquo;m fine / no thanks&rdquo; — refuses the bag, the upsell, the chopsticks</li>
-              <li><b>Toire wa doko desu ka?</b> — where&rsquo;s the toilet?</li>
-              <li><b>Oishii!</b> — delicious (say it, chefs light up)</li>
-              <li><b>Moshi moshi</b> — hello on the PHONE only, never in person</li>
-            </ul>
-          </div>
-
-          <div className="jp-card">
-            <h3>📱 Translation that actually works</h3>
-            <ul>
-              <li><b>Google Translate → download the Japanese OFFLINE pack before flying</b> — works in basements and trains with no signal</li>
-              <li><b>Camera mode</b> — point at any menu, sign or washing-machine panel, it overlays English live. This is the single most-used feature of the trip</li>
-              <li><b>Conversation mode</b> — two-way mic for hotel desks and pharmacies; hand them the phone</li>
-              <li><b>Kuli Kuli</b> — travel translator built for menus, handwritten signs, product labels and even omikuji fortune slips; adds context Google misses (needs data, free + paid tiers)</li>
-              <li><b>Google Lens</b> on product labels at Don Quijote / konbini</li>
-              <li>Most staff understand simple written English better than spoken — <b>type it, show the screen</b></li>
-            </ul>
-          </div>
-
-          <div className="jp-card">
-            <h3>📲 The everyday stack — install before the flight</h3>
-            <ul>
-              <li><b>Google Maps</b> — platform numbers, train car positions, exact fares. Gospel</li>
-              <li><b>Google Translate</b> + offline Japanese pack</li>
-              <li><b>Japan Travel by NAVITIME</b> — where Google Maps is thin: which car to board, and the <b>Kawaguchiko / Fuji-area buses</b>. Free tier is enough</li>
-              <li><b>GO</b> — Japan&rsquo;s taxi app (English UI, foreign cards)</li>
-              <li><b>Flush</b> — nearest toilet, 200k+ mapped, works offline</li>
-              <li><b>Kuli Kuli</b> — menu / handwritten-sign / label translator with context Google misses</li>
-              <li><b>Tabelog</b> — ratings (3.5+ = queue-worthy) · <b>Payke</b> — barcode → English at drugstores</li>
-            </ul>
-          </div>
-
-          <div className="jp-card">
-            <h3>🎢 Mandatory for days we hold tickets</h3>
-            <ul>
-              <li><b>Tokyo Disney Resort app</b> — DPA (Premier Access) is sold <b>only in this app, only inside the park</b>. Make the MyDisney account + load BOTH cards before flying (foreign cards work but sometimes fail — have the backup loaded)</li>
-              <li><b>USJ official app</b> — Super Nintendo World timed-entry is <b>app-only since Jan 2026</b> (paper machines removed). Register the Studio Pass in the app on the morning of 28 Dec; don&rsquo;t uninstall mid-day or the ticket voids</li>
-              <li><b>teamLab app</b> — not needed for entry (QR e-ticket is), but issues in-museum numbered queue tickets for the popular rooms. Download before NYE-week crowds</li>
-              <li><b>smartEX</b> — Tokaido Shinkansen seats; <b>test a booking from home first</b> (foreign Visa/MC flaky, Amex best; Klook is the fallback). Links to her Wallet Suica = tap through gates</li>
-              <li><b>Eki-net</b> = use the English <b>website</b>, not the app (app is Japan-store-only) — Kanazawa leg</li>
-              <li><b>Visit Japan Web</b> (website) — immigration + customs QR, both of us, before landing</li>
-            </ul>
-          </div>
-
-          <div className="jp-card">
-            <h3>🧰 Worth the space</h3>
-            <ul>
-              <li><b>Safety Tips</b> — Japan&rsquo;s official tourist disaster-alert app (quake/tsunami push, English). Both phones</li>
-              <li><b>NERV</b> — fastest earthquake early-warning in English; one phone is enough</li>
-              <li><b>ecbo cloak</b> — book luggage storage in cafés + ~380 7-Elevens (~¥500–800/bag/day); perfect for hotel-change days</li>
-              <li><b>TableCheck</b> — English restaurant reservations that actually complete · <b>AutoReserve</b> — its AI phone-calls phone-only restaurants in Japanese for you</li>
-              <li><b>Uber Eats</b> — home account + Indian cards just work; the jet-lag-night and NYE dinner safety net</li>
-              <li><b>WeatherJapan</b> — JWA data in English; pair with Windy&rsquo;s cloud layer for &ldquo;will we see Fuji tomorrow&rdquo;</li>
-            </ul>
-          </div>
-
-          <div className="jp-card">
-            <h3>🍜 Restaurant survival</h3>
-            <ul>
-              <li><b>Ticket-machine shops</b> (ramen etc.): buy the ticket FIRST at the machine by the door, then hand it over. Cash in, button with picture, done</li>
-              <li><b>Plastic food in the window?</b> Take the staff outside and point. Fully normal</li>
-              <li><b>&ldquo;Osusume&rdquo;</b> = chef&rsquo;s recommendation — ask it, get the best thing</li>
-              <li><b>No tipping. Ever.</b> They will chase you down the street to return it</li>
-              <li>Pay at the front counter, not the table — put money <b>on the little tray</b>, never in hands</li>
-            </ul>
-          </div>
-
-          <div className="jp-card">
-            <h3>🚶 Street rules that trip every tourist</h3>
-            <ul>
-              <li><b>There are no trash bins.</b> Carry a konbini bag in your daypack; bins exist only inside konbini and at vending machines</li>
-              <li><b>Escalators: stand LEFT in Tokyo, stand RIGHT in Osaka</b> — yes, it flips</li>
-              <li><b>Don&rsquo;t eat while walking</b> — stand to the side of the stall, finish, then move</li>
-              <li><b>Trains are silent</b> — phone on manner mode, no calls, talk in whispers</li>
-              <li>Queue inside the painted lines on platforms — the train door stops exactly there</li>
-            </ul>
-          </div>
-
-          <div className="jp-card">
-            <h3>💴 Paying &amp; tax-free</h3>
-            <ul>
-              <li><b>Tax-free = 10% off</b>: passport + ¥5,500 minimum in one store, same day. Look for the red &ldquo;Tax-Free&rdquo; sign (Uniqlo, Bic, Don Quijote, drugstores)</li>
-              <li>Passport stays <b>ON you</b> at all times — it&rsquo;s the law AND the discount</li>
-              <li><b>Suica tap</b> pays at konbini, vending machines, lockers, most chains</li>
-              <li>Cash lives at <b>7-Eleven ATMs</b> (Indian Visa/MC, 24/7)</li>
-              <li>Konbini = breakfast + ATM + clean toilet + coffee + bill of last resort. 7-Eleven, Lawson, FamilyMart — all open 24/7</li>
-            </ul>
-          </div>
-
-        </div>
       </section>
 
       <section className="home-mapband" aria-label="Route map">
@@ -233,6 +88,11 @@ export default function Home() {
           <h3>Cost Analysis</h3>
           <p>The full self-booked budget — flights, hotels, rail, parks, meals, yen-to-rupee, and the cash to carry.</p>
           <span className="home-card-go">The numbers →</span>
+        </a>
+        <a className="home-card" href="#/survival">
+          <h3>Survival</h3>
+          <p>Toilet kanji, seven phrases, the app stack, Suica rules — one fact per card.</p>
+          <span className="home-card-go">The decoder →</span>
         </a>
       </section>
 

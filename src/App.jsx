@@ -6,6 +6,7 @@ import Watches from './pages/Watches.jsx'
 import Flights from './pages/Flights.jsx'
 import Hotels from './pages/Hotels.jsx'
 import Bookings from './pages/Bookings.jsx'
+import Survival from './pages/Survival.jsx'
 
 const TABS = [
   { hash: '#/', label: 'The Trip' },
@@ -13,6 +14,7 @@ const TABS = [
   { hash: '#/flights', label: 'Flights' },
   { hash: '#/hotels', label: 'Hotels' },
   { hash: '#/bookings', label: 'Bookings' },
+  { hash: '#/survival', label: 'Survival' },
   { hash: '#/watches', label: 'The Pair' },
   { hash: '#/costs', label: 'Costs' },
 ]
@@ -28,7 +30,8 @@ function useHash() {
 }
 
 // below this width the tab row would wrap — the sun becomes the menu
-const MENU_BP = '(max-width: 1039px)'
+// (bumped from 1039px when the 8th tab, Survival, joined the row)
+const MENU_BP = '(max-width: 1149px)'
 
 export default function App() {
   const hash = useHash()
@@ -108,6 +111,7 @@ export default function App() {
       {route === '#/flights' && <Flights />}
       {route === '#/hotels' && <Hotels />}
       {route === '#/bookings' && <Bookings />}
+      {route === '#/survival' && <Survival />}
       {route === '#/watches' && <Watches />}
       {route === '#/costs' && <Costs />}
     </div>

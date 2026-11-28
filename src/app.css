@@ -83,7 +83,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .sunmenu-row:hover { color: var(--ink); background: var(--paper); }
 .sunmenu-row.on { color: #fffdf8; background: var(--ink); }
 
-@media (max-width: 1039px) {
+@media (max-width: 1149px) {
   .topnav { display: none; }
   .hdr-title { gap: 20px; }
   /* bigger tap target + a tappable affordance on the sun */
@@ -98,7 +98,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
     border-top: 6px solid var(--ink-soft);
   }
 }
-@media (min-width: 1040px) {
+@media (min-width: 1150px) {
   .sunmenu, .sunmenu-scrim { display: none; }
 }
 .hdr-sub { margin-top: 3px; font-size: 0.8rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
