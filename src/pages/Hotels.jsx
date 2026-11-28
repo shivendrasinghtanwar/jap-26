@@ -237,7 +237,7 @@ const LEGS = [
     ],
   },
   {
-    title: 'Kanazawa', dates: '23–24 Dec · 1 night',
+    title: 'Kanazawa', dates: '23–24 Dec · 1 night · arrive 14:50, depart ~09:45',
     cards: [
       {
         pick: true, badge: 'BOOKED ✓',
@@ -368,7 +368,7 @@ const LEGS = [
     ],
   },
   {
-    title: 'Kyoto (Christmas)', dates: '24–27 Dec · 3 nights',
+    title: 'Kyoto (Christmas)', dates: '24–27 Dec · 3 nights · check-in ~12:45 (bag drop)',
     cards: [
       {
         pick: true, badge: '#1 pick',
@@ -436,7 +436,7 @@ const LEGS = [
     ],
   },
   {
-    title: 'Osaka', dates: '27–30 Dec · 3 nights',
+    title: 'Osaka', dates: '27–30 Dec · 3 nights · check-in ~afternoon via Special Rapid',
     cards: [
       {
         pick: true, badge: '#1 pick',

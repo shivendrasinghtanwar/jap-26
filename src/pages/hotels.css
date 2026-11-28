@@ -14,12 +14,14 @@
 .htl-sub { margin: 0; color: #6b6257; font-size: 0.95rem; max-width: 70ch; }
 
 .htl-leg {
-  margin: 0 0 10px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin: 0 0 12px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
   position: sticky; top: 0; z-index: 8;
-  background: var(--paper, #f7f2e9);
-  padding: 12px 2px 10px;
-  border-bottom: 1.5px solid var(--line, #e3ddd2);
-  box-shadow: 0 10px 14px -14px rgba(60, 46, 20, 0.35);
+  background: #f1ebdd;
+  padding: 13px 16px 12px;
+  margin-left: -16px; margin-right: -16px;
+  border-bottom: 2.5px solid #c93a2b;
+  box-shadow: 0 12px 18px -14px rgba(60, 46, 20, 0.45);
+  border-radius: 0 0 12px 12px;
 }
 .htl-leg-pick {
   margin-left: auto; display: inline-flex; align-items: center; gap: 8px; min-width: 0;
@@ -41,8 +43,12 @@
 @media (max-width: 640px) {
   .htl-leg-pick b { display: none; }
 }
-.htl-leg h2 { margin: 0; font-size: 1.2rem; }
-.htl-leg .htl-leg-dates { font: 650 0.78rem/1 var(--sans, sans-serif); color: #9a8f7a; letter-spacing: 0.04em; }
+.htl-leg h2 { margin: 0; font-size: 1.4rem; line-height: 1.1; }
+.htl-leg .htl-leg-dates {
+  font: 800 0.86rem/1.2 var(--sans, sans-serif); color: #1b1b1f; letter-spacing: 0.02em;
+  background: #fffdf8; border: 1px solid #d8d0c0; border-radius: 999px;
+  padding: 6px 12px;
+}
 
 /* featured card */
 .htl-card {
