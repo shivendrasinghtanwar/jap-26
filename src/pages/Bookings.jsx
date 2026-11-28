@@ -25,14 +25,14 @@ const ITEMS = [
   // ——— Hotels (all free-cancellation) ———
   { cat: 'Hotels', jay: 'no', kind: 'hotel', d: 18.6, date: '18 Dec', time: 'check-in',
     place: 'Higashi-Kanda, Tokyo', name: 'Comfort ERA Tokyo Higashi Kanda', sub: 'Queen · 4n',
-    detail: 'Booking.com room-only · email: bed width + takkyubin',
-    platform: 'trivago', price: '₹48,370', inr: 48370, by: 'NOW', rank: 0,
-    link: 'https://www.trivago.in/en-IN/lm/comfort-hotel-era-tokyo-higashi-kanda?search=100-7300202%3Bdr-20261218-20261222%3Brc-1-2' },
+    detail: 'CONFIRMED 28 Nov · free canc · still email: bed width + takkyubin',
+    platform: 'Booking.com', price: '₹53,101', inr: 53101, by: 'BOOKED ✓', rank: 0, done: true,
+    link: 'https://secure.booking.com/mytrips' },
   { cat: 'Hotels', jay: 'no', kind: 'hotel', d: 22.6, date: '22 Dec', time: 'check-in',
-    place: 'Kawaguchiko', name: 'Mizno Hotel', sub: 'Terrace Twin NAGOMI · 1n',
-    detail: 'Anniversary plan (dinner+drinks) · or Booking ₹25,422 + dinner · email for cake',
-    platform: 'Jalan', price: '~₹40,000', inr: 40000, by: 'NOW', rank: 0,
-    link: 'https://www.jalan.net/yad317230/plan/' },
+    place: 'Kawaguchiko', name: 'Mizno Hotel', sub: 'room-only · 1n',
+    detail: 'CONFIRMED 28 Nov · free canc · NOW: book SEIKOUKI dinner + email for cake',
+    platform: 'Booking.com', price: '₹28,380', inr: 28380, by: 'BOOKED ✓', rank: 0, done: true,
+    link: 'https://secure.booking.com/mytrips' },
   { cat: 'Hotels', jay: 'no', kind: 'hotel', d: 23.6, date: '23 Dec', time: 'check-in',
     place: 'Kanazawa', name: 'Hotel Forza Kanazawa', sub: 'Comfort/Refresh Double · 1n',
     detail: '150 cm bed — NOT the Forza(140)/Business(130) doubles',
@@ -268,7 +268,7 @@ export default function Bookings() {
             <button onClick={() => onSort('by')}>Book by{arrow('by')}</button>
           </div>
           {rows.map(i => (
-            <div key={i.name} className="bkt-row" role="row">
+            <div key={i.name} className={'bkt-row' + (i.done ? ' is-done' : '')} role="row">
               <span className="bk-when">
                 {i.date}
                 {i.time && <small>{i.time}</small>}
@@ -287,7 +287,7 @@ export default function Bookings() {
               <a className="bk-plat" href={i.link} target="_blank" rel="noopener">{i.platform} ↗</a>
               <span className={'bk-badge ' + (i.jay === 'yes' ? 'jay' : 'ours')}>{i.jay === 'yes' ? 'QUOTED ✓' : 'NOT QUOTED'}</span>
               <span className="bk-price num">{i.price}<small>≈ ₹{i.inr.toLocaleString('en-IN')}</small></span>
-              <span className={'bk-by' + (i.rank === 0 ? ' hot' : '')}>{i.by}</span>
+              <span className={'bk-by' + (i.done ? ' done' : i.rank === 0 ? ' hot' : '')}>{i.by}</span>
             </div>
           ))}
           {rows.length > 0 && (

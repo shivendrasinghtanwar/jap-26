@@ -69,12 +69,13 @@ const LEGS = [
     title: 'Tokyo · Leg 1', dates: '18–22 Dec · 4 nights · check-in ~23:00 on day 1',
     cards: [
       {
-        pick: true, badge: '#1 pick',
+        pick: true, badge: 'BOOKED ✓',
         name: 'Comfort Hotel ERA Tokyo Higashi Kanda',
         area: 'Higashi-Kanda — JR Bakurocho 4 min, Bakuroyokoyama 5 min, Higashi-Nihombashi (Asakusa line) ~8 min',
         score: '8.9', reviews: 'Booking 4,099+ · Google 4.3/1,210',
-        price: '₹48,370 · Queen', total: '4 nights, room-only · free-canc',
+        price: '₹53,101 · Queen', total: 'BOOKED 28 Nov · 4n room-only · free-canc',
         chips: [
+          ['yes', '✅ BOOKED — Booking.com · ₹53,101 · confirmed'],
           ['stn', '🚉 JR Bakurocho — 4-min walk · Asakusa line 8 min'],
           ['bf', '🍳 Breakfast NOT included — pay ¥1,800/person · buffet 06:30–09:30'],
           ['warn', '⚠ Email hotel: confirm Queen bed width (160 vs 140 cm)'],
@@ -171,12 +172,13 @@ const LEGS = [
     title: 'Fuji · Kawaguchiko', dates: '22–23 Dec · 1 night · the anniversary night',
     cards: [
       {
-        pick: true, badge: '#1 pick',
+        pick: true, badge: 'BOOKED ✓',
         name: 'Mizno Hotel (湖のホテル)',
         area: 'Hillside above Asakawa, north-east shore — EVERY room faces Fuji over the lake',
         score: '9.5', reviews: '5,337 · Google 4.7/1,214',
-        price: '₹25,422', total: 'room-only free-canc · anniversary plan ~₹40k',
+        price: '₹28,380', total: 'BOOKED 28 Nov · room-only · free-canc',
         chips: [
+          ['yes', '✅ BOOKED — Booking.com · ₹28,380 · now book SEIKOUKI dinner + cake email'],
           ['stn', '🚉 Kawaguchiko Stn — NOT walkable · pickup/taxi 5–10 min'],
           ['bf', '🍳 Breakfast NOT in room-only rate — pick the breakfast plan (Western egg+fruit, Fuji-view terrace, 07:00)'],
           ['yes', '✓ Every room has the Fuji-over-lake view (official)'],

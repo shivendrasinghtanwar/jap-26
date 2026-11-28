@@ -175,3 +175,7 @@
   .bkt-total .bk-price { margin-left: auto; }
 }
 .bk-badge.oth { background: #f6ecd4; color: #8a5a00; border: 1px solid #ecdcb4; }
+
+/* booked rows */
+.bkt-row.is-done { background: #f3f8f3; border-color: #cfe0d6; }
+.bk-by.done { color: #2d5c48; font-weight: 800; }
