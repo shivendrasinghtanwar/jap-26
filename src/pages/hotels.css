@@ -1,6 +1,6 @@
 /* ——— Hotels page: audit cards ——— */
 .htl { padding: 36px clamp(16px, 4vw, 48px) 64px; overflow-y: auto; }
-.htl-wrap { max-width: 1060px; margin: 0 auto; }
+.htl-wrap { max-width: 1240px; margin: 0 auto; }
 
 .htl-head { margin-bottom: 20px; }
 .htl-kicker {
@@ -35,7 +35,15 @@
 }
 .htl-card.is-pick { border-color: #3f7d63; border-width: 2px; }
 
-.htl-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 16px; margin-bottom: 12px; }
+/* badge · name · score · price — price pinned top-right */
+.htl-top {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  gap: 4px 18px;
+  align-items: start;
+  margin-bottom: 12px;
+}
+.htl-top .htl-badge { align-self: center; justify-self: start; }
 .htl-badge {
   font: 800 0.64rem/1 var(--sans, sans-serif);
   letter-spacing: 0.14em;
@@ -53,8 +61,13 @@
 .htl-score b { display: block; font-size: 1.4rem; color: #3f7d63; line-height: 1; }
 .htl-score small { color: #9a8f7a; font-size: 0.7rem; }
 .htl-price { text-align: right; }
-.htl-price b { display: block; font-size: 1.25rem; line-height: 1.1; }
-.htl-price small { color: #9a8f7a; font-size: 0.7rem; }
+.htl-price b { display: block; font-size: 1.25rem; line-height: 1.1; white-space: nowrap; }
+.htl-price small { display: block; color: #9a8f7a; font-size: 0.7rem; max-width: 240px; line-height: 1.4; }
+@media (max-width: 860px) {
+  .htl-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 16px; }
+  .htl-price { text-align: left; }
+  .htl-price b { white-space: normal; }
+}
 
 /* feature chips */
 .htl-chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 10px 0 2px; }
